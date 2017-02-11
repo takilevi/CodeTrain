@@ -22,8 +22,8 @@ public class App {
     private static Train GetTrainData()
     {
         Train train = new Train();
-        train.SetVelocity(0);
-        train.SetColor("green");
+        train.SetVelocity(9999999);
+        train.SetColor("blue"); //Első felesleges komment.
         return train;
     }
 }
