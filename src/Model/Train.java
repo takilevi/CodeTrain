@@ -1,8 +1,10 @@
 package Model;
 
-@param Color The color of the train.
-@param Velocity The velocity of the train.
-@param Capacity The capacity of the train.
+/**
+*@param Color The color of the train.
+*@param Velocity The velocity of the train.
+*@param Capacity The capacity of the train.
+*/
 public class Train {
     private String Color;
     private int Velocity;
@@ -22,17 +24,23 @@ public class Train {
         this.Capacity = capacity;
     }
     
-    @return The color of the train.
+    /**
+    *@return The color of the train.
+    */
     public String GetColor(){
         return Color;
     }
-
-    @return The velocity of the train.
+    
+    /**
+    *@return The velocity of the train.
+    */
     public int GetVelocity(){
         return Velocity;
     }
     
-    @return The capacity of the train.
+    /**
+    *@return The capacity of the train.
+    */
     public int GetCapacity(){
         return Capacity;
     }
