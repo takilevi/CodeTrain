@@ -8,6 +8,7 @@ public class App {
 
     public static void main(String[] args)
     {
+        //Adrian Teszt 1
         Train model = GetTrainData();
         TrainView view = new TrainView();
         TrainController controller = new TrainController(model, view);
