@@ -7,6 +7,4 @@ public class Counter extends Thread {
     public void start(){}
 
     public void run(){}
-
-    //public void wait(){}
 }

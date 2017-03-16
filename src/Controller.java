@@ -1,6 +1,6 @@
 public class Controller {
 
-    public Controller(RailroadModel m){}
+    public Controller(RailroadModel model){}
 
     public void readCommand(){}
 }
