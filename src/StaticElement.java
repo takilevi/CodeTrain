@@ -4,4 +4,6 @@ public class StaticElement {
 
     public StaticElement getNextElement(StaticElement previousElement){ return null;}
     public boolean isCrash(){ return false;}
+
+
 }
