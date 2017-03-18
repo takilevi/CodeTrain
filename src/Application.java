@@ -24,6 +24,7 @@ public class Application {
         }
     }
 
+
     public static void Test(String input)
     {
         switch (input)
