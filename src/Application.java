@@ -1,37 +1,47 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Application {
+    private void initModelsForTesting() throws IOException {
+        RailroadModel model_task_1 = new RailroadModel("./map_files/task_1.txt");
+
+    }
+
 
     public static void main(String[] args) {
         System.out.println("0. Kilépés");
-        System.out.println("1. Pálya felépítése");
-        System.out.println("2. Alagút bejárat építése");
-        System.out.println("3. Alagút kijárat építése");
-        System.out.println("4. Alagút lerombolása");
-        System.out.println("5. Vonat léptetése");
-        System.out.println("6. Váltó állítása");
-        System.out.println("7. Vonat létrehozása");
-        System.out.println("8. Utasok leszállítása");
-        System.out.println("9. Vonatok ütközése");
-        System.out.println("10. Következő elem lekérése");
+        //System.out.println("1. Pálya felépítése");
+        System.out.println("1. Vonat (mozdony+kocsi) sínen lép");
+        System.out.println("2. Vonat váltón lép előre");
+        System.out.println("3. Vonat váltón lép vissza");
+        System.out.println("4. Vonat alagútba bemegy");
+        System.out.println("5. Vonat alagútban lép");
+        System.out.println("6. Vonat alagútból kijön");
+        System.out.println("7. Vonat állomáshoz ér, utasok nem szállnak le/leszállnak (+ a játékos nyer)");
+        System.out.println("8. Váltó állítása, ha nincs rajta vonat");
+        System.out.println("9. Váltó állítása, ha van rajta vonat");
+        System.out.println("10. Első alagútbejárat megépítése");
+        System.out.println("11. Második alagútbejárat megépítése, alagút jön létre");
+        System.out.println("12. Alagútbejárat lerombolása, ha nincs az alagútban vonat");
+        System.out.println("13. Alagútbejárat lerombolása, ha van az alagútban vonat");
+        System.out.println("14. Két vonat ütközik, a játékos veszít");
 
         Scanner scanner = new Scanner(System.in);
 
-        while(true)
-        {
+        while (true) {
             System.out.print("\nAdja meg a menüpont számát: ");
             Test(scanner.nextLine());
         }
     }
 
 
-    public static void Test(String input)
-    {
-        switch (input)
-        {
-            case "0": System.exit(1);
+    public static void Test(String input) {
+        switch (input) {
+            case "0":
+                System.exit(1);
                 break;
-            case "1": RailroadModel.getInstance().initFiledElements();
+            case "1":
+                //RailroadModel.getInstance().initFieldElements();
                 break;
             case "2":
                 break;
@@ -51,7 +61,16 @@ public class Application {
                 break;
             case "10":
                 break;
-            default:System.exit(0);
+            case "11":
+                break;
+            case "12":
+                break;
+            case "13":
+                break;
+            case "14":
+                break;
+            default:
+                System.exit(0);
         }
     }
 }

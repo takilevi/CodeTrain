@@ -1,11 +1,12 @@
+import java.io.*;
 import java.util.*;
 
 public class RailroadModel {
 
-    private static RailroadModel model;
+    //private static RailroadModel model;
     protected int trainCount;
 
-    public static RailroadModel getInstance()
+    /*public static RailroadModel getInstance()
     {
         if(model == null)
         {
@@ -13,11 +14,20 @@ public class RailroadModel {
         }
         Logger.CallLogging("RailroadModel", "initFiledElements()");
         return model;
+    }*/
+
+    public RailroadModel(String location) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(new BufferedInputStream(new FileInputStream(new File(location)))));
+
+        String line = null;
+
+        while ((line = reader.readLine()) != null) {
+            String[] args = line.split(" ");
+
+        }
     }
 
-    private RailroadModel() { }
-
-    public void initFiledElements()
+    public void initFieldElements()
     {
         Depot depot = new Depot();
         TunnelEntrance tunnelEntrance1 = new TunnelEntrance();
