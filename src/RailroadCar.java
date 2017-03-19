@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class RailroadCar implements Movable {
 
     private boolean passengersOnBoard;
@@ -12,7 +14,11 @@ public class RailroadCar implements Movable {
         return null;
     }
 
-    public void getOffPassengers() {
+    public void getOffPassengers(Color color) {
+        Logger.CallLogging("RailroadCar","getOffPassengers(Color color)");
+        Train vonat = new Train();
+        vonat.emptyCar();
+        Logger.ReturnLogging("RailroadCar","getOffPassengers(Color color)");
     }
 
     public void setPrevious(StaticElement currentElement) {
@@ -44,12 +50,24 @@ public class RailroadCar implements Movable {
                 temp.stepToElement(this);
                 break;
             case 2:
+                Track tr1_st = new Track();
+                Station stat1 = new Station();
+                StaticElement previous = new StaticElement();
+
+                tr1_st.getNextElement(previous);
+                setPrevious(tr1_st);
+                setCurrent(stat1);
+
+                tr1_st.leaveElement(this);
+                stat1.stepToElement(this);
+                stat1.checkStation(this);
+
 
                 break;
         }
 
 
-        Logger.CallLogging("RailroadCar", "move()");
+        Logger.ReturnLogging("RailroadCar", "move()");
     }
 
     public void crash() {

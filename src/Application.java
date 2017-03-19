@@ -47,12 +47,20 @@ public class Application {
                 tr3.awakeLocomotive(3);
                 break;
             case "4":
+                Train tr4 = new Train();
+                tr4.awakeLocomotive(4);
                 break;
-            case "5":
+            case "5": // nincs 5-ös mert az nálunk ugyanaz mint a sima lépés a síneken -> 1esre átirányítás
+                Train tr5 = new Train();
+                tr5.awakeLocomotive(1);
                 break;
             case "6":
+                Train tr6 = new Train();
+                tr6.awakeLocomotive(6);
                 break;
             case "7":
+                Train tr7 = new Train();
+                tr7.awakeLocomotive(7);
                 break;
             case "8":
                 RailroadSwitch rs = new RailroadSwitch();
