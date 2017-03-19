@@ -15,8 +15,10 @@ public class Tunnel {
 
         Logger.CallLogging("Tunnel", "build(TunnelEntrance e1)");
         Logger.CallLogging("TunnelEntrance","add(e1)");
-        Logger.ReturnLogging("TunnelEntrance","add(e2)");
+        Logger.ReturnLogging("TunnelEntrance","add(e1)");
+        Logger.CallLogging("Tunnel", "build(TunnelEntrance e1)");
         Logger.CallLogging("TunnelEntrance","add(e2)");
+        Logger.ReturnLogging("TunnelEntrance","add(e2)");
         e1.changeState();
     }
 
