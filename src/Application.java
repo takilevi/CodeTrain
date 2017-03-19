@@ -47,6 +47,8 @@ public class Application {
                 tr3.awakeLocomotive(3);
                 break;
             case "4":
+                Train tr4 = new Train();
+                tr4.awakeLocomotive(4);
                 break;
             case "5":
                 break;
