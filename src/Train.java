@@ -7,11 +7,19 @@ public class Train {
     private List<RailroadCar> cars;
     private int emptyCars;
 
-    public Train(int length, StaticElement next, Depot d){}
+    private Train(int length, StaticElement next, Depot d){}
+    public Train(){}
 
     public void emptyCar(){}
 
     public void StartTrain(){}
 
-    public void awakeLocomotive(){}
+    public void awakeLocomotive(int param){
+        Logger.CallLogging("Train","awakeLocomotive()");
+
+        Locomotive l = new Locomotive();
+        l.move(param);
+
+        Logger.ReturnLogging("Train", "awakeLocomotive()");
+    }
 }

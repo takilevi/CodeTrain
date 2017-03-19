@@ -8,15 +8,24 @@ public class RailroadSwitch extends StaticElement {
 
     public RailroadSwitch()
     {
-        Logger.CallLogging("RailroadSwitch", "RailroadSwitch()");
-        Logger.ReturnLogging("RailroadSwitch", "RailroadSwitch()");
     }
 
-    public void changeSwitchToDirection(int dir){}
+    public void changeSwitchToDirection(int dir){
+        Logger.CallLogging("RailroadSwitch","changeSwitchToDirection");
 
-    public StaticElement getCurrentSwitchInDirection(){ return null; }
+        Logger.ReturnLogging("RailroadSwitch","changeSwitchToDirection");
+    }
 
-    public StaticElement getStaticDirection(){return null;}
+    public StaticElement getCurrentSwitchInDirection(){
+        Logger.CallLogging("RailroadSwitch", "getCurrentSwitchInDirection()");
+        Logger.ReturnLogging("RailroadSwitch", "staticElement");
+        return null;
+    }
+
+    public StaticElement getStaticDirection(){
+        Logger.CallLogging("RailroadSwitch", "getStaticDirection()");
+        Logger.ReturnLogging("RailroadSwitch", "staticElement");
+        return null;}
 
     public void setStaticDirection(StaticElement staticDir)
     {
@@ -26,5 +35,29 @@ public class RailroadSwitch extends StaticElement {
     public void setDynamicDirections(List<StaticElement> directions)
     {
         dynamicDirections = directions;
+    }
+    public StaticElement getNextElement(StaticElement previousElement)
+    {
+        Logger.CallLogging("RailroadSwitch", "getNextElement()");
+        getCurrentSwitchInDirection();
+        Logger.ReturnLogging("RailroadSwitch", "nextElement");
+
+        return null;
+    }
+    public boolean isCrash(){ return false;}
+    public List<Movable> getTrainsOnElement()
+    {
+        Logger.CallLogging("RailroadSwitch", "getTrainsOnElement()");
+        Logger.ReturnLogging("RailroadSwitch", "getTrainsOnElement()");
+        return null;
+
+    }
+    public void leaveElement(Movable m){
+        Logger.CallLogging("RailroadSwitch", "leaveElement(Movable m)");
+        Logger.ReturnLogging("RailroadSwitch", "leaveElement(Movable m)");
+    }
+    public void stepToElement(Movable m){
+        Logger.CallLogging("RailroadSwitch", "stepToElement(Movable m)");
+        Logger.ReturnLogging("RailroadSwitch", "stepToElement(Movable m)");
     }
 }

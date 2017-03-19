@@ -4,8 +4,6 @@ public class Station extends StaticElement {
 
     public Station()
     {
-        Logger.CallLogging("Station", "Station()");
-        Logger.ReturnLogging("Station", "Station()");
     }
 
     public Color getColor(){ return null;}

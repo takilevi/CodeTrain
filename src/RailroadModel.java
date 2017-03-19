@@ -1,3 +1,4 @@
+import java.io.*;
 import java.util.*;
 
 public class RailroadModel {
@@ -11,13 +12,24 @@ public class RailroadModel {
         {
             model = new RailroadModel();
         }
-        Logger.CallLogging("RailroadModel", "initFiledElements()");
         return model;
     }
 
-    private RailroadModel() { }
+    //Ezt ki írta és mi ez? Miért nem volt jó az előző? Inkább azt kéne módosítani.
+   /* public RailroadModel(String location) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(new BufferedInputStream(new FileInputStream(new File(location)))));
 
-    public void initFiledElements()
+        String line = null;
+
+        while ((line = reader.readLine()) != null) {
+            String[] args = line.split(" ");
+
+        }
+    }*/
+
+   private RailroadModel(){}
+
+    public void initFieldElements()
     {
         Depot depot = new Depot();
         TunnelEntrance tunnelEntrance1 = new TunnelEntrance();
@@ -38,14 +50,14 @@ public class RailroadModel {
         track1.setElements(conveyor,station);
         station.setElements(track1,track2);
         track2.setElements(station,conveyor);
-
-
-        Logger.ReturnLogging("RailroadModel", "initFiledElements()");
     }
 
     public void startGame(){}
 
-    public void finishGame(){}
+    public void finishGame(){
+        Logger.CallLogging("RailroadModel", "finishGame()");
+        Logger.ReturnLogging("RailroadModel", "finishGame()");
+    }
 
     public void emptyTrain(){}
 }
