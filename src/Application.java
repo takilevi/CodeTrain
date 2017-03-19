@@ -35,10 +35,7 @@ public class Application {
                 System.exit(1);
                 break;
             case "1":
-
                 Train t = new Train();
-                Locomotive l = new Locomotive();
-                RailroadCar r = new RailroadCar();
                 t.awakeLocomotive();
                 break;
             case "2":

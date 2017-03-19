@@ -17,7 +17,8 @@ public class Train {
     public void awakeLocomotive(){
         Logger.CallLogging("Train","awakeLocomotive()");
 
-        locomotive.move();
+        Locomotive l = new Locomotive();
+        l.move();
 
         Logger.ReturnLogging("Train", "awakeLocomotive()");
     }

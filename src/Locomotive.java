@@ -13,10 +13,12 @@ public class Locomotive implements Movable {
 
     public void setPrevious(StaticElement currentElement){
         Logger.CallLogging("Locomotive","setPrevious(StaticElement currentElement)");
+        Logger.ReturnLogging("Locomotive","setPrevious(StaticElement currentElement)");
     }
 
     public void setCurrent(StaticElement nextElement){
         Logger.CallLogging("Locomotive","setCurrent(StaticElement nextElement)");
+        Logger.ReturnLogging("Locomotive","setCurrent(StaticElement nextElement)");
     }
 
     public void move(){
@@ -25,7 +27,8 @@ public class Locomotive implements Movable {
         Track s3 = new Track();
         RailroadCar r = new RailroadCar();
 
-        StaticElement temp = s3.getNextElement(s2);
+        s3.getNextElement(s2);
+        Track temp = new Track();
 
         setPrevious(s3);
         setCurrent(temp);
