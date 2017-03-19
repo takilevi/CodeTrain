@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- *
+ * Mozdony kezelését megvalósító osztály.
  */
 public class Locomotive implements Movable {
 
@@ -10,28 +10,28 @@ public class Locomotive implements Movable {
     private RailroadCar carAfterLocomotive;
 
     /**
-     *
-     * @return
+     * Visszatér azon elemmel, amin a vonat éppen tartózkodik.
+     * @return akutális elem
      */
     public StaticElement getCurrentElement(){ return null;}
 
     /**
-     *
-     * @return
+     * Azon statikus elemmel tér vissza, amin a vonat előzőleg tartózkodott.
+     * @return előző elem
      */
     public StaticElement getPreviousElement(){ return null;}
 
     /**
-     *
-     * @param current
-     * @param previous
-     * @param carAfter
+     * Létrehoz egy vonatot
+     * @param current Aktuális elem. (Létrehozáskor egy depó)
+     * @param previous Előző elem (Létrehozáskor null)
+     * @param carAfter A vonat után következő kocsi, ha nincs null
      */
     public void create(StaticElement current, StaticElement previous ,RailroadCar carAfter){}
 
     /**
-     *
-     * @param currentElement
+     * A vonat előző helyét állíthatjuk be itt.
+     * @param currentElement Az elem amit be akarunk állítani
      */
     public void setPrevious(StaticElement currentElement){
         Logger.CallLogging("Locomotive","setPrevious(StaticElement currentElement)");
@@ -39,8 +39,8 @@ public class Locomotive implements Movable {
     }
 
     /**
-     *
-     * @param nextElement
+     * A vonat aktuális helyét állítjuk be.
+     * @param nextElement Erre az elemre szeretnénk elhelyezni a vonatot.
      */
     public void setCurrent(StaticElement nextElement){
         Logger.CallLogging("Locomotive","setCurrent(StaticElement nextElement)");
@@ -48,8 +48,9 @@ public class Locomotive implements Movable {
     }
 
     /**
-     *
-     * @param param
+     * A vonatot léptetjük egyet. Beállítja a aktuális elemet, és az előzőt,
+     * majd ha van utána kocsi meghívja rajta a move-ot.
+     * @param param : Megadhatjuk hogy milyen elemre lépjen a mozdony.
      */
     public void move(int param){
         Logger.CallLogging("Locomotive","move()");
@@ -151,7 +152,8 @@ public class Locomotive implements Movable {
     }
 
     /**
-     *
+     * A vonaton meghívhatjuk, ekkor megkérdezik azon elemet, amin áll, hogy történt e ütközés.
+     * (Konkrét pédánkban igen.)
      */
     public void crash(){
         Logger.CallLogging("Locomotive", "crash()");

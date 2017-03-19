@@ -1,11 +1,20 @@
 import java.io.*;
 import java.util.*;
 
+/**
+ * A program model osztálya.
+ * Felelősége azon dolgok végzése, amik globálisan befolyásolját a teljes játékot.
+ * (Játék indítás, Játék vége, pálya felépítése.)
+ */
 public class RailroadModel {
 
     private static RailroadModel model;
     protected int trainCount;
 
+    /**
+     * Singletonná teszi az osztályt.
+     * @return Visszatér a modelel, illetve ha még nem létezne, létrehozza
+     */
     public static RailroadModel getInstance()
     {
         if(model == null)
@@ -15,20 +24,15 @@ public class RailroadModel {
         return model;
     }
 
-    //Ezt ki írta és mi ez? Miért nem volt jó az előző? Inkább azt kéne módosítani.
-   /* public RailroadModel(String location) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(new BufferedInputStream(new FileInputStream(new File(location)))));
 
-        String line = null;
-
-        while ((line = reader.readLine()) != null) {
-            String[] args = line.split(" ");
-
-        }
-    }*/
-
+    /**
+     * Privát konstruktor.
+     */
    private RailroadModel(){}
 
+    /**
+     * A pályaelemek inicíalizálása, pálya létrehozása.
+     */
     public void initFieldElements()
     {
         Depot depot = new Depot();
@@ -52,12 +56,23 @@ public class RailroadModel {
         track2.setElements(station,conveyor);
     }
 
+    /**
+     * Játék elindítása (A szkeletonban nincs még ilyen viselkedés.)
+     */
     public void startGame(){}
 
+    /**
+     * A játék véget ért.
+     */
     public void finishGame(){
         Logger.CallLogging("RailroadModel", "finishGame()");
         Logger.ReturnLogging("RailroadModel", "finishGame()");
     }
 
+    /**
+     * Ha egy vonat összes kocsija kiürült, akkor csökenti a teli vonatok számát a modelben,
+     * illetve ha ez a szám nulla, meghívja  a finishgamet.
+     * (Szerepe csak akkor lesz, amikor több vonat kerül a modelbe)
+     */
     public void emptyTrain(){}
 }

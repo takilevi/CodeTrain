@@ -1,14 +1,14 @@
 /**
- *
+ * A szekvencia diagramok kirajzolását vegző osztály.
  */
 public class Logger {
 
     private static int depth=0;
 
     /**
-     *
-     * @param className
-     * @param methodName
+     * Függényhívásokkor hívódik, ilyenkor mindig egy tab-al alrébb kerül a következő függvény neve.
+     * @param className Osztály neve, ami meghívta.
+     * @param methodName Függvény neve, ami meghívta.
      */
     public static void CallLogging(String className, String methodName)
     {
@@ -21,9 +21,9 @@ public class Logger {
     }
 
     /**
-     *
-     * @param className
-     * @param methodName
+     * Visszalépünk a függvényhívásokból. (== return)
+     * @param className Osztály nevem ami meghívta.
+     * @param methodName Függvény neve, ami meghívta.
      */
     public static void ReturnLogging(String className, String methodName)
     {

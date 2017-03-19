@@ -2,14 +2,15 @@ import java.io.IOException;
 import java.util.Scanner;
 
 /**
- *
+ * Az alkalmazás tartalmazza a main függvényt, innen indul a program,
+ * illetve a vezérlést is ez az osztály végzi.
  */
 public class Application {
 
     /**
      * Az alkalmazás belépési pontja.
      * Kiírja a standard inputra a menüpontokat,
-     * madj bekéri a felhasználó által választott menüpont sorszámát.
+     * madj bekéri a felhasználó által választott menüpont sorszámát, és meghívja vele a Teszt függvényt.
      */
     public static void main(String[] args) {
         System.out.println("0. Kilépés");
@@ -37,8 +38,8 @@ public class Application {
     }
 
     /**
-     *
-     * @param input
+     * A main függvény hívja, a kapott paraméter alapján elindítja a megfelelő függvényhívásokat.
+     * @param input : A felhasználó által választott menüpont sorszáma
      */
     public static void Test(String input) {
         switch (input) {

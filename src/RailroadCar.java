@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+/**
+ * A vonatok kocsiját kezelő osztály.
+ */
 public class RailroadCar implements Movable {
 
     private boolean passengersOnBoard;
@@ -7,13 +10,27 @@ public class RailroadCar implements Movable {
     private RailroadCar carAfterCar;
     private Color color;
 
+    /**
+     * Létrehozhatunk új vonatkocsit.
+     * @param c A kocsi színe, csak ilyen színű állomáson rakhatja le utasait.
+     * @param current
+     * @param carAfter
+     */
     public void create(Color c, StaticElement current, RailroadCar carAfter) {
     }
 
+    /**
+     * Aktuális elem getter fügvénye.
+     * @return az aktuális elem
+     */
     public StaticElement getCurrentElement() {
         return null;
     }
 
+    /**
+     * Utasok leszállítása.
+     * @param color Az állomás színe, ha nem egyezik a kocsi színével, nem szálhatnak le az utasok.
+     */
     public void getOffPassengers(Color color) {
         Logger.CallLogging("RailroadCar","getOffPassengers(Color color)");
         Train vonat = new Train();
@@ -21,16 +38,28 @@ public class RailroadCar implements Movable {
         Logger.ReturnLogging("RailroadCar","getOffPassengers(Color color)");
     }
 
+    /**
+     * Előző elem beállítása
+     * @param currentElement Erről jött a kocsi.
+     */
     public void setPrevious(StaticElement currentElement) {
         Logger.CallLogging("RailroadCar","setPrevious(StaticElement currentElement)");
         Logger.ReturnLogging("RailroadCar","setPrevious(StaticElement currentElement)");
     }
 
+    /**
+     * Aktuális elem beállítása
+     * @param nextElement Ide lépett a kocsi.
+     */
     public void setCurrent(StaticElement nextElement) {
         Logger.CallLogging("RailroadCar","setCurrent(StaticElement currentElement)");
         Logger.ReturnLogging("RailroadCar","setCurrent(StaticElement currentElement)");
     }
 
+    /**
+     * Kocsi léptetése. Vagy előtte lévő kocsi, vagy a modony hívhatja meg.
+     * @param param Milyen elemre lépjünk tovább
+     */
     public void move(int param) {
         Logger.CallLogging("RailroadCar", "move()");
 
@@ -70,6 +99,10 @@ public class RailroadCar implements Movable {
         Logger.ReturnLogging("RailroadCar", "move()");
     }
 
+    /**
+     * Ütközés detektálása
+     * (A skeletonban csak mozodny ütközését vizsgáltunk, de ez kocsiknál sem különböző)
+     */
     public void crash() {
     }
 }

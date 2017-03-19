@@ -1,7 +1,7 @@
 import java.util.List;
 
 /**
- *
+ * A váltót megvalósító osztály
  */
 public class RailroadSwitch extends StaticElement {
 
@@ -9,13 +9,17 @@ public class RailroadSwitch extends StaticElement {
     private StaticElement staticDirection;
     private List<StaticElement> dynamicDirections;
 
+    /**
+     * A váltó konstruktora.
+     */
     public RailroadSwitch()
     {
     }
 
     /**
-     *
-     * @param dir
+     * Ez a fügvény hívódik, ha váltani szeretnénk.
+     * Megvizsgálja hogy van e mozgó objektum a váltón, és ennek megfelelően hív tovább.
+     * @param dir Az iránya amibe állítani szeretnénk a váltót.
      */
     public void changeSwitchToDirection(int dir){
 
@@ -37,8 +41,8 @@ public class RailroadSwitch extends StaticElement {
     }
 
     /**
-     *
-     * @return
+     * Azon elemet adja vissza amelyik az éppen aktuális elemek közül aktívak.
+     * @return Az aktív statikus elem.
      */
     public StaticElement getCurrentSwitchInDirection(){
         Logger.CallLogging("RailroadSwitch", "getCurrentSwitchInDirection()");
@@ -47,8 +51,8 @@ public class RailroadSwitch extends StaticElement {
     }
 
     /**
-     *
-     * @return
+     * Visszaadja a statikus irányt.
+     * @return Az elem ami statikus irányból szomszédos a váltóval.
      */
     public StaticElement getStaticDirection(){
         Logger.CallLogging("RailroadSwitch", "getStaticDirection()");
@@ -56,8 +60,8 @@ public class RailroadSwitch extends StaticElement {
         return null;}
 
     /**
-     *
-     * @param staticDir
+     * Beállíthatjuk az egyértékű elemet.
+     * @param staticDir Egy statikus elem, ez mindig fix, nem állíthatjuk
      */
     public void setStaticDirection(StaticElement staticDir)
     {
@@ -65,17 +69,17 @@ public class RailroadSwitch extends StaticElement {
     }
 
     /**
-     *
-     * @param i
+     * Váltunk egyet
+     * @param i Azon iránya, amibe állítani akarjuk a váltót.
      */
     public void setDirection(int i){
         Logger.CallLogging("RailroadSwitch","SetDirection(int i)");
     }
 
     /**
-     *
-     * @param previousElement
-     * @return
+     * Megnézi melyik irányba áll a váltó, és ezzel visszatér.
+     * @param previousElement Ahonan ide léptünk, nem ezt adja vissza.
+     * @return A következő elem a megfelelő irányba.
      */
     public StaticElement getNextElement(StaticElement previousElement)
     {
@@ -85,11 +89,16 @@ public class RailroadSwitch extends StaticElement {
 
         return null;
     }
+
+    /**
+     * Visszaadja az elemen elhelyezkedő mozgó objektumokat.
+     * @return Ezen objektumok listálya.
+     */
     public boolean isCrash(){ return false;}
 
     /**
-     *
-     * @return
+     * Visszaadja az elemen elhelyezkedő mozgó objektumokat.
+     * @return Ezen objektumok listálya.
      */
     public List<Movable> getTrainsOnElement()
     {
@@ -99,8 +108,8 @@ public class RailroadSwitch extends StaticElement {
     }
 
     /**
-     *
-     * @param m
+     * Elhagyjuk ezt az elemet. (Kikerül a listából)
+     * @param m Azon mozgó objektum aki elhagyja.
      */
     public void leaveElement(Movable m){
         Logger.CallLogging("RailroadSwitch", "leaveElement(Movable m)");
@@ -108,14 +117,18 @@ public class RailroadSwitch extends StaticElement {
     }
 
     /**
-     *
-     * @param m
+     * Ráléptünk az elemre. (Bekerül a listába az obejktum)
+     * @param m Aki rálpett az elemre.
      */
     public void stepToElement(Movable m){
         Logger.CallLogging("RailroadSwitch", "stepToElement(Movable m)");
         Logger.ReturnLogging("RailroadSwitch", "stepToElement(Movable m)");
     }
 
+    /**
+     * A váltó inicíalizálása
+     * @param directions Azon Statikus elemek, amelyek közül mindíg egyikre állíthatjuk a váltónkat.
+     */
     public void setDynamicDirections(List<StaticElement> directions)
     {
         dynamicDirections = directions;
