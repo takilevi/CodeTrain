@@ -88,19 +88,14 @@ public class Application {
                 t.build(e1);
                 break;
             case "11":
-                Tunnel tunnel = new Tunnel();
-                TunnelEntrance e2 = new TunnelEntrance();
-                tunnel.build(e2);
-                break;
-            case "12":
                 Tunnel t1 = new Tunnel();
                 t1.destroy(false);
                 break;
-            case "13":
+            case "12":
                 Tunnel t2 = new Tunnel();
                 t2.destroy(true);
                 break;
-            case "14":
+            case "13":
                 Locomotive l1 = new Locomotive();
                 l1.crash();
                 break;
