@@ -10,6 +10,18 @@ public class TunnelEntrance extends StaticElement {
     }
     public boolean getState(){ return false;}
 
+    public void changeState()
+    {
+
+    }
+
+    public StaticElement getTunnelElement()
+    {
+        Logger.CallLogging("TunnelEntrance", "getTunnelElement()");
+        Logger.ReturnLogging("TunnelEntrance", "getTunnelElement(): StaticElement");
+        return null;
+    }
+
     public void setElements(StaticElement previous, StaticElement next)
     {
         previousElement= previous;

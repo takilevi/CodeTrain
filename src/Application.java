@@ -64,6 +64,8 @@ public class Application {
             case "12":
                 break;
             case "13":
+                Tunnel t = new Tunnel();
+                t.destroy();
                 break;
             case "14":
                 Locomotive l1 = new Locomotive();
