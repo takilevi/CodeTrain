@@ -12,6 +12,8 @@ public class TunnelEntrance extends StaticElement {
 
     public void changeState()
     {
+        Logger.CallLogging("TunnelEntrance", "changeState()");
+        Logger.ReturnLogging("TunnelEntrance", "changeState(): StaticElement");
 
     }
 

@@ -62,10 +62,12 @@ public class Application {
             case "11":
                 break;
             case "12":
+                Tunnel t1 = new Tunnel();
+                t1.destroy(false);
                 break;
             case "13":
-                Tunnel t = new Tunnel();
-                t.destroy();
+                Tunnel t2 = new Tunnel();
+                t2.destroy(true);
                 break;
             case "14":
                 Locomotive l1 = new Locomotive();
