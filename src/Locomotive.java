@@ -1,27 +1,56 @@
 import java.util.Scanner;
 
+/**
+ *
+ */
 public class Locomotive implements Movable {
 
     private StaticElement currentElement;
     private StaticElement previousElement;
     private RailroadCar carAfterLocomotive;
 
+    /**
+     *
+     * @return
+     */
     public StaticElement getCurrentElement(){ return null;}
 
+    /**
+     *
+     * @return
+     */
     public StaticElement getPreviousElement(){ return null;}
 
+    /**
+     *
+     * @param current
+     * @param previous
+     * @param carAfter
+     */
     public void create(StaticElement current, StaticElement previous ,RailroadCar carAfter){}
 
+    /**
+     *
+     * @param currentElement
+     */
     public void setPrevious(StaticElement currentElement){
         Logger.CallLogging("Locomotive","setPrevious(StaticElement currentElement)");
         Logger.ReturnLogging("Locomotive","setPrevious(StaticElement currentElement)");
     }
 
+    /**
+     *
+     * @param nextElement
+     */
     public void setCurrent(StaticElement nextElement){
         Logger.CallLogging("Locomotive","setCurrent(StaticElement nextElement)");
         Logger.ReturnLogging("Locomotive","setCurrent(StaticElement nextElement)");
     }
 
+    /**
+     *
+     * @param param
+     */
     public void move(int param){
         Logger.CallLogging("Locomotive","move()");
         switch (param){
@@ -118,13 +147,12 @@ public class Locomotive implements Movable {
                 break;
 
         }
-
-
-
-
         Logger.ReturnLogging("Locomotive","move()");
     }
 
+    /**
+     *
+     */
     public void crash(){
         Logger.CallLogging("Locomotive", "crash()");
         Track s1 = new Track();

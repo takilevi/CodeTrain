@@ -1,20 +1,41 @@
 import java.util.List;
 
+/**
+ *
+ */
 public class Tunnel {
 
     private List<TunnelEntrance> entrances;
 
-    public void build(TunnelEntrance e1, TunnelEntrance e2){}
+    /**
+     *
+     * @param e1
+     */
+    public void build(TunnelEntrance e1) {
 
-    public void destroy(boolean containsTrain)
-    {
+        Logger.CallLogging("Tunnel", "build(TunnelEntrance e1)");
+        Logger.CallLogging("TunnelEntrance","add(e1)");
+        Logger.ReturnLogging("TunnelEntrance","add(e2)");
+        Logger.CallLogging("TunnelEntrance","add(e2)");
+        e1.changeState();
+    }
+
+    /**
+     *
+     * @param containsTrain
+     */
+    public void destroy(boolean containsTrain) {
         Logger.CallLogging("Tunnel", "destroy()");
         checkTrainInTunnel(containsTrain);
         Logger.ReturnLogging("Tunnel", "destroy()");
     }
 
-    private boolean checkTrainInTunnel(boolean containsTrain)
-    {
+    /**
+     *
+     * @param containsTrain
+     * @return
+     */
+    private boolean checkTrainInTunnel(boolean containsTrain) {
         Logger.CallLogging("Tunnel", "checkTrainInTunnel()");
         TunnelEntrance t1 = new TunnelEntrance();
         Track s1 = new Track();
@@ -25,18 +46,15 @@ public class Tunnel {
         s1.getNextElement(t1);
         s2.getTrainsOnElement();
 
-        if(!containsTrain)
-        {
+        if (!containsTrain) {
             Track s3 = new Track();
             s2.getNextElement(s1);
             s3.getTrainsOnElement();
             s3.getNextElement(s2);
         }
-        if(containsTrain)
-        {
+        if (containsTrain) {
             Logger.ReturnLogging("Tunnel", "checkTrainInTunnel(): true");
-        }
-        else{
+        } else {
             Logger.ReturnLogging("Tunnel", "checkTrainInTunnel(): false");
             TunnelEntrance t0 = new TunnelEntrance();
             t0.changeState();
