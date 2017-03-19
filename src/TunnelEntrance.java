@@ -25,6 +25,7 @@ public class TunnelEntrance extends StaticElement {
     public StaticElement getTunnelElement()
     {
         Logger.CallLogging("TunnelEntrance", "getTunnelElement()");
+        getState();
         Logger.ReturnLogging("TunnelEntrance", "getTunnelElement(): StaticElement");
         return null;
     }
@@ -37,7 +38,6 @@ public class TunnelEntrance extends StaticElement {
     public StaticElement getNextElement(StaticElement previousElement)
     {
         Logger.CallLogging("TunnelEntrance", "getNextElement()");
-        getState();
         Logger.ReturnLogging("TunnelEntrance", "getNextElement(): TunnelElement");
 
         return null;

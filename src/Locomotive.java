@@ -79,13 +79,25 @@ public class Locomotive implements Movable {
             case 4:
                 TunnelEntrance te1 = new TunnelEntrance();
                 StaticElement temp_tunnelentrance = new StaticElement();
-                te1.getNextElement(temp_tunnelentrance);
+                te1.getTunnelElement();
                 setPrevious(te1);
                 setCurrent(temp_tunnelentrance);
 
                 te1.leaveElement(this);
                 temp_tunnelentrance.stepToElement(this);
 
+                break;
+            case 6:
+                TunnelEntrance te2 = new TunnelEntrance();
+                Track tunneltrack = new Track();
+
+                te2.getNextElement(tunneltrack);
+
+                setPrevious(te2);
+                setCurrent(tunneltrack);
+
+                te2.leaveElement(this);
+                tunneltrack.stepToElement(this);
                 break;
 
         }
