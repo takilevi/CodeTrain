@@ -2,15 +2,14 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Application {
-    private void initModelsForTesting() throws IOException {
-        RailroadModel model_task_1 = new RailroadModel("./map_files/task_1.txt");
+    //private void initModelsForTesting() throws IOException {
+    //    RailroadModel model_task_1 = new RailroadModel("./map_files/task_1.txt");
 
-    }
+
 
 
     public static void main(String[] args) {
         System.out.println("0. Kilépés");
-        //System.out.println("1. Pálya felépítése");
         System.out.println("1. Vonat (mozdony+kocsi) sínen lép");
         System.out.println("2. Vonat váltón lép előre");
         System.out.println("3. Vonat váltón lép vissza");
@@ -41,7 +40,6 @@ public class Application {
                 System.exit(1);
                 break;
             case "1":
-                //RailroadModel.getInstance().initFieldElements();
                 break;
             case "2":
                 break;
@@ -68,6 +66,8 @@ public class Application {
             case "13":
                 break;
             case "14":
+                Locomotive l1 = new Locomotive();
+                l1.crash();
                 break;
             default:
                 System.exit(0);

@@ -5,8 +5,6 @@ public class Track extends StaticElement {
 
     public Track()
     {
-        Logger.CallLogging("Track", "Track()");
-        Logger.ReturnLogging("Track", "Track()");
     }
 
     public void setElements(StaticElement previous, StaticElement next)
@@ -14,4 +12,14 @@ public class Track extends StaticElement {
         previousElement= previous;
         nextElement = next;
     }
+
+    public boolean isCrash()
+    {
+        Logger.CallLogging("Track", "isCrash()");
+        Logger.ReturnLogging("Track", "isCrash(): true");
+        return true;
+    }
 }
+
+
+

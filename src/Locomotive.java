@@ -1,3 +1,4 @@
+
 public class Locomotive implements Movable {
 
     private StaticElement currentElement;
@@ -16,5 +17,12 @@ public class Locomotive implements Movable {
 
     public void move(){}
 
-    public void crash(){}
+    public void crash(){
+        Logger.CallLogging("Locomotive", "crash()");
+        Track s1 = new Track();
+        s1.isCrash();
+        RailroadModel.getInstance().finishGame();
+        Logger.ReturnLogging("Locomotive", "crash(): exit");
+
+    }
 }

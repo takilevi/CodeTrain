@@ -8,8 +8,6 @@ public class RailroadSwitch extends StaticElement {
 
     public RailroadSwitch()
     {
-        Logger.CallLogging("RailroadSwitch", "RailroadSwitch()");
-        Logger.ReturnLogging("RailroadSwitch", "RailroadSwitch()");
     }
 
     public void changeSwitchToDirection(int dir){}

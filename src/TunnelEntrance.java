@@ -7,8 +7,6 @@ public class TunnelEntrance extends StaticElement {
 
     public TunnelEntrance()
     {
-        Logger.CallLogging("TunnelEntrance", "TunnelEntrance()");
-        Logger.ReturnLogging("TunnelEntrance", "TunnelEntrance()");
     }
     public boolean getState(){ return false;}
 
