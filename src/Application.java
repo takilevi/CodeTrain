@@ -7,7 +7,9 @@ import java.util.Scanner;
 public class Application {
 
     /**
-     *
+     * Az alkalmazás belépési pontja.
+     * Kiírja a standard inputra a menüpontokat,
+     * madj bekéri a felhasználó által választott menüpont sorszámát.
      */
     public static void main(String[] args) {
         System.out.println("0. Kilépés");
