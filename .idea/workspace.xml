@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2871a42f-36e9-4878-9344-750d1096d763" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Application.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Application.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Locomotive.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Locomotive.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Movable.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Movable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/RailroadCar.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/RailroadCar.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/RailroadSwitch.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/RailroadSwitch.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Track.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Track.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Train.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Train.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application.java" afterPath="$PROJECT_DIR$/src/Application.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Locomotive.java" afterPath="$PROJECT_DIR$/src/Locomotive.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Movable.java" afterPath="$PROJECT_DIR$/src/Movable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RailroadCar.java" afterPath="$PROJECT_DIR$/src/RailroadCar.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RailroadSwitch.java" afterPath="$PROJECT_DIR$/src/RailroadSwitch.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Track.java" afterPath="$PROJECT_DIR$/src/Track.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Train.java" afterPath="$PROJECT_DIR$/src/Train.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,8 +24,8 @@
       <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="38" column="18" lean-forward="false" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+            <state relative-caret-position="238">
+              <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,8 +46,8 @@
       <file leaf-file-name="Locomotive.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Locomotive.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="52" column="48" lean-forward="false" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
+            <state relative-caret-position="274">
+              <caret line="60" column="57" lean-forward="true" selection-start-line="60" selection-start-column="57" selection-end-line="60" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -80,8 +69,8 @@
       <file leaf-file-name="RailroadSwitch.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/RailroadSwitch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+            <state relative-caret-position="206">
+              <caret line="26" column="64" lean-forward="true" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -164,9 +153,9 @@
         <option value="$PROJECT_DIR$/src/StaticElement.java" />
         <option value="$PROJECT_DIR$/src/Train.java" />
         <option value="$PROJECT_DIR$/src/Movable.java" />
-        <option value="$PROJECT_DIR$/src/Application.java" />
         <option value="$PROJECT_DIR$/src/Track.java" />
         <option value="$PROJECT_DIR$/src/RailroadCar.java" />
+        <option value="$PROJECT_DIR$/src/Application.java" />
         <option value="$PROJECT_DIR$/src/RailroadSwitch.java" />
         <option value="$PROJECT_DIR$/src/Locomotive.java" />
       </list>
@@ -649,7 +638,7 @@
       <updated>1489862858694</updated>
       <workItem from="1489862864346" duration="5927000" />
       <workItem from="1489929293340" duration="7391000" />
-      <workItem from="1489943256502" duration="3524000" />
+      <workItem from="1489943256502" duration="5084000" />
     </task>
     <task id="LOCAL-00001" summary="KÉSZ: 14-es pont&#10;TODO: Loggingot átnézni, nem világos, hogy hogyan is kéne kinéznie&#10;TODO: Többi menüpont">
       <created>1489933169166</created>
@@ -679,11 +668,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489945627351</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Kész: 2-es">
+      <created>1489946818421</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1489946818421</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16842000" />
+    <option name="totallyTimeSpent" value="18402000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -731,7 +727,8 @@
     <MESSAGE value="KÉSZ: 13, 14-es pont&#10;TODO: Loggingot átnézni, nem világos, hogy hogyan is kéne kinéznie&#10;TODO: Többi menüpont" />
     <MESSAGE value="Kész: 1-es" />
     <MESSAGE value="BUGFIXED Kész: 1-es" />
-    <option name="LAST_COMMIT_MESSAGE" value="BUGFIXED Kész: 1-es" />
+    <MESSAGE value="Kész: 2-es" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kész: 2-es" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -936,6 +933,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/StaticElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="28" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/RailroadCar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="512">
@@ -943,16 +948,6 @@
           <folding>
             <element signature="e#322#323#0" expanded="true" />
             <element signature="e#349#350#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="38" column="18" lean-forward="false" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -965,26 +960,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StaticElement.java">
+    <entry file="file://$PROJECT_DIR$/src/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="28" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="238">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RailroadSwitch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        <state relative-caret-position="206">
+          <caret line="26" column="64" lean-forward="true" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Locomotive.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="52" column="48" lean-forward="false" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
+        <state relative-caret-position="274">
+          <caret line="60" column="57" lean-forward="true" selection-start-line="60" selection-start-column="57" selection-end-line="60" selection-end-column="57" />
           <folding />
         </state>
       </provider>

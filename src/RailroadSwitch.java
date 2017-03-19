@@ -22,7 +22,10 @@ public class RailroadSwitch extends StaticElement {
         return null;
     }
 
-    public StaticElement getStaticDirection(){return null;}
+    public StaticElement getStaticDirection(){
+        Logger.CallLogging("RailroadSwitch", "getStaticDirection()");
+        Logger.ReturnLogging("RailroadSwitch", "staticElement");
+        return null;}
 
     public void setStaticDirection(StaticElement staticDir)
     {

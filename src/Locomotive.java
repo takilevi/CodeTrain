@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Locomotive implements Movable {
 
@@ -52,6 +53,28 @@ public class Locomotive implements Movable {
                 rs1.leaveElement(this);
                 temp_switch.stepToElement(this);
 
+                break;
+            case 3:
+                StaticElement ste = new StaticElement();
+                RailroadSwitch rs2 = new RailroadSwitch();
+                System.out.print("\nNyomj 1-est ha jó felé áll a switch, 2-est ha nem: ");
+                Scanner scanner = new Scanner(System.in);
+                switch (scanner.nextInt()){
+                    case 1:
+                        rs2.getStaticDirection();
+                        StaticElement temp_switch2 = new StaticElement();
+                        setPrevious(rs2);
+                        setCurrent(temp_switch2);
+
+                        rs2.leaveElement(this);
+                        temp_switch2.stepToElement(this);
+                        break;
+                    case 2:
+                        RailroadModel.getInstance().finishGame();
+                        break;
+                    default:
+                        System.exit(1);
+                }
                 break;
 
         }

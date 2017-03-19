@@ -43,6 +43,8 @@ public class Application {
                 tr2.awakeLocomotive(2);
                 break;
             case "3":
+                Train tr3 = new Train();
+                tr3.awakeLocomotive(3);
                 break;
             case "4":
                 break;
