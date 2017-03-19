@@ -10,7 +10,11 @@ public class RailroadSwitch extends StaticElement {
     {
     }
 
-    public void changeSwitchToDirection(int dir){}
+    public void changeSwitchToDirection(int dir){
+        Logger.CallLogging("RailroadSwitch","changeSwitchToDirection");
+
+        Logger.ReturnLogging("RailroadSwitch","changeSwitchToDirection");
+    }
 
     public StaticElement getCurrentSwitchInDirection(){ return null; }
 

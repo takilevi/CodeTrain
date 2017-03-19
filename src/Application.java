@@ -4,10 +4,6 @@ import java.util.Scanner;
 public class Application {
     //private void initModelsForTesting() throws IOException {
     //    RailroadModel model_task_1 = new RailroadModel("./map_files/task_1.txt");
-
-
-
-
     public static void main(String[] args) {
         System.out.println("0. Kilépés");
         System.out.println("1. Vonat (mozdony+kocsi) sínen lép");
@@ -42,6 +38,7 @@ public class Application {
             case "1":
                 break;
             case "2":
+
                 break;
             case "3":
                 break;
@@ -54,6 +51,8 @@ public class Application {
             case "7":
                 break;
             case "8":
+                RailroadSwitch rs = new RailroadSwitch();
+                rs.changeSwitchToDirection(0);
                 break;
             case "9":
                 break;
