@@ -35,11 +35,12 @@ public class Application {
                 System.exit(1);
                 break;
             case "1":
-                Train t = new Train();
-                t.awakeLocomotive();
+                Train tr = new Train();
+                tr.awakeLocomotive(1);
                 break;
             case "2":
-
+                Train tr2 = new Train();
+                tr2.awakeLocomotive(2);
                 break;
             case "3":
                 break;

@@ -25,21 +25,29 @@ public class RailroadCar implements Movable {
         Logger.ReturnLogging("RailroadCar","setCurrent(StaticElement currentElement)");
     }
 
-    public void move() {
+    public void move(int param) {
         Logger.CallLogging("RailroadCar", "move()");
 
-        Track s1 = new Track();
-        Track s2 = new Track();
-        RailroadCar r = new RailroadCar();
+        switch (param){
+            case 1:
+                Track s1 = new Track();
+                Track s2 = new Track();
+                RailroadCar r = new RailroadCar();
 
-        s2.getNextElement(s1);
-        Track temp = new Track();
-        setPrevious(s2);
-        setCurrent(temp);
+                s2.getNextElement(s1);
+                Track temp = new Track();
+                setPrevious(s2);
+                setCurrent(temp);
 
-        s2.leaveElement(this);
+                s2.leaveElement(this);
 
-        temp.stepToElement(this);
+                temp.stepToElement(this);
+                break;
+            case 2:
+
+                break;
+        }
+
 
         Logger.CallLogging("RailroadCar", "move()");
     }

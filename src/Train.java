@@ -14,11 +14,11 @@ public class Train {
 
     public void StartTrain(){}
 
-    public void awakeLocomotive(){
+    public void awakeLocomotive(int param){
         Logger.CallLogging("Train","awakeLocomotive()");
 
         Locomotive l = new Locomotive();
-        l.move();
+        l.move(param);
 
         Logger.ReturnLogging("Train", "awakeLocomotive()");
     }
