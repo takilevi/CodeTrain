@@ -2,8 +2,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Application {
-    //private void initModelsForTesting() throws IOException {
-    //    RailroadModel model_task_1 = new RailroadModel("./map_files/task_1.txt");
+
     public static void main(String[] args) {
         System.out.println("0. Kilépés");
         System.out.println("1. Vonat (mozdony+kocsi) sínen lép");
@@ -36,6 +35,11 @@ public class Application {
                 System.exit(1);
                 break;
             case "1":
+
+                Train t = new Train();
+                Locomotive l = new Locomotive();
+                RailroadCar r = new RailroadCar();
+                t.awakeLocomotive();
                 break;
             case "2":
 

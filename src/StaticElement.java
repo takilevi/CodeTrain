@@ -7,7 +7,7 @@ public class StaticElement {
     public StaticElement getNextElement(StaticElement previousElement)
     {
         Logger.CallLogging("StaticElement", "getNextElement()");
-        Logger.ReturnLogging("StaticElement", "getNextElement()");
+        Logger.ReturnLogging("StaticElement", "nextElement");
 
         return null;
     }
@@ -18,6 +18,14 @@ public class StaticElement {
         Logger.ReturnLogging("StaticElement", "getTrainsOnElement()");
         return null;
 
+    }
+    public void leaveElement(Movable m){
+        Logger.CallLogging("StaticElement", "leaveElement(Movable m)");
+        Logger.ReturnLogging("StaticElement", "leaveElement(Movable m)");
+    }
+    public void stepToElement(Movable m){
+        Logger.CallLogging("StaticElement", "stepToElement(Movable m)");
+        Logger.ReturnLogging("StaticElement", "stepToElement(Movable m)");
     }
 
 

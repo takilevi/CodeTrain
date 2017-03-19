@@ -15,7 +15,7 @@ public class Tunnel {
 
     private boolean checkTrainInTunnel(boolean containsTrain)
     {
-        Logger.CallLogging("Tunnel", "destroy()");
+        Logger.CallLogging("Tunnel", "checkTrainInTunnel()");
         TunnelEntrance t1 = new TunnelEntrance();
         Track s1 = new Track();
         Track s2 = new Track();
