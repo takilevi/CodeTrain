@@ -85,8 +85,6 @@ public class Application {
                 Tunnel t = new Tunnel();
                 TunnelEntrance e1 = new TunnelEntrance();
                 t.build(e1);
-                TunnelEntrance e2 = new TunnelEntrance();
-                t.build(e2);
                 break;
             case "11":
                 Tunnel t1 = new Tunnel();
