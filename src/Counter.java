@@ -1,3 +1,6 @@
+/**
+ *
+ */
 public class Counter extends Thread {
 
     private int stepTime;

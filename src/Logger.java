@@ -1,8 +1,15 @@
-
+/**
+ *
+ */
 public class Logger {
 
     private static int depth=0;
 
+    /**
+     *
+     * @param className
+     * @param methodName
+     */
     public static void CallLogging(String className, String methodName)
     {
         for(int i=0;i<depth;i++)
@@ -13,6 +20,11 @@ public class Logger {
         depth++;
     }
 
+    /**
+     *
+     * @param className
+     * @param methodName
+     */
     public static void ReturnLogging(String className, String methodName)
     {
         depth--;

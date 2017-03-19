@@ -1,6 +1,9 @@
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ *
+ */
 public class Train {
 
     private int totalLength;
@@ -8,6 +11,12 @@ public class Train {
     private List<RailroadCar> cars;
     private int emptyCars;
 
+    /**
+     *
+     * @param length
+     * @param next
+     * @param d
+     */
     private Train(int length, StaticElement next, Depot d){}
     public Train(){}
 
@@ -27,6 +36,10 @@ public class Train {
 
     public void StartTrain(){}
 
+    /**
+     *
+     * @param param
+     */
     public void awakeLocomotive(int param){
         Logger.CallLogging("Train","awakeLocomotive()");
 

@@ -1,8 +1,14 @@
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ *
+ */
 public class Application {
 
+    /**
+     *
+     */
     public static void main(String[] args) {
         System.out.println("0. Kilépés");
         System.out.println("1. Vonat (mozdony+kocsi) sínen lép");
@@ -28,7 +34,10 @@ public class Application {
         }
     }
 
-
+    /**
+     *
+     * @param input
+     */
     public static void Test(String input) {
         switch (input) {
             case "0":
@@ -63,14 +72,22 @@ public class Application {
                 tr7.awakeLocomotive(7);
                 break;
             case "8":
-                RailroadSwitch rs = new RailroadSwitch();
-                rs.changeSwitchToDirection(0);
+                RailroadSwitch rs1 = new RailroadSwitch();
+                rs1.changeSwitchToDirection(1);
                 break;
             case "9":
+                RailroadSwitch rs2 = new RailroadSwitch();
+                rs2.changeSwitchToDirection(2);
                 break;
             case "10":
+                Tunnel t = new Tunnel();
+                TunnelEntrance e1 = new TunnelEntrance();
+                t.build(e1);
                 break;
             case "11":
+                Tunnel tunnel = new Tunnel();
+                TunnelEntrance e2 = new TunnelEntrance();
+                tunnel.build(e2);
                 break;
             case "12":
                 Tunnel t1 = new Tunnel();
