@@ -99,6 +99,23 @@ public class Locomotive implements Movable {
                 te2.leaveElement(this);
                 tunneltrack.stepToElement(this);
                 break;
+            case 7:
+                Track tr1_st = new Track();
+                Station stat1 = new Station();
+                Track tr2_st = new Track();
+                RailroadCar station_car = new RailroadCar();
+
+                stat1.getNextElement(tr1_st);
+                setPrevious(stat1);
+                setCurrent(tr2_st);
+
+                stat1.leaveElement(this);
+                tr2_st.stepToElement(this);
+
+                station_car.move(2);
+
+
+                break;
 
         }
 

@@ -59,6 +59,8 @@ public class Application {
                 tr6.awakeLocomotive(6);
                 break;
             case "7":
+                Train tr7 = new Train();
+                tr7.awakeLocomotive(7);
                 break;
             case "8":
                 RailroadSwitch rs = new RailroadSwitch();
