@@ -45,7 +45,7 @@ public class Track extends StaticElement {
     public StaticElement getNextElement(StaticElement previousElement)
     {
         Logger.CallLogging("Track", "getNextElement()");
-        Logger.ReturnLogging("Track", "nextElement");
+        Logger.ReturnLogging("Track", "getNextElement(): nextElement");
 
         return null;
     }

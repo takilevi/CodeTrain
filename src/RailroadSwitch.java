@@ -30,7 +30,7 @@ public class RailroadSwitch extends StaticElement {
                 setDirection(1);
 
                 if(trainsOnElement == 0){
-                    Logger.ReturnLogging("RailroadSwitch","setDirection(in i)");
+                    Logger.ReturnLogging("RailroadSwitch","setDirection(int i)");
                 }
                 Logger.ReturnLogging("RailroadSwitch","changeSwitchToDirection(int i)");
                 break;
@@ -46,7 +46,7 @@ public class RailroadSwitch extends StaticElement {
      */
     public StaticElement getCurrentSwitchInDirection(){
         Logger.CallLogging("RailroadSwitch", "getCurrentSwitchInDirection()");
-        Logger.ReturnLogging("RailroadSwitch", "staticElement");
+        Logger.ReturnLogging("RailroadSwitch", "getCurrentSwitchInDirection(): staticElement");
         return null;
     }
 
@@ -56,7 +56,7 @@ public class RailroadSwitch extends StaticElement {
      */
     public StaticElement getStaticDirection(){
         Logger.CallLogging("RailroadSwitch", "getStaticDirection()");
-        Logger.ReturnLogging("RailroadSwitch", "staticElement");
+        Logger.ReturnLogging("RailroadSwitch", "getStaticDirection(): staticElement");
         return null;}
 
     /**
@@ -73,6 +73,7 @@ public class RailroadSwitch extends StaticElement {
      * @param i Azon iránya, amibe állítani akarjuk a váltót.
      */
     public void setDirection(int i){
+
         Logger.CallLogging("RailroadSwitch","SetDirection(int i)");
     }
 
@@ -85,7 +86,7 @@ public class RailroadSwitch extends StaticElement {
     {
         Logger.CallLogging("RailroadSwitch", "getNextElement()");
         getCurrentSwitchInDirection();
-        Logger.ReturnLogging("RailroadSwitch", "nextElement");
+        Logger.ReturnLogging("RailroadSwitch", "getNextElement(): nextElement");
 
         return null;
     }
