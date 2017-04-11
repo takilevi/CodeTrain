@@ -65,7 +65,112 @@ public class RailroadModel {
         }
     }
 
-    public void CommandExecution(String command){
+    public void CommandExecution(String c){
+
+        if(c == null){
+            return;
+        }
+
+        String mapName;
+        String trainName;
+        String locomotiveName;
+        String mapElement;
+        String carName;
+        String color;
+        String passengers;
+        String step;
+        String switchName;
+        String switchState;
+        String Tenter1;
+        String Tenter2;
+        String stationName;
+
+        String [] command = c.split(" ");
+
+        switch (command[0]){
+            case "help":
+                break;
+
+            case "loadMap":
+                mapName = command[1];
+                break;
+
+            case "listMapElements":
+                break;
+
+            case "listTrain":
+                trainName = command[1];
+                break;
+
+            case "listTrains":
+                break;
+
+            case "addLocomotive":
+                trainName = command[1];
+                locomotiveName = command[2];
+                mapElement = command[3];
+                break;
+
+            case "addPassengerCarToLocomotive":
+                locomotiveName = command[1];
+                carName = command[2];
+                color = command[3];
+                passengers = command[4];
+                break;
+
+            case "addHopperCarToLocomotive":
+                locomotiveName = command[1];
+                carName = command[2];
+                break;
+
+            case "stepLocomotive":
+                locomotiveName = command[1];
+                step = command[2];
+                break;
+
+            case "stepAll":
+                step = command[1];
+                break;
+
+            case "run":
+                break;
+
+            case "stop":
+                break;
+
+            case "changeSwitch":
+                switchName = command[1];
+                switchState = command[2];
+                break;
+
+            case "buildTunnel":
+                Tenter1 = command[1];
+                Tenter2 = command[2];
+                break;
+
+            case "destroyTunnel":
+                break;
+
+            case "readSwitch":
+                switchName = command[1];
+                break;
+
+            case "changeStationParams":
+                stationName =command[1];
+                color = command[2];
+                passengers = command[3];
+                break;
+
+            case "readStationParams":
+                stationName = command[1];
+                break;
+
+            case "readPassengerCarParams":
+                locomotiveName = command[1];
+                carName = command[2];
+                break;
+
+        }
 
     }
 
