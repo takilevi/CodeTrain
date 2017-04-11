@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
  * A "depó",azaz a kocsiszín, a vonatok indításáért felelős, innen indulnak a vonatok.
  * Csak egy irányba lehet elhagyni az depót,
@@ -5,27 +7,33 @@
  */
 public class Depot extends StaticElement {
 
+
+    private List<StaticElement> depotElements;
+
     /**
      * A kocsiszín konstruktora.
      */
-    public Depot()
-    {
-    }
+    public Depot() {}
 
-    private StaticElement nextElement;
-
-
-    /**
-     * A depó után következő statikus elemet lehet beállítani a settere segítségével.
-     * @param next : A következő elem
-     */
-    public void setNextElement(StaticElement next)
-    {
-        nextElement = next;
+    public List<StaticElement> getDepotElements() {
+        return depotElements;
     }
 
     /**
      * Vonatot bocsájt ki a pályára
      */
     public void releaseTrain(){}
+
+    public void checkElementsFree(){}
+
+    public void addDepotPoint(StaticElement point) {
+
+        depotElements.add(point);
+
+    }
+
+    @Override
+    public StaticElement getNextElement(StaticElement previousElement) {
+        return null;
+    }
 }

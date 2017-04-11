@@ -23,20 +23,10 @@ public class RailroadSwitch extends StaticElement {
      */
     public void changeSwitchToDirection(int dir){
 
-        switch (dir){
-            case 1:
-                Logger.CallLogging("RailroadSwitch","changeSwitchToDirection(int i)");
-                trainsOnElement =0;
-                setDirection(1);
+        if(trainsOnElement.isEmpty()){
 
-                if(trainsOnElement == 0){
-                    Logger.ReturnLogging("RailroadSwitch","setDirection(int i)");
-                }
-                Logger.ReturnLogging("RailroadSwitch","changeSwitchToDirection(int i)");
-                break;
-            case 2:
-                Logger.CallLogging("RailroadSwitch","changeSwitchToDirection()");
-                Logger.ReturnLogging("RailroadSwitch","changeSwitchToDirection");
+            setDirection(dir);
+
         }
     }
 
@@ -45,9 +35,8 @@ public class RailroadSwitch extends StaticElement {
      * @return Az aktív statikus elem.
      */
     public StaticElement getCurrentSwitchInDirection(){
-        Logger.CallLogging("RailroadSwitch", "getCurrentSwitchInDirection()");
-        Logger.ReturnLogging("RailroadSwitch", "getCurrentSwitchInDirection(): staticElement");
-        return null;
+
+        return dynamicDirections.get(direction);
     }
 
     /**
@@ -55,16 +44,16 @@ public class RailroadSwitch extends StaticElement {
      * @return Az elem ami statikus irányból szomszédos a váltóval.
      */
     public StaticElement getStaticDirection(){
-        Logger.CallLogging("RailroadSwitch", "getStaticDirection()");
-        Logger.ReturnLogging("RailroadSwitch", "getStaticDirection(): staticElement");
-        return null;}
+
+        return staticDirection;
+    }
 
     /**
      * Beállíthatjuk az egyértékű elemet.
      * @param staticDir Egy statikus elem, ez mindig fix, nem állíthatjuk
      */
-    public void setStaticDirection(StaticElement staticDir)
-    {
+    public void setStaticDirection(StaticElement staticDir) {
+
         staticDirection = staticDir;
     }
 
@@ -74,7 +63,10 @@ public class RailroadSwitch extends StaticElement {
      */
     public void setDirection(int i){
 
-        Logger.CallLogging("RailroadSwitch","SetDirection(int i)");
+        if(i <= dynamicDirections.size()){
+            direction = i;
+        }
+
     }
 
     /**
@@ -84,18 +76,25 @@ public class RailroadSwitch extends StaticElement {
      */
     public StaticElement getNextElement(StaticElement previousElement)
     {
-        Logger.CallLogging("RailroadSwitch", "getNextElement()");
-        getCurrentSwitchInDirection();
-        Logger.ReturnLogging("RailroadSwitch", "getNextElement(): nextElement");
-
-        return null;
+        if(previousElement == staticDirection){
+            return dynamicDirections.get(direction);
+        }
+        else if(previousElement == dynamicDirections.get(direction)){
+            return staticDirection;
+        }
+        else{
+            //Finishgame, kéne ismernie a modellt nem?
+            return null;
+        }
     }
 
     /**
      * Visszaadja az elemen elhelyezkedő mozgó objektumokat.
      * @return Ezen objektumok listálya.
      */
-    public boolean isCrash(){ return false;}
+    public boolean isCrash(){
+        return false;
+    }
 
     /**
      * Visszaadja az elemen elhelyezkedő mozgó objektumokat.
@@ -103,9 +102,7 @@ public class RailroadSwitch extends StaticElement {
      */
     public List<Movable> getTrainsOnElement()
     {
-        Logger.CallLogging("RailroadSwitch", "getTrainsOnElement()");
-        Logger.ReturnLogging("RailroadSwitch", "getTrainsOnElement()");
-        return null;
+        return trainsOnElement;
     }
 
     /**
@@ -113,8 +110,10 @@ public class RailroadSwitch extends StaticElement {
      * @param m Azon mozgó objektum aki elhagyja.
      */
     public void leaveElement(Movable m){
-        Logger.CallLogging("RailroadSwitch", "leaveElement(Movable m)");
-        Logger.ReturnLogging("RailroadSwitch", "leaveElement(Movable m)");
+
+        if(trainsOnElement.contains(m)){
+            trainsOnElement.remove(m);
+        }
     }
 
     /**
@@ -122,8 +121,10 @@ public class RailroadSwitch extends StaticElement {
      * @param m Aki rálpett az elemre.
      */
     public void stepToElement(Movable m){
-        Logger.CallLogging("RailroadSwitch", "stepToElement(Movable m)");
-        Logger.ReturnLogging("RailroadSwitch", "stepToElement(Movable m)");
+
+        if(!trainsOnElement.contains(m)){
+            trainsOnElement.add(m);
+        }
     }
 
     /**

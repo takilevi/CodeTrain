@@ -32,9 +32,7 @@ public class Track extends StaticElement {
      */
     public boolean isCrash()
     {
-        Logger.CallLogging("Track", "isCrash()");
-        Logger.ReturnLogging("Track", "isCrash(): true");
-        return true;
+        return false;
     }
 
     /**
@@ -44,10 +42,12 @@ public class Track extends StaticElement {
      */
     public StaticElement getNextElement(StaticElement previousElement)
     {
-        Logger.CallLogging("Track", "getNextElement()");
-        Logger.ReturnLogging("Track", "getNextElement(): nextElement");
-
-        return null;
+        if(this.previousElement == previousElement){
+            return nextElement;
+        }
+        else{
+            return previousElement;
+        }
     }
 
     /**
@@ -56,9 +56,7 @@ public class Track extends StaticElement {
      */
     public List<Movable> getTrainsOnElement()
     {
-        Logger.CallLogging("Track", "getTrainsOnElement()");
-        Logger.ReturnLogging("Track", "getTrainsOnElement()");
-        return null;
+        return trainsOnElement;
 
     }
 
@@ -67,8 +65,10 @@ public class Track extends StaticElement {
      * @param m Azon mozgó objektum aki elhagyja.
      */
     public void leaveElement(Movable m){
-        Logger.CallLogging("Track", "leaveElement(Movable m)");
-        Logger.ReturnLogging("Track", "leaveElement(Movable m)");
+
+        if(trainsOnElement.contains(m)){
+            trainsOnElement.remove(m);
+        }
     }
 
     /**
@@ -76,8 +76,10 @@ public class Track extends StaticElement {
      * @param m Aki rálpett az elemre.
      */
     public void stepToElement(Movable m){
-        Logger.CallLogging("Track", "stepToElement(Movable m)");
-        Logger.ReturnLogging("Track", "stepToElement(Movable m)");
+
+        if(!trainsOnElement.contains(m)){
+            trainsOnElement.add(m);
+        }
     }
 }
 

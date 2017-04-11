@@ -3,22 +3,16 @@ import java.util.List;
 /**
  * Statikus pályaelemet reprezentál. (Az amire a mozgó objektumaink ráléphetnek)
  */
-public class StaticElement {
+public abstract class StaticElement {
 
-    protected int trainsOnElement;
+    protected List<Movable> trainsOnElement;
 
     /**
      * Azon statikus szomszédját adja vissza, ami nem egyenlő azzal ahonan oda léptünk.
      * @param previousElement Ahonan ide léptünk, nem ezt adja vissza.
      * @return A következő elem a megfelelő irányba.
      */
-    public StaticElement getNextElement(StaticElement previousElement)
-    {
-        Logger.CallLogging("StaticElement", "getNextElement()");
-        Logger.ReturnLogging("StaticElement", "nextElement");
-
-        return null;
-    }
+    public abstract StaticElement getNextElement(StaticElement previousElement);
 
     /**
      * Volt e ütközés az elemet
@@ -32,10 +26,7 @@ public class StaticElement {
      */
     public List<Movable> getTrainsOnElement()
     {
-        Logger.CallLogging("StaticElement", "getTrainsOnElement()");
-        Logger.ReturnLogging("StaticElement", "getTrainsOnElement()");
-        return null;
-
+        return trainsOnElement;
     }
 
     /**
@@ -43,8 +34,10 @@ public class StaticElement {
      * @param m Azon mozgó objektum aki elhagyja.
      */
     public void leaveElement(Movable m){
-        Logger.CallLogging("StaticElement", "leaveElement(Movable m)");
-        Logger.ReturnLogging("StaticElement", "leaveElement(Movable m)");
+
+        if(trainsOnElement.contains(m)){
+            trainsOnElement.remove(m);
+        }
     }
 
     /**
@@ -52,8 +45,11 @@ public class StaticElement {
      * @param m Aki rálpett az elemre.
      */
     public void stepToElement(Movable m){
-        Logger.CallLogging("StaticElement", "stepToElement(Movable m)");
-        Logger.ReturnLogging("StaticElement", "stepToElement(Movable m)");
+
+        if(!trainsOnElement.contains(m)){
+            trainsOnElement.add(m);
+        }
+
     }
 
 

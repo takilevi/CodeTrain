@@ -9,38 +9,32 @@ public class Train {
     private int totalLength;
     private Locomotive locomotive;
     private List<RailroadCar> cars;
-    private int emptyCars;
+    private List<PassengerCar> freeCars;
+    private RailroadModel model;
 
-    /**
-     * A vonat privatát konstruktora
-     * @param length A vonat hossza
-     * @param next A következő elem ahova lépni fog a vonat
-     * @param d A depó, ahol létrejött a vonat
-     */
-    private Train(int length, StaticElement next, Depot d){}
+
 
     /**
      * Publikus konstruktor a vonathoz
      */
-    public Train(){}
+    public Train(RailroadModel model){
+        this.model = model;
+    }
 
     /**
      * Ha kiürül egy kocsi, eggyel csökenti a teli kocsik számát.
      * Ha az összes kocsi kiürült, és (ebben az esetben) nincs több vonat a modelben,
      * hív egy finishgame()-et.
      */
-    public void  emptyCar(){
-        Logger.CallLogging("Train","emptyCar()");
-        System.out.print("\nNyomj 1-est ha ez volt az utolsó kiürítendő kocsi, 2-est ha nem: ");
-        Scanner scanner = new Scanner(System.in);
-        switch (scanner.nextInt()) {
-            case 1:
-                RailroadModel.getInstance().finishGame();
-                break;
-            case 2:
-                break;
+    public void  emptyCar(PassengerCar car){
+
+        if(freeCars.contains(car)){
+            freeCars.remove(car);
+
+            if(freeCars.isEmpty()){
+                model.emptyTrain(this);
+            }
         }
-        Logger.ReturnLogging("Train","emptyCar()");
     }
 
     /**
@@ -53,11 +47,22 @@ public class Train {
      * @param param
      */
     public void awakeLocomotive(int param){
-        Logger.CallLogging("Train","awakeLocomotive()");
 
-        Locomotive l = new Locomotive();
-        l.move(param);
-
-        Logger.ReturnLogging("Train", "awakeLocomotive()");
     }
+
+    public boolean CheckPutDownEligible(RailroadCar from){
+        return false;
+    }
+
+    public void fillUpTrain(Locomotive loco, List<RailroadCar> cars){
+
+        locomotive = loco;
+
+        this.cars = cars;
+
+        //üres kicsit feltöltése, mert lehet alapból üresen indul 1 kocsi.
+
+    }
+
+
 }

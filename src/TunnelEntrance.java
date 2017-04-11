@@ -21,18 +21,20 @@ public class TunnelEntrance extends StaticElement {
      * @return Az alagút állapota. Igaz ha aktív az alagút.
      */
     public boolean getState(){
-        Logger.CallLogging("TunnelEntrance", "getState()");
-        Logger.ReturnLogging("TunnelEntrance", "getState(): true");
-        return true;}
+        return isActive;
+    }
 
     /**
      * Megváltoztatja az alagút bejárat állapotát.
      */
-    public void changeState()
-    {
-        Logger.CallLogging("TunnelEntrance", "changeState()");
-        Logger.ReturnLogging("TunnelEntrance", "changeState(): StaticElement");
+    public void changeState() {
 
+        if(isActive){
+            isActive = false;
+        }
+        else{
+            isActive = true;
+        }
     }
 
     /**
@@ -41,10 +43,7 @@ public class TunnelEntrance extends StaticElement {
      */
     public StaticElement getTunnelElement()
     {
-        Logger.CallLogging("TunnelEntrance", "getTunnelElement()");
-        getState();
-        Logger.ReturnLogging("TunnelEntrance", "getTunnelElement(): StaticElement");
-        return null;
+        return TunnelElement;
     }
 
     /**
@@ -65,16 +64,20 @@ public class TunnelEntrance extends StaticElement {
      */
     public StaticElement getNextElement(StaticElement previousElement)
     {
-        Logger.CallLogging("TunnelEntrance", "getNextElement()");
-        Logger.ReturnLogging("TunnelEntrance", "getNextElement(): TunnelElement");
-
-        return null;
+        if(this.previousElement == previousElement){
+            return nextElement;
+        }
+        else{
+            return previousElement;
+        }
     }
     /**
      * Volt e ütközés az elemet
      * @return Igaz, ha több mint egy mozgó objektum van rajta, egyébként hamis.
      */
-    public boolean isCrash(){ return false;}
+    public boolean isCrash(){
+        return false;
+    }
 
     /**
      * Visszaadja az elemen elhelyezkedő mozgó objektumokat.
@@ -82,9 +85,7 @@ public class TunnelEntrance extends StaticElement {
      */
     public List<Movable> getTrainsOnElement()
     {
-        Logger.CallLogging("TunnelEntrance", "getTrainsOnElement()");
-        Logger.ReturnLogging("TunnelEntrance", "getTrainsOnElement()");
-        return null;
+        return trainsOnElement;
     }
 
     /**
@@ -92,8 +93,10 @@ public class TunnelEntrance extends StaticElement {
      * @param m Azon mozgó objektum aki elhagyja.
      */
     public void leaveElement(Movable m){
-        Logger.CallLogging("TunnelEntrance", "leaveElement(Movable m)");
-        Logger.ReturnLogging("TunnelEntrance", "leaveElement(Movable m)");
+
+        if(trainsOnElement.contains(m)){
+            trainsOnElement.remove(m);
+        }
     }
 
     /**
@@ -101,7 +104,9 @@ public class TunnelEntrance extends StaticElement {
      * @param m Aki rálpett az elemre.
      */
     public void stepToElement(Movable m){
-        Logger.CallLogging("TunnelEntrance", "stepToElement(Movable m)");
-        Logger.ReturnLogging("TunnelEntrance", "stepToElement(Movable m)");
+
+        if(!trainsOnElement.contains(m)){
+            trainsOnElement.add(m);
+        }
     }
 }

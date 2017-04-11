@@ -5,14 +5,16 @@ import java.util.Scanner;
  * Állomást valósítja meg az osztály.
  */
 public class Station extends StaticElement {
+
     private StaticElement previousElement;
     private StaticElement nextElement;
+    private int getOnPassengers;
+    Color color;
 
     /**
      * Az állomás konstruktora.
      */
-    public Station()
-    {
+    public Station() {
     }
 
     /**
@@ -20,9 +22,9 @@ public class Station extends StaticElement {
      * @return Az állomás színe.
      */
     public Color getColor(){
-        Logger.CallLogging("Station", "getColor()");
-        Logger.ReturnLogging("Station", "getColor(): Blue");
-        return Color.Blue;}
+
+        return color;
+    }
 
     /**
      * Létrehozásakor be kell álítani, hogy melyik pontosan két elemhez kapcsolódik.
@@ -41,17 +43,21 @@ public class Station extends StaticElement {
      */
     public StaticElement getNextElement(StaticElement previousElement)
     {
-        Logger.CallLogging("Station", "getNextElement()");
-        Logger.ReturnLogging("Station", "getNextElement(): nextElement");
-
-        return null;
+        if(this.previousElement == previousElement){
+            return nextElement;
+        }
+        else{
+            return previousElement;
+        }
     }
 
     /**
      * Volt e ütközés az elemet
      * @return Igaz, ha több mint egy mozgó objektum van rajta, egyébként hamis.
      */
-    public boolean isCrash(){ return false;}
+    public boolean isCrash(){
+        return false;
+    }
 
     /**
      * Visszaadja az elemen elhelyezkedő mozgó objektumokat.
@@ -59,10 +65,7 @@ public class Station extends StaticElement {
      */
     public List<Movable> getTrainsOnElement()
     {
-        Logger.CallLogging("Station", "getTrainsOnElement()");
-        Logger.ReturnLogging("Station", "getTrainsOnElement() : List<Movable>");
-        return null;
-
+        return trainsOnElement;
     }
 
     /**
@@ -70,8 +73,10 @@ public class Station extends StaticElement {
      * @param m Azon mozgó objektum aki elhagyja.
      */
     public void leaveElement(Movable m){
-        Logger.CallLogging("Station", "leaveElement(Movable m)");
-        Logger.ReturnLogging("Station", "leaveElement(Movable m)");
+
+        if(trainsOnElement.contains(m)){
+            trainsOnElement.remove(m);
+        }
     }
 
     /**
@@ -79,9 +84,21 @@ public class Station extends StaticElement {
      * @param m Aki rálpett az elemre.
      */
     public void stepToElement(Movable m){
-        Logger.CallLogging("Station", "stepToElement(Movable m)");
 
-        Logger.ReturnLogging("Station", "stepToElement(Movable m)");
+        if(!trainsOnElement.contains(m)){
+            trainsOnElement.add(m);
+        }
+
+    }
+
+    public boolean isPassengersWaiting(){
+
+        if(getOnPassengers>0){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     /**
@@ -89,16 +106,6 @@ public class Station extends StaticElement {
      * @param r A kocsi aki rálépett az állomásra.
      */
     public void checkStation(RailroadCar r){
-        Logger.CallLogging("Station", "checkStation(RailroadCar r)");
-        System.out.print("\nNyomj 1-est ha le akarsz rakni utast, 2-est ha nem: ");
-        Scanner scanner = new Scanner(System.in);
-        switch (scanner.nextInt()){
-            case 1:
-                r.getOffPassengers(getColor());
-                break;
-            case 2:
-                break;
-        }
-        Logger.ReturnLogging("Station", "checkStation(RailroadCar r)");
+        //Ez kell még?
     }
 }
