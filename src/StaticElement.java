@@ -53,4 +53,8 @@ public abstract class StaticElement {
     }
 
 
+    public abstract void setNextElement(StaticElement nextElement);
+    public abstract void setPreviousElement(StaticElement previousElement);
+    public abstract void setDynamicDirection(StaticElement one_dir);
+    public abstract void setStaticDirection(StaticElement staticDir);
 }

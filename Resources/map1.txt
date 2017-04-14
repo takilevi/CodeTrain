@@ -4,13 +4,13 @@ Switch s1 2
 Track t3
 Track t4
 t3
-Station st1 blue
+Station st1 0 Blue
 TunnelElement te1
 Track t5
 t4
 Track t6
 TunnelElement te2
-Station st2 red
+Station st2 2 Red
 te1
 Track t7
 Track t8

@@ -8,7 +8,7 @@ public class TunnelEntrance extends StaticElement {
     private StaticElement previousElement;
     private StaticElement nextElement;
     private StaticElement TunnelElement;
-    private boolean isActive;
+    private boolean isActive = false;
 
     /**
      * Alagút bejárat konstruktora.
@@ -46,16 +46,6 @@ public class TunnelEntrance extends StaticElement {
         return TunnelElement;
     }
 
-    /**
-     * Létrehozásakor be kell álítani, hogy melyik pontosan két elemhez kapcsolódik.
-     * @param previous Előző statikus elem.
-     * @param next Következő statikus elem.
-     */
-    public void setElements(StaticElement previous, StaticElement next)
-    {
-        previousElement= previous;
-        nextElement = next;
-    }
 
     /**
      * Azon statikus szomszédját adja vissza, ami nem egyenlő azzal ahonan oda léptünk.
@@ -108,5 +98,25 @@ public class TunnelEntrance extends StaticElement {
         if(!trainsOnElement.contains(m)){
             trainsOnElement.add(m);
         }
+    }
+
+    @Override
+    public void setNextElement(StaticElement nextElement) {
+        this.nextElement=nextElement;
+    }
+
+    @Override
+    public void setPreviousElement(StaticElement previousElement) {
+        this.previousElement=previousElement;
+    }
+
+    @Override
+    public void setDynamicDirection(StaticElement one_dir) {
+
+    }
+
+    @Override
+    public void setStaticDirection(StaticElement staticDir) {
+
     }
 }

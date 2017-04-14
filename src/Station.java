@@ -14,7 +14,9 @@ public class Station extends StaticElement {
     /**
      * Az állomás konstruktora.
      */
-    public Station() {
+    public Station(int getOnPassengers, Color color) {
+        this.getOnPassengers=getOnPassengers;
+        this.color = color;
     }
 
     /**
@@ -26,16 +28,6 @@ public class Station extends StaticElement {
         return color;
     }
 
-    /**
-     * Létrehozásakor be kell álítani, hogy melyik pontosan két elemhez kapcsolódik.
-     * @param previous Előző statikus elem.
-     * @param next Következő statikus elem.
-     */
-    public void setElements(StaticElement previous, StaticElement next)
-    {
-        previousElement= previous;
-        nextElement = next;
-    }
     /**
      * Azon statikus szomszédját adja vissza, ami nem egyenlő azzal ahonan oda léptünk.
      * @param previousElement Ahonan ide léptünk, nem ezt adja vissza.
@@ -91,6 +83,26 @@ public class Station extends StaticElement {
 
     }
 
+    @Override
+    public void setNextElement(StaticElement nextElement) {
+        this.nextElement=nextElement;
+    }
+
+    @Override
+    public void setPreviousElement(StaticElement previousElement) {
+        this.previousElement=previousElement;
+    }
+
+    @Override
+    public void setDynamicDirection(StaticElement one_dir) {
+
+    }
+
+    @Override
+    public void setStaticDirection(StaticElement staticDir) {
+
+    }
+
     public boolean isPassengersWaiting(){
 
         if(getOnPassengers>0){
@@ -99,13 +111,5 @@ public class Station extends StaticElement {
         else{
             return false;
         }
-    }
-
-    /**
-     * Ha egy állomásra kocsi lép, akkor leszálhatnak róla utasok.
-     * @param r A kocsi aki rálépett az állomásra.
-     */
-    public void checkStation(RailroadCar r){
-        //Ez kell még?
     }
 }

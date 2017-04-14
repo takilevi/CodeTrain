@@ -25,6 +25,24 @@ public class Track extends StaticElement {
         previousElement= previous;
         nextElement = next;
     }
+    @Override
+    public void setPreviousElement(StaticElement previousElement){
+        this.previousElement=previousElement;
+    }
+
+    @Override
+    public void setDynamicDirection(StaticElement one_dir) {
+
+    }
+
+    @Override
+    public void setStaticDirection(StaticElement staticDir) {
+
+    }
+    @Override
+    public  void setNextElement(StaticElement nextElement){
+        this.nextElement = nextElement;
+    }
 
     /**
      * Volt e ütközés a sínen.

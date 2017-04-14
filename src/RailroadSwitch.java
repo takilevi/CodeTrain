@@ -14,6 +14,7 @@ public class RailroadSwitch extends StaticElement {
      */
     public RailroadSwitch()
     {
+        setDirection(0);
     }
 
     /**
@@ -52,6 +53,7 @@ public class RailroadSwitch extends StaticElement {
      * Beállíthatjuk az egyértékű elemet.
      * @param staticDir Egy statikus elem, ez mindig fix, nem állíthatjuk
      */
+    @Override
     public void setStaticDirection(StaticElement staticDir) {
 
         staticDirection = staticDir;
@@ -127,12 +129,23 @@ public class RailroadSwitch extends StaticElement {
         }
     }
 
+    @Override
+    public void setNextElement(StaticElement nextElement) {
+
+    }
+
+    @Override
+    public void setPreviousElement(StaticElement previousElement) {
+
+    }
+
     /**
      * A váltó inicíalizálása
-     * @param directions Azon Statikus elemek, amelyek közül mindíg egyikre állíthatjuk a váltónkat.
+     * @param one_dir Azon Statikus elemek, amelyek közül mindíg egyikre állíthatjuk a váltónkat.
      */
-    public void setDynamicDirections(List<StaticElement> directions)
+    @Override
+    public void setDynamicDirection(StaticElement one_dir)
     {
-        dynamicDirections = directions;
+        dynamicDirections.add(one_dir);
     }
 }
