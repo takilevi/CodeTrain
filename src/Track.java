@@ -39,6 +39,12 @@ public class Track extends StaticElement {
     public void setStaticDirection(StaticElement staticDir) {
 
     }
+
+    @Override
+    public void setTunnelElement(StaticElement tunnelElement) {
+
+    }
+
     @Override
     public  void setNextElement(StaticElement nextElement){
         this.nextElement = nextElement;

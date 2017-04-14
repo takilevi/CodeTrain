@@ -5,7 +5,11 @@ import java.util.List;
  * Csak egy irányba lehet elhagyni az depót,
  * azaz azon vonat, aki indulása után ide érkezik, kisiklik.
  */
+<<<<<<< HEAD
 public class Depot  {
+=======
+public class Depot {
+>>>>>>> origin/master
 
 
     private List<StaticElement> depotElements;
@@ -31,9 +35,12 @@ public class Depot  {
         depotElements.add(point);
 
     }
+<<<<<<< HEAD
 
 
     public StaticElement getNextElement(StaticElement previousElement) {
         return null;
     }
+=======
+>>>>>>> origin/master
 }

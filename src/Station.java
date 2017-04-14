@@ -103,6 +103,11 @@ public class Station extends StaticElement {
 
     }
 
+    @Override
+    public void setTunnelElement(StaticElement tunnelElement) {
+
+    }
+
     public boolean isPassengersWaiting(){
 
         if(getOnPassengers>0){
