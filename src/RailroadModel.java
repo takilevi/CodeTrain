@@ -17,6 +17,9 @@ public class RailroadModel {
     private List<Train> freeTrains;
     private List<StaticElement> elementsInModel;
 
+    //TODO: Ez csak ideiglenes, majd amikor rendesen betölti a pályát, máshova kell menteni
+    private String mapName="";
+
     /**
      * Singletonná teszi az osztályt.
      * @return Visszatér a modelel, illetve ha még nem létezne, létrehozza
@@ -75,7 +78,6 @@ public class RailroadModel {
             return;
         }
 
-        String mapName;
         String trainName;
         String locomotiveName;
         String mapElement;
@@ -91,20 +93,24 @@ public class RailroadModel {
 
         String [] command = c.split(" ");
 
+        try
+        {
+
+
         switch (command[0]){
             case "help":
                 System.out.println(ANSI_GREEN+"loadMap\t"+ANSI_RED+" loadMap map1.txt \t " + ANSI_BLUE + " Pálya felépítése");
                 System.out.println(ANSI_GREEN+"listMapElements\t "+ANSI_RED+"listMapElements \t " + ANSI_BLUE + " Kilistázza a pályaösszes elemét a rajta álló vonatokkal együtt");
                 System.out.println(ANSI_GREEN+"listTrain <vonat neve>\t " + ANSI_RED + " listTrain v1 \t " + ANSI_BLUE + " Egyetlen, paraméterben megadott vonatot fog kilistázni, ennek mozdonyát illetve kocsijait (ha vannak).");
                 System.out.println(ANSI_GREEN+"listTrains\t " + ANSI_RED + " listTrains \t " + ANSI_BLUE + " Kilistázza a pályán haladó összes vonatot (elemenként) és feltünteti a színüket (ha van) valamint, hogy melyik pálya elemen állnak éppen.");
-                System.out.println(ANSI_GREEN+"addLocomotive <mozdony neve> <pályaelem neve amire kerül>\t " + ANSI_RED + " addLocomotive m3 r4 \t " + ANSI_BLUE + " Egy mozdony ráhelyezése egy megadott pályaelemre.");
+                System.out.println(ANSI_GREEN+"addLocomotive <vonat neve> <mozdony neve> <pályaelem neve amire kerül>\t " + ANSI_RED + " addLocomotive v4 m3 s4 \t " + ANSI_BLUE + " Egy mozdony ráhelyezése egy megadott pályaelemre, vonat nevének megadása.");
                 System.out.println(ANSI_GREEN+"addPassengersCarToLocomotive <mozodony neve> <kocsi neve> <szín> <tartalmaz-e utast>\t " + ANSI_RED + " addPassengersCarToLocomotive m3 k1 red true \t " + ANSI_BLUE + " Egy utasokat szállító/vagy nem szállító kocsit csatolhatunk egy létező mozdonyhoz.");
                 System.out.println(ANSI_GREEN+"addHopperCarToLocomotive <mozdony neve> <kocsi neve>\t " + ANSI_RED + " addHopperCarToLocomotive m1 k2 \t " + ANSI_BLUE + " Egy szeneskocsit csatolhatunk egy létező mozdonyhoz");
                 System.out.println(ANSI_GREEN+"stepLocomotive <mozdony neve> <léptetés száma>\t " + ANSI_RED + " stepLocomotive m2 5 \t " + ANSI_BLUE + " Egy adott mozdonyt (és a hozzá tartozó kocsikat) egy megadott mértékkel léptetünk.");
                 System.out.println(ANSI_GREEN+"stepAll <léptetések száma>\t " + ANSI_RED + " stepAll 3 \t " + ANSI_BLUE + " Minden mozdonyt (és a hozzá tartozó kocsikat) egy előre megadott mértékkel léptetünk.");
                 System.out.println(ANSI_GREEN+"run\t " + ANSI_RED + " run \t " + ANSI_BLUE + " Önállóan lépteti az összes pályán lévő vonatot másodpercenként egyszer, amíg véget nem ér a játék.");
                 System.out.println(ANSI_GREEN+"stop\t " + ANSI_RED + " stop \t " + ANSI_BLUE + " Ha futó run parancs után hívjuk, akkor leáll a futtatás (vonatok mozgása)");
-                System.out.println(ANSI_GREEN+"changeSwitch <váltó neve>\t " + ANSI_RED + " changeSwitch v2 \t " + ANSI_BLUE + " Egy megadott váltó dinamikus irányát átváltja a meglévők közül egy véletlenszerűre.");
+                System.out.println(ANSI_GREEN+"changeSwitch <váltó neve> <dinamikus váltás iránya>\t " + ANSI_RED + " changeSwitch v2 s3 \t " + ANSI_BLUE + " Egy megadott váltó dinamikus irányát átváltja a megadott irányba.");
                 System.out.println(ANSI_GREEN+"buildTunnel <első bejárat neve> <második bejárat neve>\t " + ANSI_RED + " buildTunnel a1 a3 \t " + ANSI_BLUE + " Egy alagutat épít (aktivál) a paraméterként megkapott két alagútbejárat segítségével");
                 System.out.println(ANSI_GREEN+"destroyTunnel\t " + ANSI_RED + " destroyTunnel \t " + ANSI_BLUE + " Lerombolja (deaktiválja) az éppen aktív alagutat.");
                 System.out.println(ANSI_GREEN+"readSwitch <váltó neve>\t " + ANSI_RED + " readSwitch v3 \t " + ANSI_BLUE + " Egy létező váltó paraméterei kérdezhetőek le.");
@@ -114,10 +120,39 @@ public class RailroadModel {
                 break;
 
             case "loadMap":
-                mapName = command[1];
+                try
+                {
+                    mapName = command[1];
+                    Scanner in = new Scanner(new File("Resources/"+mapName));
+                    //TODO: pálya elmentése, betöltése
+                }
+
+                catch (FileNotFoundException e)
+                {
+                    System.out.println("invalid parameter "+ c);
+                }
+
                 break;
 
             case "listMapElements":
+                try
+                {
+                    BufferedReader  in = new BufferedReader (new FileReader("Resources/"+mapName));
+                    String line;
+
+                    while((line = in.readLine())!= null )
+                    {
+                        System.out.println(line);
+                    }
+                }
+
+                catch (FileNotFoundException e)
+                {
+                    System.out.println("map has not been loaded");
+                }
+                catch (IOException e) {
+                    e.printStackTrace();
+                }
                 break;
 
             case "listTrain":
@@ -194,7 +229,14 @@ public class RailroadModel {
 
         }
 
+        }
+
+        catch(ArrayIndexOutOfBoundsException a)
+        {
+            System.out.println("missing parameter "+ c);
+        }
     }
+
 
     public void notEmpty(Train full){
 
