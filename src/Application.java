@@ -7,24 +7,23 @@ import java.util.Scanner;
  */
 public class Application {
 
+    private static RailroadModel model;
+    private static Controller controller;
+
     /**
      * Az alkalmazás belépési pontja.
      * Kiírja a standard inputra a menüpontokat,
-     * madj bekéri a felhasználó által választott menüpont sorszámát, és meghívja vele a Teszt függvényt.
+     * majd bekéri a felhasználó által választott menüpont sorszámát, és meghívja vele a Teszt függvényt.
      */
     public static void main(String[] args) {
 
-
-
-        RailroadModel model = RailroadModel.getInstance();
-        Controller controller = new Controller(model);
+        model = RailroadModel.getInstance();
+        controller = new Controller(model);
 
         model.initFieldElements();
-        //stb..
+        model.startGame();
 
         controller.readCommand();
 
     }
-
-
 }

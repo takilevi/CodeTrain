@@ -8,12 +8,13 @@ public class Controller {
 
     RailroadModel model;
 
-    public Controller(RailroadModel model){
+    public Controller(RailroadModel model)
+    {
         this.model = model;
     }
 
-    public void readCommand(){
-
+    public void readCommand()
+    {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
