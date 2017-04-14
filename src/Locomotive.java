@@ -8,12 +8,22 @@ public class Locomotive implements Movable {
     private StaticElement currentElement;
     private StaticElement previousElement;
     private RailroadCar carAfterLocomotive;
+    private String name;
 
-
-    public Locomotive(StaticElement current, StaticElement previous){
+    public Locomotive(StaticElement current, StaticElement previous, String name){
         currentElement = current;
         previousElement = previous;
+        this.name = name;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     /**
      * Visszatér azon elemmel, amin a vonat éppen tartózkodik.
      * @return akutális elem
@@ -68,4 +78,9 @@ public class Locomotive implements Movable {
     public void crash(){;
 
     }
+
+    public void listTrain(){
+        System.out.println(name + " " + currentElement.getClass());
+    }
+
 }

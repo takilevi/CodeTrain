@@ -5,7 +5,7 @@ import java.util.List;
  * Csak egy irányba lehet elhagyni az depót,
  * azaz azon vonat, aki indulása után ide érkezik, kisiklik.
  */
-public class Depot extends StaticElement {
+public class Depot  {
 
 
     private List<StaticElement> depotElements;
@@ -32,7 +32,7 @@ public class Depot extends StaticElement {
 
     }
 
-    @Override
+
     public StaticElement getNextElement(StaticElement previousElement) {
         return null;
     }

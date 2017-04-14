@@ -1,3 +1,5 @@
+import javax.sound.midi.SysexMessage;
+
 /**
  * Created by Andy on 2017. 04. 11..
  */
@@ -7,8 +9,8 @@ public class PassengerCar extends RailroadCar {
     private Color color;
     private Train trainRef;
 
-    public PassengerCar(StaticElement current, Color color, boolean passengers, Train trainRef) {
-        super(current);
+    public PassengerCar(StaticElement current, Color color, boolean passengers, Train trainRef, String name) {
+        super(current, name);
 
         this.color = color;
         passengerOnBoard = passengers;
@@ -39,5 +41,8 @@ public class PassengerCar extends RailroadCar {
         return false;
     }
 
-
+    @Override
+    public void listTrain(){
+        System.out.print("PassengerCar "+name+" "+color+" "+ currentElement+" " + passengerOnBoard);
+    }
 }

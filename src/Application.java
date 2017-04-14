@@ -20,7 +20,7 @@ public class Application {
         model = RailroadModel.getInstance();
         controller = new Controller(model);
 
-        model.initFieldElements();
+
         model.startGame();
 
         controller.readCommand();

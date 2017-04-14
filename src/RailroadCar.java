@@ -7,11 +7,13 @@ import java.util.Scanner;
 public abstract class RailroadCar implements Movable {
 
 
-    private StaticElement currentElement;
-    private Movable carAfterCar;
-    private Movable carBefore;
+    protected StaticElement currentElement;
+    protected Movable carAfterCar;
+    protected Movable carBefore;
+    protected String name;
 
-    public RailroadCar(StaticElement current){
+    public RailroadCar(StaticElement current, String name){
+        this.name = name;
         currentElement = current;
     }
 
@@ -62,4 +64,6 @@ public abstract class RailroadCar implements Movable {
     public void crash() {
 
     }
+
+    public abstract void listTrain();
 }

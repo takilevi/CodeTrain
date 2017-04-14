@@ -5,9 +5,13 @@ public class HopperCar extends RailroadCar{
 
 
 
-    public HopperCar(StaticElement current) {
-        super(current);
+    public HopperCar(StaticElement current, String name) {
+        super(current, name);
     }
 
+    @Override
+    public void listTrain(){
+        System.out.print("HopperCar" + this.name + this.currentElement);
+    }
 
 }

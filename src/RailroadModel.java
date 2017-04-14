@@ -35,14 +35,17 @@ public class RailroadModel {
      * Privát konstruktor.
      */
     private RailroadModel() {
+        trainsInModel = new ArrayList<>();
+        freeTrains = new ArrayList<>();
+        elementsInModel = new LinkedHashMap<String, StaticElement>();
     }
 
     /**
      * A pályaelemek inicíalizálása, pálya létrehozása.
      */
     public void initFieldElements(String mapName) {
-        trainsInModel = null;
-        freeTrains = null;
+        trainsInModel = new ArrayList<>();
+        freeTrains = new ArrayList<>();
         elementsInModel = new LinkedHashMap<String, StaticElement>();
         String[] previousSplittedLine = null;
 
@@ -252,15 +255,43 @@ public class RailroadModel {
 
                 case "listTrain":
                     trainName = command[1];
+                    for(int i= 0; i< trainsInModel.size(); i++){
+                        Train t = trainsInModel.get(i);
+                        if(t.getName().equals(trainName)){
+                            t.listTrain();
+                            break;
+                        }
+                    }
+                    System.out.println("Ilyen nevű vonat jelenleg nincs a modelben!");
                     break;
 
                 case "listTrains":
+                    if(trainsInModel.isEmpty()){
+                        System.out.println("A modelben jelenleg nincsenek vonatok!");
+                        break;
+                    }
+                    for(int i= 0; i<trainsInModel.size(); i++){
+                        trainsInModel.get(i).listTrain();
+                    }
                     break;
 
                 case "addLocomotive":
                     trainName = command[1];
                     locomotiveName = command[2];
                     mapElement = command[3];
+
+                    elementsInModel.put("sin", new Track());
+
+                    if(elementsInModel.containsKey(mapElement)){
+                        Train t = new Train(this, trainName);
+                        model.trainsInModel.add(t);
+                        Locomotive m = new Locomotive(elementsInModel.get(mapElement), null, trainName);
+                        t.fillUpTrain(m, null);
+                    }
+                    else{
+                        System.out.println("Ilyen elem sajnos nincs a modelben!");
+                    }
+
                     break;
 
                 case "addPassengerCarToLocomotive":
