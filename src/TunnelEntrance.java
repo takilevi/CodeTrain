@@ -7,13 +7,14 @@ public class TunnelEntrance extends StaticElement {
 
     private StaticElement previousElement;
     private StaticElement nextElement;
-    private StaticElement TunnelElement;
-    private boolean isActive = false;
+    private StaticElement tunnelElement;
+    private boolean isActive;
 
     /**
      * Alagút bejárat konstruktora.
      */
     public TunnelEntrance() {
+        isActive=false;
     }
 
     /**
@@ -43,7 +44,7 @@ public class TunnelEntrance extends StaticElement {
      */
     public StaticElement getTunnelElement()
     {
-        return TunnelElement;
+        return tunnelElement;
     }
 
 
@@ -118,5 +119,10 @@ public class TunnelEntrance extends StaticElement {
     @Override
     public void setStaticDirection(StaticElement staticDir) {
 
+    }
+
+    @Override
+    public void setTunnelElement(StaticElement tunnelElement) {
+        this.tunnelElement=tunnelElement;
     }
 }

@@ -59,6 +59,11 @@ public class RailroadSwitch extends StaticElement {
         staticDirection = staticDir;
     }
 
+    @Override
+    public void setTunnelElement(StaticElement tunnelElement) {
+
+    }
+
     /**
      * Váltunk egyet
      * @param i Azon iránya, amibe állítani akarjuk a váltót.

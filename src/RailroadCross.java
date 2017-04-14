@@ -84,5 +84,30 @@ public class RailroadCross extends StaticElement {
 
     }
 
+    @Override
+    public void setNextElement(StaticElement nextElement) {
+
+    }
+
+    @Override
+    public void setPreviousElement(StaticElement previousElement) {
+
+    }
+
+    @Override
+    public void setDynamicDirection(StaticElement one_dir) {
+
+    }
+
+    @Override
+    public void setStaticDirection(StaticElement staticDir) {
+
+    }
+
+    @Override
+    public void setTunnelElement(StaticElement tunnelElement) {
+
+    }
+
 
 }

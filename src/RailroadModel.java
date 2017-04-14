@@ -78,7 +78,7 @@ public class RailroadModel {
                                     temp2.setPreviousElement(temp);
                                     break;
                                 case "Station":
-                                    elementsInModel.put(temp_splittedLine[1], new Station(0,Color.Blue));
+                                    elementsInModel.put(temp_splittedLine[1], new Station(0, Color.Blue));
                                     StaticElement temp_s = elementsInModel.get(splittedLine[1]);
                                     temp_s.setDynamicDirection(elementsInModel.get(temp_splittedLine[1]));
                                     StaticElement temp2_s = elementsInModel.get(temp_splittedLine[1]);
@@ -102,14 +102,14 @@ public class RailroadModel {
 
                         break;
                     case "Station":
-                        elementsInModel.put(splittedLine[1], new Station(Integer.parseInt(splittedLine[2]),Color.valueOf(splittedLine[3])));
+                        elementsInModel.put(splittedLine[1], new Station(Integer.parseInt(splittedLine[2]), Color.valueOf(splittedLine[3])));
                         StaticElement temp_stat = elementsInModel.get(previousSplittedLine[1]);
                         temp_stat.setNextElement(elementsInModel.get(splittedLine[1]));
                         StaticElement temp2_stat = elementsInModel.get(splittedLine[1]);
                         temp2_stat.setPreviousElement(temp_stat);
                         break;
                     case "TunnelElement":
-                        elementsInModel.put(splittedLine[1],new TunnelEntrance());
+                        elementsInModel.put(splittedLine[1], new TunnelEntrance());
                         StaticElement temp_tunnel = elementsInModel.get(previousSplittedLine[1]);
                         temp_tunnel.setNextElement(elementsInModel.get(splittedLine[1]));
                         StaticElement temp2_tunnel = elementsInModel.get(splittedLine[1]);
@@ -121,20 +121,41 @@ public class RailroadModel {
                     default:
                         //ebben a .getClass().getName() -ben nem annyira vagyok biztos
                         String searchType = elementsInModel.get(splittedLine[0]).getClass().getName();
-                        switch (searchType){
+                        switch (searchType) {
                             case "TunnelEntrance":
                                 String until_tunnelend = in.readLine();
                                 String[] in_tunnel = until_tunnelend.split(" ");
-                                while (in_tunnel[1]!=null)
-                                {
 
+                                elementsInModel.put(in_tunnel[1], new Track());
+                                StaticElement temp_intunnel = elementsInModel.get(splittedLine[0]);
+                                temp_intunnel.setTunnelElement(elementsInModel.get(in_tunnel[1]));
+                                StaticElement temp2_intunnel = elementsInModel.get(in_tunnel[1]);
+                                temp2_intunnel.setPreviousElement(temp_intunnel);
 
+                                String [] prev_in_tunnel = in_tunnel;
+                                until_tunnelend = in.readLine();
+                                in_tunnel = until_tunnelend.split(" ");
+                                while (in_tunnel[1] != null) {
+                                    elementsInModel.put(in_tunnel[1], new Track());
+                                    StaticElement prev_track_intunnel = elementsInModel.get(prev_in_tunnel[1]);
+                                    prev_track_intunnel.setNextElement(elementsInModel.get(in_tunnel[1]));
+                                    StaticElement track_intunnel = elementsInModel.get(in_tunnel[1]);
+                                    track_intunnel.setPreviousElement(prev_track_intunnel);
+
+                                    prev_in_tunnel=in_tunnel;
                                     until_tunnelend = in.readLine();
                                     in_tunnel = until_tunnelend.split(" ");
                                 }
+                                StaticElement tunnel_end_entrance = elementsInModel.get(in_tunnel[0]);
+                                StaticElement tunnel_end_track = elementsInModel.get(prev_in_tunnel[1]);
+                                tunnel_end_entrance.setTunnelElement(tunnel_end_track);
+                                tunnel_end_track.setNextElement(tunnel_end_entrance);
                                 break;
                             default:
-
+                                String[] rebase_splittedline = new String[2];
+                                rebase_splittedline[1] = splittedLine[0];
+                                rebase_splittedline[0] = searchType;
+                                splittedLine = rebase_splittedline;
                                 break;
                         }
                         break;
