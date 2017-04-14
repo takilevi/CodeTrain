@@ -282,7 +282,9 @@ public class RailroadModel {
                             t.listTrain();
                             break;
                         }
+                        break;
                     }
+
                     System.out.println("Ilyen nevű vonat jelenleg nincs a modelben!");
                     break;
 
@@ -303,6 +305,7 @@ public class RailroadModel {
 
                     elementsInModel.put("sin", new Track());
 
+                    //ez még nem jó, nemtudom hogyan írja ki, hogy melyik elemen van.
                     if(elementsInModel.containsKey(mapElement)){
                         Train t = new Train(this, trainName);
                         model.trainsInModel.add(t);

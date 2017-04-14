@@ -104,13 +104,11 @@ public class RailroadCross extends StaticElement {
 
     }
 
-<<<<<<< HEAD
-=======
+
     @Override
     public void setTunnelElement(StaticElement tunnelElement) {
 
     }
 
->>>>>>> origin/master
 
 }

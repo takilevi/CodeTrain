@@ -20,10 +20,6 @@ public class Application {
         model = RailroadModel.getInstance();
         controller = new Controller(model);
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
         model.startGame();
 
         controller.readCommand();
