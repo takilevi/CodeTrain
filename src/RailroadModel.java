@@ -15,7 +15,7 @@ public class RailroadModel {
     private static RailroadModel model;
     private List<Train> trainsInModel;
     private List<Train> freeTrains;
-    private List<StaticElement> elementsInModel;
+    private Map<StaticElement,String> elementsInModel; //ezt átírtam list<StaticElement>-ről, hogy tudjuk tárolni a neveket is
 
     //TODO: Ez csak ideiglenes, majd amikor rendesen betölti a pályát, máshova kell menteni
     private String mapName="";
@@ -45,7 +45,44 @@ public class RailroadModel {
     public void initFieldElements() {
         trainsInModel = null;
         freeTrains = null;
-        elementsInModel = null;
+        elementsInModel = new HashMap<StaticElement,String>();
+
+        //TODO: értelmesen megcsinálni
+
+        BufferedReader  in = null;
+        try
+        {
+            in = new BufferedReader(new FileReader("Resources/"+mapName));
+            String line;
+
+            while((line = in.readLine())!= null )
+            {
+                String[] splittedLine = line.split(" ");
+                switch (splittedLine[0])
+                {
+                    case "Track" :
+                        elementsInModel.put(new Track(),splittedLine[1]);
+                        break;
+                    case "Switch" :
+                        elementsInModel.put(new RailroadSwitch(),splittedLine[1]);
+                        break;
+                    case "Station" :
+                        elementsInModel.put(new Station(),splittedLine[1]);
+                        break;
+                    case "TunnelElement" :
+                        elementsInModel.put(new TunnelEntrance(),splittedLine[1]);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
     }
 
     /**
@@ -124,6 +161,7 @@ public class RailroadModel {
                 {
                     mapName = command[1];
                     Scanner in = new Scanner(new File("Resources/"+mapName));
+                    initFieldElements();
                     //TODO: pálya elmentése, betöltése
                 }
 
@@ -150,9 +188,11 @@ public class RailroadModel {
                 {
                     System.out.println("map has not been loaded");
                 }
+
                 catch (IOException e) {
                     e.printStackTrace();
                 }
+
                 break;
 
             case "listTrain":
