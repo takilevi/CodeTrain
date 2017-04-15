@@ -20,12 +20,13 @@ public class RailroadSwitch extends StaticElement {
     /**
      * Ez a fügvény hívódik, ha váltani szeretnénk.
      * Megvizsgálja hogy van e mozgó objektum a váltón, és ennek megfelelően hív tovább.
-     * @param dir Az iránya amibe állítani szeretnénk a váltót.
+     * @param direction Az iránya amibe állítani szeretnénk a váltót.
      */
-    public void changeSwitchToDirection(int dir){
+    public void changeSwitchToDirection(StaticElement direction){
 
         if(trainsOnElement.isEmpty()){
 
+            int dir = dynamicDirections.indexOf(direction);
             setDirection(dir);
 
         }
@@ -93,6 +94,11 @@ public class RailroadSwitch extends StaticElement {
             //Finishgame, kéne ismernie a modellt nem?
             return null;
         }
+    }
+
+    @Override
+    public StaticElement getPrevForLoco() {
+        return null;
     }
 
     /**

@@ -253,9 +253,6 @@ public class RailroadModel {
                 case "loadMap":
                     mapName = command[1];
                     initFieldElements(mapName);
-                    //TODO: pálya elmentése, betöltése
-
-
                     break;
 
                 case "listMapElements":
@@ -303,13 +300,11 @@ public class RailroadModel {
                     locomotiveName = command[2];
                     mapElement = command[3];
 
-                    elementsInModel.put("sin", new Track());
-
                     //ez még nem jó, nemtudom hogyan írja ki, hogy melyik elemen van.
                     if(elementsInModel.containsKey(mapElement)){
                         Train t = new Train(this, trainName);
                         model.trainsInModel.add(t);
-                        Locomotive m = new Locomotive(elementsInModel.get(mapElement), null, trainName);
+                        Locomotive m = new Locomotive(elementsInModel.get(mapElement), elementsInModel.get(mapElement).getPrevForLoco(), locomotiveName);
                         t.fillUpTrain(m, null);
                     }
                     else{
@@ -319,15 +314,28 @@ public class RailroadModel {
                     break;
 
                 case "addPassengerCarToLocomotive":
-                    locomotiveName = command[1];
+                    trainName = command[1];
                     carName = command[2];
                     color = command[3];
                     passengers = command[4];
+
+                    for (Train curInstance: trainsInModel) {
+                        if(curInstance.getName().matches(trainName)){
+                            PassengerCar p = new PassengerCar(null,Color.valueOf(color),Boolean.parseBoolean(passengers),curInstance,carName);
+                            curInstance.addCar(p);
+                        }
+                    }
                     break;
 
                 case "addHopperCarToLocomotive":
-                    locomotiveName = command[1];
+                    trainName = command[1];
                     carName = command[2];
+                    for (Train curInstance: trainsInModel) {
+                        if(curInstance.getName().matches(trainName)){
+                            HopperCar p = new HopperCar(null,curInstance,carName);
+                            curInstance.addCar(p);
+                        }
+                    }
                     break;
 
                 case "stepLocomotive":
@@ -348,6 +356,9 @@ public class RailroadModel {
                 case "changeSwitch":
                     switchName = command[1];
                     switchState = command[2];
+
+                    RailroadSwitch switcher = (RailroadSwitch)elementsInModel.get(switchName);
+                    switcher.changeSwitchToDirection(elementsInModel.get(switchState));
                     break;
 
                 case "buildTunnel":
@@ -360,21 +371,47 @@ public class RailroadModel {
 
                 case "readSwitch":
                     switchName = command[1];
+                    RailroadSwitch readable = (RailroadSwitch)elementsInModel.get(switchName);
+
+                    System.out.println(readable.getClass().getName()+"\t"+switchName);
+                    //TODO: ezt jól beszoptuk!
                     break;
 
                 case "changeStationParams":
                     stationName = command[1];
                     color = command[2];
                     passengers = command[3];
+
+                    Station stat = (Station)elementsInModel.get(stationName);
+                    stat.setColor(Color.valueOf(color));
+                    stat.setGetOnPassengers(Integer.parseInt(passengers));
                     break;
 
                 case "readStationParams":
                     stationName = command[1];
+                    Station stat_read = (Station)elementsInModel.get(stationName);
+                    System.out.println("Station\t"+stationName);
+                    System.out.println("Color\t"+stat_read.getColor());
+                    System.out.println("Passengers\t"+stat_read.getGetOnPassengers());
                     break;
 
                 case "readPassengerCarParams":
-                    locomotiveName = command[1];
+                    trainName = command[1];
                     carName = command[2];
+                    for (Train curInstance: trainsInModel) {
+                        if(curInstance.getName().matches(trainName)){
+                            List<RailroadCar> cars_temp_list = curInstance.getCars();
+                            for(RailroadCar curCar: cars_temp_list){
+                                if(curCar.getName().matches(carName)){
+                                    System.out.println("PassengerCar\t"+carName);
+                                    System.out.println("In train\t"+trainName);
+                                    System.out.println("Color\t"+curCar.getColor());
+                                    System.out.println("Passengers on board\t"+curCar.getPassengersOnBoard());
+                                }
+                            }
+                        }
+                    }
+
                     break;
 
             }

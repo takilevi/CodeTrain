@@ -13,7 +13,7 @@ public abstract class StaticElement {
      * @return A következő elem a megfelelő irányba.
      */
     public abstract StaticElement getNextElement(StaticElement previousElement);
-
+    public abstract  StaticElement getPrevForLoco();
     /**
      * Volt e ütközés az elemet
      * @return Igaz, ha több mint egy mozgó objektum van rajta, egyébként hamis.

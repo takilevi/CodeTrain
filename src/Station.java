@@ -19,6 +19,8 @@ public class Station extends StaticElement {
         this.color = color;
     }
 
+    public void setGetOnPassengers(int passengers){getOnPassengers=passengers;}
+    public void setColor(Color color){this.color=color;}
     /**
      * Az állomás színének a getter-e.
      * @return Az állomás színe.
@@ -27,6 +29,7 @@ public class Station extends StaticElement {
 
         return color;
     }
+    public  int getGetOnPassengers(){return getOnPassengers;}
 
     /**
      * Azon statikus szomszédját adja vissza, ami nem egyenlő azzal ahonan oda léptünk.
@@ -41,6 +44,11 @@ public class Station extends StaticElement {
         else{
             return previousElement;
         }
+    }
+
+    @Override
+    public StaticElement getPrevForLoco() {
+        return previousElement;
     }
 
     /**

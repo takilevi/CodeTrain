@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 public class Train {
 
-    private int totalLength;
+    private int totalLength = 0;
     private Locomotive locomotive;
     private List<RailroadCar> cars;
     private List<PassengerCar> freeCars;
@@ -28,10 +28,7 @@ public class Train {
     public String getName() {
         return name;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    public List<RailroadCar> getCars(){return cars;}
 
     /**
      * Ha kiürül egy kocsi, eggyel csökenti a teli kocsik számát.
@@ -73,24 +70,22 @@ public class Train {
 
         if (cars != null) {
             this.cars = cars;
-            //TODO a totallengtbe beleszámít a mozdony is?
-            totalLength = cars.size() + 1;
+            totalLength += cars.size();
         }
     }
 
-    public void addCar(List<RailroadCar> cars) {
-        if(cars.isEmpty())
-            return;
+    public void addCar(RailroadCar car) {
 
-        this.cars.addAll(cars);
+        this.cars.add(car);
+        totalLength++;
+        elementFindForCar(car);
     }
-
-
-
-
         //üres kicsit feltöltése, mert lehet alapból üresen indul 1 kocsi.
 
 
+    private void elementFindForCar(RailroadCar car){
+        //TODO meg kell keresni a staticelementjét, használjuk a totallenght-et
+    }
     public void listTrain(){
         System.out.println(name);
         locomotive.listTrain();

@@ -45,4 +45,14 @@ public class PassengerCar extends RailroadCar {
     public void listTrain(){
         System.out.print("PassengerCar "+name+" "+color+" "+ currentElement+" " + passengerOnBoard);
     }
+
+    @Override
+    public Color getColor() {
+        return color;
+    }
+
+    @Override
+    public boolean getPassengersOnBoard() {
+        return passengerOnBoard;
+    }
 }
