@@ -3,12 +3,12 @@
  */
 public class HopperCar extends RailroadCar{
 
-    private Train trainRef;
 
 
-    public HopperCar(StaticElement current,Train trainRef, String name) {
-        super(current, name);
-        this.trainRef = trainRef;
+
+    public HopperCar(StaticElement current,StaticElement previous, Train trainRef, String name) {
+        super(current,previous, name, trainRef);
+
     }
 
     @Override

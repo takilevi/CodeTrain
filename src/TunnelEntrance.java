@@ -72,9 +72,6 @@ public class TunnelEntrance extends StaticElement {
      * Volt e ütközés az elemet
      * @return Igaz, ha több mint egy mozgó objektum van rajta, egyébként hamis.
      */
-    public boolean isCrash(){
-        return false;
-    }
 
     /**
      * Visszaadja az elemen elhelyezkedő mozgó objektumokat.

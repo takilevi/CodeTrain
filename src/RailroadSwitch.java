@@ -105,9 +105,6 @@ public class RailroadSwitch extends StaticElement {
      * Visszaadja az elemen elhelyezkedő mozgó objektumokat.
      * @return Ezen objektumok listálya.
      */
-    public boolean isCrash(){
-        return false;
-    }
 
     /**
      * Visszaadja az elemen elhelyezkedő mozgó objektumokat.

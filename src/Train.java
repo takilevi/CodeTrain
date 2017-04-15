@@ -53,9 +53,15 @@ public class Train {
 
     /**
      * A vonatot felkelti, és lépteti egyet.
-     * @param param
      */
-    public void awakeLocomotive(int param){
+    public void awakeLocomotive(){
+        locomotive.move();
+
+        locomotive.crash();
+
+        //Nincs vége a játéknak
+        System.out.println("false");
+        System.out.println("false");
 
     }
 
@@ -92,6 +98,10 @@ public class Train {
         for(int i= 0; i< cars.size(); i++){
             cars.get(i).listTrain();
         }
+    }
+
+    public void getOfRails(){
+        model.finishGame(1);
     }
 
 }

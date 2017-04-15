@@ -9,11 +9,14 @@ public class Locomotive implements Movable {
     private StaticElement previousElement;
     private RailroadCar carAfterLocomotive;
     private String name;
+    private Train train;
 
-    public Locomotive(StaticElement current, StaticElement previous, String name){
+    public Locomotive(StaticElement current, StaticElement previous, String name, Train t){
         currentElement = current;
         previousElement = previous;
+        currentElement.stepToElement(this);
         this.name = name;
+        train = t;
     }
 
     public String getName() {
@@ -65,9 +68,20 @@ public class Locomotive implements Movable {
     /**
      * A vonatot léptetjük egyet. Beállítja a aktuális elemet, és az előzőt,
      * majd ha van utána kocsi meghívja rajta a move-ot.
-     * @param param : Megadhatjuk hogy milyen elemre lépjen a mozdony.
      */
-    public void move(int param){
+    public void move(){
+
+        StaticElement next = currentElement.getNextElement(previousElement);
+        previousElement = currentElement;
+        currentElement = next;
+
+        previousElement.leaveElement(this);
+        currentElement.stepToElement(this);
+
+        if(carAfterLocomotive != null){
+            carAfterLocomotive.move();
+        }
+
 
     }
 
@@ -76,6 +90,14 @@ public class Locomotive implements Movable {
      * (Konkrét pédánkban igen.)
      */
     public void crash(){;
+        if(currentElement.isCrash()){
+            train.getOfRails();
+        }
+        else{
+            if(carAfterLocomotive != null){
+                carAfterLocomotive.crash();
+            }
+        }
 
     }
 

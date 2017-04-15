@@ -55,7 +55,6 @@ public class RailroadCross extends StaticElement {
 
     }
 
-    public boolean isCrash(){ return false;}
 
     /**
      * Visszaadja az elemen elhelyezkedő mozgó objektumokat.

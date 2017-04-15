@@ -50,14 +50,6 @@ public class Track extends StaticElement {
         this.nextElement = nextElement;
     }
 
-    /**
-     * Volt e ütközés a sínen.
-     * @return Ha több mint egy mozgó objektum van rajta akkor igaz, egyébként hamis.
-     */
-    public boolean isCrash()
-    {
-        return false;
-    }
 
     /**
      * Azon statikus szomszédját adja vissza, ami nem egyenlő azzal ahonan oda léptünk.

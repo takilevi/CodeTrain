@@ -8,7 +8,7 @@ public interface Movable {
      * Léptethetünk vele.
      * @param param Milyen elemre lépjünk tovább
      */
-    void move(int param);
+    void move();
 
     /**
      * Ütközés detektálása

@@ -8,13 +8,19 @@ public abstract class RailroadCar implements Movable {
 
 
     protected StaticElement currentElement;
+    protected StaticElement previousElement;
     protected Movable carAfterCar;
     protected Movable carBefore;
-    protected String name;
 
-    public RailroadCar(StaticElement current, String name){
+    protected String name;
+    private Train train;
+
+    public RailroadCar(StaticElement current,StaticElement previous, String name, Train t){
         this.name = name;
         currentElement = current;
+        previousElement = previous;
+        currentElement.stepToElement(this);
+        train = t;
     }
 
     /**
@@ -53,9 +59,19 @@ public abstract class RailroadCar implements Movable {
 
     /**
      * Kocsi léptetése. Vagy előtte lévő kocsi, vagy a modony hívhatja meg.
-     * @param param Milyen elemre lépjünk tovább
      */
-    public void move(int param) {
+    public void move() {
+
+        StaticElement next = currentElement.getNextElement(previousElement);
+        previousElement = currentElement;
+        currentElement = next;
+
+        previousElement.leaveElement(this);
+        currentElement.leaveElement(this);
+
+        if(carAfterCar != null){
+            carAfterCar.move();
+        }
 
     }
 
@@ -64,7 +80,14 @@ public abstract class RailroadCar implements Movable {
      * (A skeletonban csak mozodny ütközését vizsgáltunk, de ez kocsiknál sem különböző)
      */
     public void crash() {
-
+        if(currentElement.isCrash()){
+            train.getOfRails();
+        }
+        else{
+            if(carAfterCar != null){
+                carAfterCar.crash();
+            }
+        }
     }
 
     public abstract void listTrain();

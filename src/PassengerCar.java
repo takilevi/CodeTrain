@@ -7,14 +7,12 @@ public class PassengerCar extends RailroadCar {
 
     private boolean passengerOnBoard;
     private Color color;
-    private Train trainRef;
 
-    public PassengerCar(StaticElement current, Color color, boolean passengers, Train trainRef, String name) {
-        super(current, name);
+    public PassengerCar(StaticElement current,StaticElement previous, Color color, boolean passengers, Train trainRef, String name) {
+        super(current, previous,  name, trainRef);
 
         this.color = color;
         passengerOnBoard = passengers;
-        this.trainRef = trainRef;
 
     }
 

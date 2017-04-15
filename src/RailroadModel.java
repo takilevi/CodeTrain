@@ -189,7 +189,17 @@ public class RailroadModel {
      * A játék véget ért.
      */
     public void finishGame(int code) {
-
+        //Játék vége
+        System.out.println("true");
+        if(code == 0){
+            //Nem volt ütközés, nyertünk
+            System.out.println("true");
+        }
+        else{
+            //Vesztettünk
+            System.out.println("false");
+        }
+        System.exit(0);
     }
 
     /**
@@ -216,7 +226,7 @@ public class RailroadModel {
         String carName;
         String color;
         String passengers;
-        String step;
+        int step;
         String switchName;
         String switchState;
         String Tenter1;
@@ -300,11 +310,12 @@ public class RailroadModel {
                     locomotiveName = command[2];
                     mapElement = command[3];
 
+
                     //ez még nem jó, nemtudom hogyan írja ki, hogy melyik elemen van.
                     if(elementsInModel.containsKey(mapElement)){
                         Train t = new Train(this, trainName);
                         model.trainsInModel.add(t);
-                        Locomotive m = new Locomotive(elementsInModel.get(mapElement), elementsInModel.get(mapElement).getPrevForLoco(), locomotiveName);
+                        Locomotive m = new Locomotive(elementsInModel.get(mapElement), elementsInModel.get(mapElement).getPrevForLoco(), locomotiveName, t);
                         t.fillUpTrain(m, null);
                     }
                     else{
@@ -321,7 +332,7 @@ public class RailroadModel {
 
                     for (Train curInstance: trainsInModel) {
                         if(curInstance.getName().matches(trainName)){
-                            PassengerCar p = new PassengerCar(null,Color.valueOf(color),Boolean.parseBoolean(passengers),curInstance,carName);
+                            PassengerCar p = new PassengerCar(null,null, Color.valueOf(color),Boolean.parseBoolean(passengers),curInstance,carName);
                             curInstance.addCar(p);
                         }
                     }
@@ -332,19 +343,39 @@ public class RailroadModel {
                     carName = command[2];
                     for (Train curInstance: trainsInModel) {
                         if(curInstance.getName().matches(trainName)){
-                            HopperCar p = new HopperCar(null,curInstance,carName);
+                            HopperCar p = new HopperCar(null, null, curInstance,carName);
                             curInstance.addCar(p);
                         }
                     }
                     break;
 
                 case "stepLocomotive":
+
                     locomotiveName = command[1];
-                    step = command[2];
+                    step = Integer.parseInt(command[2]);
+
+                    for(int i = 0; i< step; i++){
+                        for(Train t : trainsInModel){
+                            if(t.getName().equals(locomotiveName)){
+                                t.awakeLocomotive();
+                            }
+                        }
+                    }
+
                     break;
 
                 case "stepAll":
-                    step = command[1];
+                    step = Integer.parseInt(command[1]);
+
+                    if(trainsInModel.isEmpty()){
+                        System.out.println("Nincsenek vonatok a modelben!");
+                    }
+
+                    for(int i = 0; i< step; i++) {
+                        for(Train t : trainsInModel){
+                            t.awakeLocomotive();
+                        }
+                    }
                     break;
 
                 case "run":
