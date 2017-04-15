@@ -62,6 +62,12 @@ public class TunnelEntrance extends StaticElement {
             return previousElement;
         }
     }
+
+    @Override
+    public StaticElement getPrevForLoco() {
+        return previousElement;
+    }
+
     /**
      * Volt e ütközés az elemet
      * @return Igaz, ha több mint egy mozgó objektum van rajta, egyébként hamis.

@@ -35,6 +35,11 @@ public class RailroadCross extends StaticElement {
 
     }
 
+    @Override
+    public StaticElement getPrevForLoco() {
+        return null;
+    }
+
 
     public void setFirstDirections(StaticElement entrance, StaticElement exit){
 

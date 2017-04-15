@@ -33,6 +33,7 @@ public abstract class RailroadCar implements Movable {
         currentElement = current;
     }
 
+    public String getName(){return name;}
     public Movable getCarAfterCar() {
         return carAfterCar;
     }
@@ -48,6 +49,7 @@ public abstract class RailroadCar implements Movable {
     public void setCarBefore(Movable carBefore) {
         this.carBefore = carBefore;
     }
+
 
     /**
      * Kocsi léptetése. Vagy előtte lévő kocsi, vagy a modony hívhatja meg.
@@ -66,4 +68,6 @@ public abstract class RailroadCar implements Movable {
     }
 
     public abstract void listTrain();
+    public abstract Color getColor();
+    public abstract boolean getPassengersOnBoard();
 }

@@ -74,6 +74,11 @@ public class Track extends StaticElement {
         }
     }
 
+    @Override
+    public StaticElement getPrevForLoco() {
+        return previousElement;
+    }
+
     /**
      * Visszaadja az elemen elhelyezkedő mozgó objektumokat.
      * @return Ezen objektumok listálya.
