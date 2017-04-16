@@ -44,6 +44,7 @@ public abstract class StaticElement {
         return trainsOnElement;
     }
 
+    public void setTrainsOnElement(Movable trainPart){trainsOnElement.add(trainPart);}
     /**
      * Elhagyjuk ezt az elemet. (Kikerül a listából)
      *

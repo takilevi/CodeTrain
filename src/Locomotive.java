@@ -11,6 +11,8 @@ public class Locomotive implements Movable {
 
     public Locomotive(StaticElement current, StaticElement previous, String name, Train t) {
         currentElement = current;
+        current.setTrainsOnElement(this);
+
         previousElement = previous;
         currentElement.stepToElement(this);
         this.name = name;

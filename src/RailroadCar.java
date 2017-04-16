@@ -34,6 +34,8 @@ public abstract class RailroadCar implements Movable {
     public void setCurrent(StaticElement current) {
         currentElement = current;
     }
+    public void setPreviousElement(StaticElement previousElement){this.previousElement=previousElement;}
+    public StaticElement getPreviousElement(){return previousElement;}
 
     public String getName(){return name;}
     public Movable getCarAfterCar() {

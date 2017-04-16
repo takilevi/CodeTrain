@@ -96,7 +96,7 @@ public class RailroadSwitch extends StaticElement {
 
     @Override
     public StaticElement getPrevForLoco() {
-        return null;
+        return staticDirection;
     }
 
     /**
