@@ -15,11 +15,11 @@ public class Tunnel {
      */
     public void build(TunnelEntrance e1) {
 
-        if(entrances.size()>2){
-            return;
-        }
         if(entrances == null){
             entrances = new ArrayList<TunnelEntrance>();
+        }
+        if(entrances.size()>2){
+            return;
         }
         entrances.add(e1);
 

@@ -16,8 +16,7 @@ public class RailroadModel {
     private List<Train> trainsInModel;
     private List<Train> freeTrains;
     private Map<String, StaticElement> elementsInModel; //ezt átírtam list<StaticElement>-ről, hogy tudjuk tárolni a neveket is
-    private String mapName;
-
+    Tunnel activeTunnel = new Tunnel();
     /**
      * Singletonná teszi az osztályt.
      *
@@ -220,6 +219,7 @@ public class RailroadModel {
             return;
         }
 
+        String mapName="";
         String trainName;
         String locomotiveName;
         String mapElement;
@@ -232,6 +232,7 @@ public class RailroadModel {
         String Tenter1;
         String Tenter2;
         String stationName;
+
 
         String[] command = c.split(" ");
 
@@ -263,6 +264,7 @@ public class RailroadModel {
                 case "loadMap":
                     mapName = command[1];
                     initFieldElements(mapName);
+                    System.out.println(ANSI_GREEN+"Sikeres pályabetöltés!"+ANSI_RESET);
                     break;
 
                 case "listMapElements":
@@ -273,9 +275,15 @@ public class RailroadModel {
                         while ((line = in.readLine()) != null) {
                             System.out.println(line);
                         }
-                    } catch (FileNotFoundException e) {
-                        System.out.println("map has not been loaded");
-                    } catch (IOException e) {
+
+                    }
+
+                    catch (FileNotFoundException e)
+                    {
+                        System.out.println(ANSI_RED+"map has not been loaded"+ANSI_RESET);
+                    }
+                    catch (IOException e)
+                    {
                         e.printStackTrace();
                     }
 
@@ -292,12 +300,12 @@ public class RailroadModel {
                         break;
                     }
 
-                    System.out.println("Ilyen nevű vonat jelenleg nincs a modelben!");
+                    System.out.println(ANSI_RED+"Ilyen nevű vonat jelenleg nincs a modelben!"+ANSI_RESET);
                     break;
 
                 case "listTrains":
                     if(trainsInModel.isEmpty()){
-                        System.out.println("A modelben jelenleg nincsenek vonatok!");
+                        System.out.println(ANSI_RED+"A modelben jelenleg nincsenek vonatok!"+ANSI_RESET);
                         break;
                     }
                     for(int i= 0; i<trainsInModel.size(); i++){
@@ -317,9 +325,10 @@ public class RailroadModel {
                         model.trainsInModel.add(t);
                         Locomotive m = new Locomotive(elementsInModel.get(mapElement), elementsInModel.get(mapElement).getPrevForLoco(), locomotiveName, t);
                         t.fillUpTrain(m, null);
+                        System.out.println(ANSI_GREEN+"Sikeresen a pályához lett adva a vonat!"+ANSI_RESET);
                     }
                     else{
-                        System.out.println("Ilyen elem sajnos nincs a modelben!");
+                        System.out.println(ANSI_RED+"Ilyen elem sajnos nincs a modelben!"+ANSI_RESET);
                     }
 
                     break;
@@ -336,6 +345,7 @@ public class RailroadModel {
                             curInstance.addCar(p);
                         }
                     }
+                    System.out.println(ANSI_GREEN+"Sikereses hozzá lett adva a kocsi a vonathoz!"+ANSI_RESET);
                     break;
 
                 case "addHopperCarToLocomotive":
@@ -347,10 +357,10 @@ public class RailroadModel {
                             curInstance.addCar(p);
                         }
                     }
+                    System.out.println(ANSI_GREEN+"Sikereses hozzá lett adva a kocsi a vonathoz!"+ANSI_RESET);
                     break;
 
                 case "stepLocomotive":
-
                     locomotiveName = command[1];
                     step = Integer.parseInt(command[2]);
 
@@ -361,14 +371,15 @@ public class RailroadModel {
                             }
                         }
                     }
-
+                    System.out.println(ANSI_GREEN+"Sikereses tovább haladt a vonat!"+ANSI_RESET);
                     break;
 
                 case "stepAll":
                     step = Integer.parseInt(command[1]);
 
                     if(trainsInModel.isEmpty()){
-                        System.out.println("Nincsenek vonatok a modelben!");
+                        System.out.println(ANSI_RED+"Nincsenek vonatok a modelben!"+ANSI_RESET);
+                        break;
                     }
 
                     for(int i = 0; i< step; i++) {
@@ -376,6 +387,7 @@ public class RailroadModel {
                             t.awakeLocomotive();
                         }
                     }
+                    System.out.println(ANSI_GREEN+"Sikereses tovább haladtak a vonatok!"+ANSI_RESET);
                     break;
 
                 case "run":
@@ -390,14 +402,31 @@ public class RailroadModel {
 
                     RailroadSwitch switcher = (RailroadSwitch)elementsInModel.get(switchName);
                     switcher.changeSwitchToDirection(elementsInModel.get(switchState));
+
+                    System.out.println(ANSI_GREEN+"Sikeres váltóállítás!"+ANSI_RESET);
                     break;
 
                 case "buildTunnel":
                     Tenter1 = command[1];
-                    Tenter2 = command[2];
+                    Tenter2 = command[2];//TODO: melyikek a bejáratok, kijáratok?
+
+                    activeTunnel.build(new TunnelEntrance());
+                    activeTunnel.build(new TunnelEntrance());
+
+                    System.out.println(ANSI_GREEN+"Sikereses alagútépítés!"+ANSI_RESET);
                     break;
 
                 case "destroyTunnel":
+
+                    if(activeTunnel != null)
+                    {
+                        activeTunnel.destroy();
+                        System.out.println(ANSI_GREEN+"Sikereses alagútrombolás!"+ANSI_RESET);
+                    }
+                    else{
+                        System.out.println(ANSI_RED+"Nincs aktív alagút."+ANSI_RESET);
+                    }
+
                     break;
 
                 case "readSwitch":
@@ -416,6 +445,7 @@ public class RailroadModel {
                     Station stat = (Station)elementsInModel.get(stationName);
                     stat.setColor(Color.valueOf(color));
                     stat.setGetOnPassengers(Integer.parseInt(passengers));
+                    System.out.println(ANSI_GREEN+"Sikereses állomás beállítás!"+ANSI_RESET);
                     break;
 
                 case "readStationParams":
@@ -448,7 +478,7 @@ public class RailroadModel {
             }
 
         } catch (ArrayIndexOutOfBoundsException a) {
-            System.out.println("missing parameter " + c);
+            System.out.println(ANSI_RED+"missing parameter " + c+ANSI_RESET);
         }
     }
 
