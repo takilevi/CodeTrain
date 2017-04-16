@@ -141,7 +141,7 @@ public class RailroadModel {
                                 until_tunnelend = in.readLine();
                                 in_tunnel = until_tunnelend.split(" ");
 
-                                while (in_tunnel[1] != null) {
+                                while (in_tunnel.length != 1) {
                                     elementsInModel.put(in_tunnel[1], new Track());
                                     StaticElement prev_track_intunnel = elementsInModel.get(prev_in_tunnel[1]);
                                     prev_track_intunnel.setNextElement(elementsInModel.get(in_tunnel[1]));
@@ -172,14 +172,6 @@ public class RailroadModel {
             }
         } catch (Exception e) {
             e.printStackTrace();
-        }
-    }
-
-    private void IterateThroughMap() {
-        for (Map.Entry<String, StaticElement> entry : elementsInModel.entrySet()) {
-            String key = entry.getKey();
-            StaticElement value = entry.getValue();
-            // now work with key and value...
         }
     }
 
