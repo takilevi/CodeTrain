@@ -1,5 +1,5 @@
 /**
- * Interfész, azon osztályok valósítják meg, akik képesek valamilyen mozgára.
+ * Interfész, azon osztályok valósítják meg, akik képesek valamilyen mozgásra.
  * Ezzel eggyüt járhat az ütközés is.
  */
 public interface Movable {

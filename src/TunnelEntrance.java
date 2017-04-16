@@ -18,7 +18,7 @@ public class TunnelEntrance extends StaticElement {
     }
 
     /**
-     * Visszaadja hogy aktiválták e az alagutat.
+     * Visszaadja hogy aktiválták -e az alagutat.
      * @return Az alagút állapota. Igaz ha aktív az alagút.
      */
     public boolean getState(){
@@ -39,14 +39,13 @@ public class TunnelEntrance extends StaticElement {
     }
 
     /**
-     * Megnézi hogy aktív e az alagút, és a megfelelő elemet adja vissza.
-     * @return Egy statikus elem, annak megfelelően, hogy aktív volt e az alagút.
+     * Megnézi hogy aktív -e az alagút, és a megfelelő elemet adja vissza.
+     * @return Egy statikus elem, annak megfelelően, hogy aktív volt -e az alagút.
      */
     public StaticElement getTunnelElement()
     {
         return tunnelElement;
     }
-
 
     /**
      * Azon statikus szomszédját adja vissza, ami nem egyenlő azzal ahonan oda léptünk.
@@ -69,13 +68,13 @@ public class TunnelEntrance extends StaticElement {
     }
 
     /**
-     * Volt e ütközés az elemet
+     * Volt e ütközés az elemen
      * @return Igaz, ha több mint egy mozgó objektum van rajta, egyébként hamis.
      */
 
     /**
      * Visszaadja az elemen elhelyezkedő mozgó objektumokat.
-     * @return Ezen objektumok listálya.
+     * @return Ezen objektumok listája.
      */
     public List<Movable> getTrainsOnElement()
     {

@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * A vonatot reprezentáló osztály
@@ -13,7 +12,6 @@ public class Train {
     private List<PassengerCar> freeCars;
     private RailroadModel model;
     private String name;
-
 
     /**
      * Publikus konstruktor a vonathoz
@@ -47,7 +45,7 @@ public class Train {
     }
 
     /**
-     * Elindítja vonat counter-ét.
+     * Elindítja a vonat counter-ét.
      */
     public void StartTrain(){}
 
@@ -86,7 +84,7 @@ public class Train {
         totalLength++;
         elementFindForCar(car);
     }
-        //üres kicsit feltöltése, mert lehet alapból üresen indul 1 kocsi.
+        //üres kicsik feltöltése, mert lehet alapból üresen indul 1 kocsi.
 
 
     private void elementFindForCar(RailroadCar car){

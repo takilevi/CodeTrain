@@ -11,23 +11,23 @@ public class Track extends StaticElement {
     /**
      * A sín konstruktora.
      */
-    public Track()
-    {
+    public Track() {
     }
 
     /**
-     * Létrehozásakor be kell álítani, hogy melyik pontosan két elemhez kapcsolódik.
+     * Létrehozásakor be kell álítani, hogy melyik két elemhez kapcsolódik.
+     *
      * @param previous Előző statikus elem.
-     * @param next Következő statikus elem.
+     * @param next     Következő statikus elem.
      */
-    public void setElements(StaticElement previous, StaticElement next)
-    {
-        previousElement= previous;
+    public void setElements(StaticElement previous, StaticElement next) {
+        previousElement = previous;
         nextElement = next;
     }
+
     @Override
-    public void setPreviousElement(StaticElement previousElement){
-        this.previousElement=previousElement;
+    public void setPreviousElement(StaticElement previousElement) {
+        this.previousElement = previousElement;
     }
 
     @Override
@@ -46,22 +46,20 @@ public class Track extends StaticElement {
     }
 
     @Override
-    public  void setNextElement(StaticElement nextElement){
+    public void setNextElement(StaticElement nextElement) {
         this.nextElement = nextElement;
     }
 
-
     /**
      * Azon statikus szomszédját adja vissza, ami nem egyenlő azzal ahonan oda léptünk.
+     *
      * @param previousElement Ahonan ide léptünk, nem ezt adja vissza.
      * @return A következő elem a megfelelő irányba.
      */
-    public StaticElement getNextElement(StaticElement previousElement)
-    {
-        if(this.previousElement == previousElement){
+    public StaticElement getNextElement(StaticElement previousElement) {
+        if (this.previousElement == previousElement) {
             return nextElement;
-        }
-        else{
+        } else {
             return previousElement;
         }
     }
@@ -73,32 +71,32 @@ public class Track extends StaticElement {
 
     /**
      * Visszaadja az elemen elhelyezkedő mozgó objektumokat.
-     * @return Ezen objektumok listálya.
+     *
+     * @return Ezen objektumok listája.
      */
-    public List<Movable> getTrainsOnElement()
-    {
+    public List<Movable> getTrainsOnElement() {
         return trainsOnElement;
 
     }
 
     /**
      * Elhagyjuk ezt az elemet. (Kikerül a listából)
+     *
      * @param m Azon mozgó objektum aki elhagyja.
      */
-    public void leaveElement(Movable m){
+    public void leaveElement(Movable m) {
 
-        if(trainsOnElement.contains(m)){
+        if (trainsOnElement.contains(m)) {
             trainsOnElement.remove(m);
         }
     }
 
     /**
-     *
      * @param m Aki rálpett az elemre.
      */
-    public void stepToElement(Movable m){
+    public void stepToElement(Movable m) {
 
-        if(!trainsOnElement.contains(m)){
+        if (!trainsOnElement.contains(m)) {
             trainsOnElement.add(m);
         }
     }

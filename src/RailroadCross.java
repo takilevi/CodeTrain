@@ -1,8 +1,5 @@
 import java.util.List;
 
-/**
- * Created by Andy on 2017. 04. 11..
- */
 public class RailroadCross extends StaticElement {
 
     private StaticElement firstEntrance;
@@ -32,7 +29,6 @@ public class RailroadCross extends StaticElement {
         else{
             return null;
         }
-
     }
 
     @Override
@@ -40,21 +36,17 @@ public class RailroadCross extends StaticElement {
         return null;
     }
 
-
     public void setFirstDirections(StaticElement entrance, StaticElement exit){
 
         firstEntrance = entrance;
         firstExit = exit;
-
     }
 
     public void setSecondDirections(StaticElement entrance, StaticElement exit){
 
         secondEntrance = entrance;
         secondExit = exit;
-
     }
-
 
     /**
      * Visszaadja az elemen elhelyezkedő mozgó objektumokat.
@@ -85,7 +77,6 @@ public class RailroadCross extends StaticElement {
         if(!trainsOnElement.contains(m)){
             trainsOnElement.add(m);
         }
-
     }
 
     @Override
@@ -108,11 +99,8 @@ public class RailroadCross extends StaticElement {
 
     }
 
-
     @Override
     public void setTunnelElement(StaticElement tunnelElement) {
 
     }
-
-
 }

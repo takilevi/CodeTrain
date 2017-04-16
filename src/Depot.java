@@ -1,13 +1,11 @@
 import java.util.List;
 
 /**
- * A "depó",azaz a kocsiszín, a vonatok indításáért felelős, innen indulnak a vonatok.
+ * A "depó", azaz a kocsiszín, a vonatok indításáért felelős, innen indulnak a vonatok.
  * Csak egy irányba lehet elhagyni az depót,
  * azaz azon vonat, aki indulása után ide érkezik, kisiklik.
  */
 public class Depot {
-
-
 
     private List<StaticElement> depotElements;
 

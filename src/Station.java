@@ -1,8 +1,7 @@
 import java.util.List;
-import java.util.Scanner;
 
 /**
- * Állomást valósítja meg az osztály.
+ * Az állomást valósítja meg az osztály.
  */
 public class Station extends StaticElement {
 
@@ -51,11 +50,9 @@ public class Station extends StaticElement {
         return previousElement;
     }
 
-
-
     /**
      * Visszaadja az elemen elhelyezkedő mozgó objektumokat.
-     * @return Ezen objektumok listálya.
+     * @return Ezen objektumok listája.
      */
     public List<Movable> getTrainsOnElement()
     {
@@ -74,7 +71,7 @@ public class Station extends StaticElement {
     }
 
     /**
-     * Ráléptünk az elemre. (Bekerül a listába az obejktum)
+     * Ráléptünk az elemre. (Bekerül a listába az objektum)
      * @param m Aki rálpett az elemre.
      */
     public void stepToElement(Movable m){
@@ -82,7 +79,6 @@ public class Station extends StaticElement {
         if(!trainsOnElement.contains(m)){
             trainsOnElement.add(m);
         }
-
     }
 
     @Override
