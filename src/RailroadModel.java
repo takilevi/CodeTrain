@@ -50,7 +50,7 @@ public class RailroadModel {
 
         BufferedReader in = null;
         try {
-            in = new BufferedReader(new FileReader("Resources/" + mapName));
+            in = new BufferedReader(new FileReader("Resources/map/" + mapName));
             String line;
 
             while ((line = in.readLine()) != null) {
@@ -170,7 +170,9 @@ public class RailroadModel {
                 }
                 previousSplittedLine = splittedLine;
             }
-        } catch (Exception e) {
+        } catch (FileNotFoundException e) {
+            System.out.println("Wrong mapname");
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -255,13 +257,15 @@ public class RailroadModel {
                     break;
 
                 case "loadMap":
-                    mapName = command[1];
-                    initFieldElements(mapName);
+
+                        mapName = command[1];
+                        initFieldElements(mapName);
+
                     break;
 
                 case "listMapElements":
                     try {
-                        BufferedReader in = new BufferedReader(new FileReader("Resources/" + mapName));
+                        BufferedReader in = new BufferedReader(new FileReader("Resources/map/" + mapName));
                         String line;
 
                         while ((line = in.readLine()) != null) {
