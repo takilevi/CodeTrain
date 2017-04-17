@@ -1,36 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b719b53-8ac2-4a4f-856c-ea236c24fa12" name="Default" comment="pár parancsot megcsináltam">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/testMap_3sin.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/HopperCar.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/HopperCar.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Locomotive.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Locomotive.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Movable.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Movable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/PassengerCar.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/PassengerCar.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/RailroadCar.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/RailroadCar.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/RailroadCross.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/RailroadCross.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/RailroadModel.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/RailroadModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/RailroadSwitch.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/RailroadSwitch.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/StaticElement.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/StaticElement.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Station.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Station.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Track.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Track.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Train.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Train.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/TunnelEntrance.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/TunnelEntrance.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HopperCar.java" afterPath="$PROJECT_DIR$/src/HopperCar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Locomotive.java" afterPath="$PROJECT_DIR$/src/Locomotive.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Movable.java" afterPath="$PROJECT_DIR$/src/Movable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PassengerCar.java" afterPath="$PROJECT_DIR$/src/PassengerCar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RailroadCar.java" afterPath="$PROJECT_DIR$/src/RailroadCar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RailroadCross.java" afterPath="$PROJECT_DIR$/src/RailroadCross.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RailroadModel.java" afterPath="$PROJECT_DIR$/src/RailroadModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RailroadSwitch.java" afterPath="$PROJECT_DIR$/src/RailroadSwitch.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StaticElement.java" afterPath="$PROJECT_DIR$/src/StaticElement.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Station.java" afterPath="$PROJECT_DIR$/src/Station.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Track.java" afterPath="$PROJECT_DIR$/src/Track.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Train.java" afterPath="$PROJECT_DIR$/src/Train.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TunnelEntrance.java" afterPath="$PROJECT_DIR$/src/TunnelEntrance.java" />
-    </list>
+    <list default="true" id="6b719b53-8ac2-4a4f-856c-ea236c24fa12" name="Default" comment="pár parancsot megcsináltam" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,7 +19,7 @@
       <file leaf-file-name="RailroadCross.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/RailroadCross.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
+            <state relative-caret-position="918">
               <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding>
                 <element signature="e#880#881#0" expanded="true" />
@@ -61,8 +32,8 @@
       <file leaf-file-name="RailroadModel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/RailroadModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2737">
-              <caret line="217" column="0" lean-forward="true" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
+            <state relative-caret-position="17">
+              <caret line="217" column="0" lean-forward="false" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#notEmpty#0;class#RailroadModel#0" expanded="false" />
@@ -74,7 +45,7 @@
       <file leaf-file-name="Depot.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Depot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
+            <state relative-caret-position="544">
               <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding />
             </state>
@@ -84,8 +55,8 @@
       <file leaf-file-name="StaticElement.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/StaticElement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+            <state relative-caret-position="374">
+              <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1118#1119#0" expanded="true" />
@@ -98,7 +69,7 @@
       <file leaf-file-name="Locomotive.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Locomotive.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="272">
               <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
               <folding>
                 <element signature="e#2539#2540#0" expanded="true" />
@@ -111,7 +82,7 @@
       <file leaf-file-name="Train.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Train.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
+            <state relative-caret-position="969">
               <caret line="61" column="31" lean-forward="false" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -123,7 +94,7 @@
       <file leaf-file-name="Track.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Track.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-474">
+            <state relative-caret-position="816">
               <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding>
                 <element signature="e#1645#1646#0" expanded="true" />
@@ -136,7 +107,7 @@
       <file leaf-file-name="Station.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Station.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="850">
               <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding />
             </state>
@@ -146,7 +117,7 @@
       <file leaf-file-name="RailroadCar.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/RailroadCar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
+            <state relative-caret-position="340">
               <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
               <folding />
             </state>
@@ -156,7 +127,7 @@
       <file leaf-file-name="RailroadSwitch.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/RailroadSwitch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="1717">
               <caret line="106" column="7" lean-forward="false" selection-start-line="106" selection-start-column="7" selection-end-line="106" selection-end-column="7" />
               <folding />
             </state>
@@ -252,6 +223,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -295,8 +268,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -678,12 +649,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -707,6 +677,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -904,10 +875,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding>
-            <element signature="e#1349#1350#0" expanded="true" />
-            <element signature="e#1391#1392#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -954,7 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16133">
           <caret line="949" column="16" lean-forward="false" selection-start-line="949" selection-start-column="16" selection-end-line="949" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1024,7 +991,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="15" lean-forward="false" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1049,7 +1015,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Station.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="850">
           <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding />
         </state>
@@ -1057,7 +1023,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RailroadSwitch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="1717">
           <caret line="106" column="7" lean-forward="false" selection-start-line="106" selection-start-column="7" selection-end-line="106" selection-end-column="7" />
           <folding />
         </state>
@@ -1065,7 +1031,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RailroadCross.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="918">
           <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
             <element signature="e#880#881#0" expanded="true" />
@@ -1076,7 +1042,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Depot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
+        <state relative-caret-position="544">
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
@@ -1084,7 +1050,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Train.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
+        <state relative-caret-position="969">
           <caret line="61" column="31" lean-forward="false" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1094,7 +1060,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Track.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-474">
+        <state relative-caret-position="816">
           <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding>
             <element signature="e#1645#1646#0" expanded="true" />
@@ -1105,8 +1071,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/StaticElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        <state relative-caret-position="374">
+          <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1118#1119#0" expanded="true" />
@@ -1117,7 +1083,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Locomotive.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="272">
           <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
           <folding>
             <element signature="e#2539#2540#0" expanded="true" />
@@ -1128,7 +1094,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RailroadCar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
+        <state relative-caret-position="340">
           <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
           <folding />
         </state>
@@ -1136,8 +1102,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RailroadModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2737">
-          <caret line="217" column="0" lean-forward="true" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
+        <state relative-caret-position="17">
+          <caret line="217" column="0" lean-forward="false" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#notEmpty#0;class#RailroadModel#0" expanded="false" />
