@@ -1,6 +1,3 @@
-import java.io.IOException;
-import java.util.Scanner;
-
 /**
  * Az alkalmazás tartalmazza a main függvényt, innen indul a program,
  * illetve a vezérlést is ez az osztály végzi.

@@ -71,36 +71,25 @@ public class Train {
 
 
         locomotive = loco;
-        //TODO:itt ne adjunk cars listát, nem praktikus, ez legyen az addLocomotive, és van egy addCar
-        /*
+
         if (cars != null) {
             this.cars = cars;
             totalLength += cars.size();
         }
-        */
     }
 
     public void addCar(RailroadCar car) {
 
-        if(cars.isEmpty()){
-            locomotive.setCarAfter(car);
-            car.setCarBefore(locomotive);
-            car.setCurrent(locomotive.getPreviousElement());
-            car.setPreviousElement(locomotive.getPreviousElement().getPrevForLoco());
-            this.cars.add(car);
-            totalLength++;
-
-        }
-        if(cars != null && !cars.isEmpty()) {
-            cars.get(cars.size()-1).setCarAfterCar(car);
-            car.setCarBefore(cars.get(cars.size()-1));
-            car.setCurrent(cars.get(cars.size()-1).getPreviousElement());
-            car.setPreviousElement(car.getCurrentElement().getPrevForLoco());
-            this.cars.add(car);
-            totalLength++;
-        }
+        this.cars.add(car);
+        totalLength++;
+        elementFindForCar(car);
     }
+        //üres kicsik feltöltése, mert lehet alapból üresen indul 1 kocsi.
 
+
+    private void elementFindForCar(RailroadCar car){
+        //TODO meg kell keresni a staticelementjét, használjuk a totallenght-et
+    }
     public void listTrain(){
         System.out.println(name);
         locomotive.listTrain();

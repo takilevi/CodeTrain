@@ -27,7 +27,6 @@ public class Tunnel {
             entrances.get(0).changeState();
             entrances.get(1).changeState();
         }
-
     }
 
     /**
@@ -39,11 +38,10 @@ public class Tunnel {
             entrances.get(0).changeState();
             entrances.get(1).changeState();
         }
-
     }
 
     /**
-     * Megnézi hogy volt e az alagútban vonat
+     * Megnézi hogy volt -e az alagútban vonat
      * @return Visszaadja hogy volt-e benne.
      */
     private boolean checkTrainInTunnel() {
