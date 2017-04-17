@@ -1,0 +1,5 @@
+LoadMap map2.txt
+AddLocomotive train1 l0 t5
+addPassangersCarToTrain train1 pc0 blue true
+AddLocomotive train2 l1 t3
+StepLocomotive l0 1

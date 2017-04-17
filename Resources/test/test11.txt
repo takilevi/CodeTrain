@@ -1,0 +1,4 @@
+loadMap map5.txt
+listActiveTunnel
+buildTunnel te1 te2
+listActiveTunnel

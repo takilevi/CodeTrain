@@ -1,0 +1,4 @@
+loadMap map3.txt
+addLocomotive train1 l0 sw1
+changeSwitch sw1 t2
+listMapElements

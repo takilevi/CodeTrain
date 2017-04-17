@@ -1,0 +1,6 @@
+false
+false
+train1
+Locomotive l0 t6
+PassangerCar pc0 red t5 true
+HopperCar hc0 t4

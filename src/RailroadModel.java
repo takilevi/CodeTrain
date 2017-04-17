@@ -48,7 +48,7 @@ public class RailroadModel {
         elementsInModel = new LinkedHashMap<String, StaticElement>();
         String[] previousSplittedLine = null;
 
-        BufferedReader in = null;
+        BufferedReader in;
         try {
             in = new BufferedReader(new FileReader("Resources/map/" + mapName));
             String line;
@@ -320,7 +320,7 @@ public class RailroadModel {
 
                     break;
 
-                case "addPassengerCarToLocomotive":
+                case "addPassengerCarToTrain":
                     trainName = command[1];
                     carName = command[2];
                     color = command[3];
@@ -334,7 +334,7 @@ public class RailroadModel {
                     }
                     break;
 
-                case "addHopperCarToLocomotive":
+                case "addHopperCarToTrain":
                     trainName = command[1];
                     carName = command[2];
                     for (Train curInstance : trainsInModel) {

@@ -1,0 +1,13 @@
+Track t1
+Track t2
+Switch s1
+Track t3
+Track t4
+t3
+Station st1 blue
+TunnelElement te1
+Track t5
+t4
+Track t6
+TunnelElement te2
+Station st2 red
