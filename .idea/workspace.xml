@@ -1,34 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b719b53-8ac2-4a4f-856c-ea236c24fa12" name="Default" comment="Rendszereztem kicsit a Resources mappát, hogy jobban átlátható legyen, a RailroadModell-ben elkaptam a még le nem kezelt FiletNotfoundExepciont a fájlbetöltésnél, és átírtam a fájlbeolvasás paramétereit, hogy most már a Resources/map/ mappából olvasson be. Nálam minden jól fut, ha valami mégsem jó jelezzétek.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/map/map2.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/map/map3.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/map/map4.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/map/map5.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/map/map6.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/map/map7.txt" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/testMap_3sin.txt" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Resources/63236-OAYIOH-751.jpg" afterPath="$PROJECT_DIR$/Resources/img/63236-OAYIOH-751.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Resources/depot.png" afterPath="$PROJECT_DIR$/Resources/img/depot.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Resources/harmas_elag.png" afterPath="$PROJECT_DIR$/Resources/img/harmas_elag.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Resources/kettes_elag.jpg" afterPath="$PROJECT_DIR$/Resources/img/kettes_elag.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Resources/map1.txt" afterPath="$PROJECT_DIR$/Resources/map/map1.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Resources/railroad_map.png" afterPath="$PROJECT_DIR$/Resources/img/railroad_map.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Resources/station.png" afterPath="$PROJECT_DIR$/Resources/img/station.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Resources/switch.jpg" afterPath="$PROJECT_DIR$/Resources/img/switch.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Resources/track.png" afterPath="$PROJECT_DIR$/Resources/img/track.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Resources/track_collection.png" afterPath="$PROJECT_DIR$/Resources/img/track_collection.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Resources/tracks_collection.jpg" afterPath="$PROJECT_DIR$/Resources/img/tracks_collection.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Resources/tunnel_entrance.png" afterPath="$PROJECT_DIR$/Resources/img/tunnel_entrance.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Locomotive.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Locomotive.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/RailroadCar.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/RailroadCar.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/RailroadModel.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/RailroadModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/RailroadSwitch.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/RailroadSwitch.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/StaticElement.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/StaticElement.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Train.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Train.class" />
+    <list default="true" id="6b719b53-8ac2-4a4f-856c-ea236c24fa12" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RailroadModel.java" afterPath="$PROJECT_DIR$/src/RailroadModel.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -774,7 +748,7 @@
       <workItem from="1492171367965" duration="19803000" />
       <workItem from="1492258651061" duration="9925000" />
       <workItem from="1492363332333" duration="6852000" />
-      <workItem from="1492422557840" duration="2318000" />
+      <workItem from="1492422557840" duration="2380000" />
     </task>
     <task id="LOCAL-00001" summary="KÉSZ: 14-es pont&#10;TODO: Loggingot átnézni, nem világos, hogy hogyan is kéne kinéznie&#10;TODO: Többi menüpont">
       <created>1489933169166</created>
@@ -881,11 +855,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492366079939</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Rendszereztem kicsit a Resources mappát, hogy jobban átlátható legyen, a RailroadModell-ben elkaptam a még le nem kezelt FiletNotfoundExepciont a fájlbetöltésnél, és átírtam a fájlbeolvasás paramétereit, hogy most már a Resources/map/ mappából olvasson be. Nálam minden jól fut, ha valami mégsem jó jelezzétek.">
+      <created>1492424891666</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1492424891666</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71979000" />
+    <option name="totallyTimeSpent" value="72041000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
