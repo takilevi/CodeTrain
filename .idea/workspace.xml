@@ -4,7 +4,6 @@
     <list default="true" id="6b719b53-8ac2-4a4f-856c-ea236c24fa12" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/RailroadModel.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/RailroadModel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CodeTrain.iml" afterPath="$PROJECT_DIR$/CodeTrain.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -734,7 +733,7 @@
       <workItem from="1492258651061" duration="9925000" />
       <workItem from="1492363332333" duration="6852000" />
       <workItem from="1492422557840" duration="12384000" />
-      <workItem from="1492444358957" duration="78000" />
+      <workItem from="1492444358957" duration="126000" />
     </task>
     <task id="LOCAL-00001" summary="KÉSZ: 14-es pont&#10;TODO: Loggingot átnézni, nem világos, hogy hogyan is kéne kinéznie&#10;TODO: Többi menüpont">
       <created>1489933169166</created>
@@ -862,7 +861,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492429126350</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Batch file a Resources/test mappában">
+      <created>1492444482522</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1492444482522</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -883,7 +889,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82123000" />
+    <option name="totallyTimeSpent" value="82171000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -946,7 +952,8 @@
     <MESSAGE value="initFieldElements() fixed, legalábbis lefordul, remélem jól is működik" />
     <MESSAGE value="Rendszereztem kicsit a Resources mappát, hogy jobban átlátható legyen, a RailroadModell-ben elkaptam a még le nem kezelt FiletNotfoundExepciont a fájlbetöltésnél, és átírtam a fájlbeolvasás paramétereit, hogy most már a Resources/map/ mappából olvasson be. Nálam minden jól fut, ha valami mégsem jó jelezzétek." />
     <MESSAGE value="Testek és kimeneteik" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testek és kimeneteik" />
+    <MESSAGE value="Batch file a Resources/test mappában" />
+    <option name="LAST_COMMIT_MESSAGE" value="Batch file a Resources/test mappában" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1220,6 +1227,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1277,6 +1285,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
