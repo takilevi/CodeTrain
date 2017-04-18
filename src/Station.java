@@ -13,7 +13,8 @@ public class Station extends StaticElement {
     /**
      * Az állomás konstruktora.
      */
-    public Station(int getOnPassengers, Color color) {
+    public Station(int getOnPassengers, Color color,String name) {
+        super(name);
         this.getOnPassengers=getOnPassengers;
         this.color = color;
     }

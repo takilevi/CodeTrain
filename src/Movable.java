@@ -6,9 +6,9 @@ public interface Movable {
 
     /**
      * Léptethetünk vele.
-     * @param param Milyen elemre lépjünk tovább
+     * @param stepToElement Milyen elemre lépjünk tovább
      */
-    void move();
+    void move(StaticElement stepToElement);
 
     /**
      * Ütközés detektálása

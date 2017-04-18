@@ -11,7 +11,7 @@ public class Locomotive implements Movable {
 
     public Locomotive(StaticElement current, StaticElement previous, String name, Train t) {
         currentElement = current;
-        current.setTrainsOnElement(this);
+        current.stepToElement(this);
 
         previousElement = previous;
         currentElement.stepToElement(this);
@@ -71,7 +71,7 @@ public class Locomotive implements Movable {
      * A vonatot léptetjük egyet. Beállítja a aktuális elemet, és az előzőt,
      * majd ha van utána kocsi meghívja rajta a move-ot.
      */
-    public void move() {
+    public void move(StaticElement stepToElement) {
 
         StaticElement next = currentElement.getNextElement(previousElement);
         previousElement = currentElement;
@@ -81,7 +81,7 @@ public class Locomotive implements Movable {
         currentElement.stepToElement(this);
 
         if (carAfterLocomotive != null) {
-            carAfterLocomotive.move();
+            carAfterLocomotive.move(previousElement);
         }
     }
 
@@ -101,7 +101,7 @@ public class Locomotive implements Movable {
     }
 
     public void listTrain() {
-        System.out.println(name + " " + currentElement.getClass());
+        System.out.println("Locomotive "+name + " " + currentElement.getName());
     }
 
 }

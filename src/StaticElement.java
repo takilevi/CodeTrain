@@ -7,8 +7,10 @@ import java.util.List;
 public abstract class StaticElement {
 
     protected List<Movable> trainsOnElement;
+    private String name;
 
-    StaticElement() {
+    StaticElement(String name) {
+        this.name=name;
         trainsOnElement = new ArrayList<>();
     }
 
@@ -21,7 +23,7 @@ public abstract class StaticElement {
     public abstract StaticElement getNextElement(StaticElement previousElement);
 
     public abstract StaticElement getPrevForLoco();
-
+    public String getName(){return name;}
     /**
      * Volt -e ütközés az elemen
      *
@@ -44,7 +46,6 @@ public abstract class StaticElement {
         return trainsOnElement;
     }
 
-    public void setTrainsOnElement(Movable trainPart){trainsOnElement.add(trainPart);}
     /**
      * Elhagyjuk ezt az elemet. (Kikerül a listából)
      *

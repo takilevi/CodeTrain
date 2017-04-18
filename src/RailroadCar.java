@@ -11,11 +11,8 @@ public abstract class RailroadCar implements Movable {
     protected String name;
     private Train train;
 
-    public RailroadCar(StaticElement current,StaticElement previous, String name, Train t){
+    public RailroadCar(String name, Train t){
         this.name = name;
-        currentElement = current;
-        previousElement = previous;
-        currentElement.stepToElement(this);
         train = t;
     }
 
@@ -57,17 +54,17 @@ public abstract class RailroadCar implements Movable {
     /**
      * Kocsi léptetése. Vagy előtte lévő kocsi, vagy a modony hívhatja meg.
      */
-    public void move() {
+    public void move(StaticElement stepToElement) {
 
-        StaticElement next = currentElement.getNextElement(previousElement);
+
         previousElement = currentElement;
-        currentElement = next;
+        currentElement = stepToElement;
 
         previousElement.leaveElement(this);
-        currentElement.leaveElement(this);
+        currentElement.stepToElement(this);
 
         if (carAfterCar != null) {
-            carAfterCar.move();
+            carAfterCar.move(previousElement);
         }
     }
 
