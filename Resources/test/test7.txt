@@ -1,4 +1,5 @@
 loadMap map3.txt
 addLocomotive train1 l0 sw1
+readSwitch sw1
 changeSwitch sw1 t2
-listMapElements
+readSwitch sw1

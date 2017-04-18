@@ -1,5 +1,5 @@
 loadMap map5.txt
-buildtunnel te1 te2
+buildTunnel te1 te2
 addLocomotive train1 l0 te1
-stepLocomotive train1 1
+stepTrain train1 1
 listTrain train1
