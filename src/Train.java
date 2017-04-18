@@ -64,6 +64,8 @@ public class Train {
 
         locomotive.crash();
 
+        RailroadModel.commandsOutput.add("Nyertünk: false");
+        RailroadModel.commandsOutput.add("Vesztettünk: false");
         System.out.println("Nyertünk: false");
         System.out.println("Vesztettünk: false");
 
@@ -73,6 +75,10 @@ public class Train {
         return false;
     }
 
+    /**
+     * Mozdony hozzáadása a vonathoz (csak 1 lehet)
+     * @param loco a mozdony
+     */
     public void addLocomotive(Locomotive loco) {
 
         if(locomotive == null){
@@ -82,6 +88,10 @@ public class Train {
 
     }
 
+    /**
+     * Kocsi hozzáadása a vonathoz
+     * @param car a kocsi
+     */
     public void addCar(RailroadCar car) {
 
 
@@ -112,6 +122,7 @@ public class Train {
     }
 
     public void listTrain(){
+        RailroadModel.commandsOutput.add(name);
         System.out.println(name);
         locomotive.listTrain();
         for(int i= 0; i< cars.size(); i++){
@@ -119,6 +130,9 @@ public class Train {
         }
     }
 
+    /**
+     * Kisiklott a vonat
+     */
     public void getOfRails(){
         model.finishGame(1);
     }

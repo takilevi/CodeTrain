@@ -3,11 +3,17 @@
  */
 public class Locomotive implements Movable {
 
+    /**
+     * Mozdony, tudja a jelenlegi és az előző elemet ami állt
+     * ismeri az utána következő kocsit (ha van)
+     * van neve, és vonat amihez tartozik
+     */
     private StaticElement currentElement;
     private StaticElement previousElement;
     private RailroadCar carAfterLocomotive;
     private String name;
     private Train train;
+
 
     public Locomotive(StaticElement current, StaticElement previous, String name, Train t) {
         currentElement = current;
@@ -73,6 +79,11 @@ public class Locomotive implements Movable {
     public void move(StaticElement stepToElement) {
 
         StaticElement next = currentElement.getNextElement(previousElement);
+
+        if(next == null){
+            train.getOfRails();
+        }
+
         previousElement = currentElement;
         currentElement = next;
 
@@ -99,15 +110,31 @@ public class Locomotive implements Movable {
         }
     }
 
-    public void listTrain() {
+    /**
+     * Segéd függvény a prototípushoz
+     */
+    public void listTrain()
+    {
+        RailroadModel.commandsOutput.add("Locomotive "+name + " " + currentElement.getName());
         System.out.println("Locomotive "+name + " " + currentElement.getName());
     }
 
+    /**
+     * Nem szállhatnak rá fel utasok!
+     * @param color
+     * @param number
+     * @return
+     */
     @Override
     public boolean tryToGetOnPassenger(Color color, int number) {
         return false;
     }
 
+    /**
+     * Nincsen színe!
+     * @param color
+     * @return
+     */
     @Override
     public boolean tryToPutDownPassengers(Color color) {
         return false;

@@ -12,6 +12,10 @@ public class Controller {
         this.model = model;
     }
 
+    /**
+     * Olvassa a standard inputról a parancsokat,
+     * és a modelnek továbbítja, hogy dolgozza fel.
+     */
     public void readCommand()
     {
         Scanner scanner = new Scanner(System.in);

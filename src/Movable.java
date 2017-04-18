@@ -15,7 +15,18 @@ public interface Movable {
      */
     void crash();
 
+    /**
+     * Megpróbálhatnak rá felkapaszkodni utasok
+     * @param color Az állomás színe, ahonnan az utasok jöttek
+     * @param number Az utasok száma (igazából 1 v 0), az állomás szemponjából lényeges
+     * @return
+     */
     public boolean tryToGetOnPassenger(Color color, int number);
 
+    /**
+     * Leszállhatnak utasok róla
+     * @param color Az állomás színe
+     * @return
+     */
     public boolean tryToPutDownPassengers(Color color);
 }

@@ -1,7 +1,13 @@
 Track t0
 Track t1
-RailRoadCross rrc0
-t1
-Track t2
-t3
+RailroadCross rc0 t0 Track t2
+RailroadCross rc0 t1 Track t3
+t2
+Station st0 0 Blue
+Station st1 1 Red
 Track t4
+t3
+Track t5
+Track t6
+Track t7
+Station st2 0 Red

@@ -7,11 +7,20 @@ import java.util.*;
  * (Játék indítás, Játék vége, pálya felépítése.)
  */
 public class RailroadModel {
+    /**
+     * Színek illetve egy lista, ami tárolja az egyes parancsokra kiadott outputokat.
+     */
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_RED = "\u001B[31m";
     public static final String ANSI_BLUE = "\u001B[34m";
+    public static List<String> commandsOutput = new ArrayList<>();
 
+    /**
+     * Tárolja az összes vonatot, azokat amiken még vannak utasok
+     * Az összes element, az aktív alagutat, a nem üres állomásokat
+     * A betöltött pálya nevét, és egy counter szálat
+     */
     private static RailroadModel model;
     private List<Train> trainsInModel;
     private List<Train> fullTrains;
@@ -19,6 +28,9 @@ public class RailroadModel {
     private Tunnel activeTunnel;
     private List<Station> notEmptyStations;
     private String mapName;
+    private Counter counter;
+
+
 
     /**
      * Singletonná teszi az osztályt.
@@ -127,11 +139,22 @@ public class RailroadModel {
                         break;
 
                     case "RailroadCross":
-                        //TODO: ez nem túl egyszerű
+
+                        String line_2 = in.readLine();
+                        String[] line_2_rc = line_2.split(" ");
+                        elementsInModel.put(splittedLine[1],new RailroadCross(splittedLine[1]));
+                        elementsInModel.put(splittedLine[4], new Track(splittedLine[4]));
+                        elementsInModel.put(line_2_rc[4],new Track(line_2_rc[4]));
+                        RailroadCross rc_temp = (RailroadCross)elementsInModel.get(splittedLine[1]);
+                        rc_temp.setFirstDirections(elementsInModel.get(splittedLine[2]),elementsInModel.get(splittedLine[4]));
+                        rc_temp.setSecondDirections(elementsInModel.get(line_2_rc[2]),elementsInModel.get(line_2_rc[4]));
+                        elementsInModel.get(splittedLine[2]).setNextElement(rc_temp);
+                        elementsInModel.get(splittedLine[4]).setPreviousElement(rc_temp);
+                        elementsInModel.get(line_2_rc[2]).setNextElement(rc_temp);
+                        elementsInModel.get(line_2_rc[4]).setPreviousElement(rc_temp);
                         break;
 
                     default:
-                        //ebben a .getClass().getName() -ben nem annyira vagyok biztos
                         String searchType = elementsInModel.get(splittedLine[0]).getClass().getSimpleName();
 
                         switch (searchType) {
@@ -186,13 +209,14 @@ public class RailroadModel {
     }
 
     /**
-     * Játék elindítása (A szkeletonban nincs még ilyen viselkedés.)
+     * Játék elindítása (A prototípusban még nem kell.)
      */
     public void startGame() {
     }
 
     /**
-     * A játék véget ért.
+     * A játék véget ért. Ha a code 0, és már az állomásokon se várnak utasok, nyertünk
+     * Ha 1 akkor vesztettünk.
      */
     public void finishGame(int code) {
 
@@ -234,6 +258,11 @@ public class RailroadModel {
 
 
     }
+
+    /**
+     * Utasok szálltak fel egy vonatra
+     * @param full
+     */
     public void fullTrain(Train full){
 
         if(!fullTrains.contains(full)){
@@ -241,6 +270,10 @@ public class RailroadModel {
         }
     }
 
+    /**
+     * Kiürült egy állomás
+     * @param empty az állomás
+     */
     public void emptyStation(Station empty){
 
         if(notEmptyStations.contains(empty)){
@@ -248,6 +281,11 @@ public class RailroadModel {
         }
     }
 
+    /**
+     * A prototípus feldolgozza a standart inputon, vagy a testből olvasott parancsokat
+     * és végrehajta.
+     * @param c A parancs
+     */
     public void CommandExecution(String c) {
 
         if (c == null) {
@@ -267,6 +305,7 @@ public class RailroadModel {
         String Tenter2;
         String stationName;
         String testName;
+        String crossName;
 
         String[] command = c.split(" ");
 
@@ -307,6 +346,7 @@ public class RailroadModel {
                         String line;
 
                         while ((line = in.readLine()) != null) {
+                            commandsOutput.add(line);
                             System.out.println(line);
                         }
                     } catch (FileNotFoundException e) {
@@ -389,18 +429,18 @@ public class RailroadModel {
 
                     trainName = command[1];
                     step = Integer.parseInt(command[2]);
-                    int findIt = 0;
+
                     for (int i = 0; i < step; i++) {
                         for (Train t : trainsInModel) {
                             if (t.getName().matches(trainName)) {
-                                findIt++;
+
                                 t.awakeLocomotive();
                             }
                         }
                     }
 
 
-                    //System.out.println(findIt);
+
 
                     break;
 
@@ -418,12 +458,25 @@ public class RailroadModel {
                     }
                     break;
 
+                case "readCross":
+                    crossName = command[1];
+                    RailroadCross cross = (RailroadCross)elementsInModel.get(crossName);
+                    commandsOutput.add("RailroadCross "+crossName);
+                    commandsOutput.add(cross.firstDirections());
+                    commandsOutput.add(cross.secondDirections());
+                    System.out.println("RailroadCross "+crossName);
+                    System.out.println(cross.firstDirections());
+                    System.out.println(cross.secondDirections());
+                    break;
+
                 case "run":
-                    Counter counter = new Counter(1000);
+                    counter = new Counter(3000, "RunTrains", trainsInModel);
+                    System.out.println("Nyomj meg valamilyen gombot, ha parancsot írnál be");
                     counter.start();
                     break;
 
                 case "stop":
+                    counter.stopThread();
                     break;
 
                 case "changeSwitch":
@@ -461,8 +514,10 @@ public class RailroadModel {
                     if(activeTunnel != null){
                         //Csúnya, és Demeter, de ez a prototípusban elmegy, a véglegesből úgyis ki kell szedni.
                         System.out.println("Tunnel : " + activeTunnel.getEntrances().get(0).getName() + " " + activeTunnel.getEntrances().get(1).getName());
+                        commandsOutput.add("Tunnel : " + activeTunnel.getEntrances().get(0).getName() + " " + activeTunnel.getEntrances().get(1).getName());
                     }
                     else{
+                        commandsOutput.add("Aktív alagút: null");
                         System.out.println("Aktív alagút: null");
                     }
                     break;
@@ -471,6 +526,10 @@ public class RailroadModel {
                     switchName = command[1];
                     RailroadSwitch readable = (RailroadSwitch) elementsInModel.get(switchName);
 
+                    commandsOutput.add(readable.getClass().getSimpleName() + "\t" + switchName);
+                    commandsOutput.add("Static Direction "+readable.getStaticDirection().getName());
+                    commandsOutput.add("Current Dynamic Direction "+readable.getCurrentSwitchInDirection().getName());
+                    commandsOutput.add("Optional Directions "+ readable.getDynamicDirectionNames());
                     System.out.println(readable.getClass().getSimpleName() + "\t" + switchName);
                     System.out.println("Static Direction "+readable.getStaticDirection().getName());
                     System.out.println("Current Dynamic Direction "+readable.getCurrentSwitchInDirection().getName());
@@ -498,6 +557,9 @@ public class RailroadModel {
                 case "readStationParams":
                     stationName = command[1];
                     Station stat_read = (Station) elementsInModel.get(stationName);
+                    commandsOutput.add("Station " + stationName);
+                    commandsOutput.add("Color " + stat_read.getColor());
+                    commandsOutput.add("Passengers " + stat_read.getGetOnPassengers());
                     System.out.println("Station " + stationName);
                     System.out.println("Color " + stat_read.getColor());
                     System.out.println("Passengers " + stat_read.getGetOnPassengers());
@@ -511,6 +573,10 @@ public class RailroadModel {
                             List<RailroadCar> cars_temp_list = curInstance.getCars();
                             for (RailroadCar curCar : cars_temp_list) {
                                 if (curCar.getName().matches(carName)) {
+                                    commandsOutput.add("PassengerCar " + carName);
+                                    commandsOutput.add("In train " + trainName);
+                                    commandsOutput.add("Color " + curCar.getColor());
+                                    commandsOutput.add("Passengers on board " + curCar.getPassengersOnBoard());
                                     System.out.println("PassengerCar " + carName);
                                     System.out.println("In train " + trainName);
                                     System.out.println("Color " + curCar.getColor());
@@ -521,19 +587,51 @@ public class RailroadModel {
                     }
                     break;
 
+                //Beolvassa a teszteket, majd végrehajtja.
                 case "readTest":
                     try {
                         testName = command[1];
                         BufferedReader in = new BufferedReader(new FileReader("Resources/test/" + testName));
-                        String commands = "";
                         String line;
                         while ((line = in.readLine()) != null) {
                             CommandExecution(line);
 
                         }
-
-                    } catch (FileNotFoundException e) {
+                    } catch (IOException e) {
                         e.printStackTrace();
+                    }
+                    break;
+
+                //Beolvassa a tesztet, végrehajtja, majd megnézi, hogy az eredmény egyezik e az elvártal.
+                //(Kozolon nem működik megfelelően a karakterkódolás miatt. )
+                case "readTestWithResult":
+                    try {
+                        commandsOutput = new ArrayList<>();
+                        testName = command[1];
+                        BufferedReader in = new BufferedReader(new FileReader("Resources/test/" + testName));
+                        String line;
+                        while ((line = in.readLine()) != null) {
+                            CommandExecution(line);
+
+                        }
+                        System.out.println(".-----------------------------------------.");
+                        if(commandsOutput != null){
+                            List<String> output = new ArrayList<>();
+                            in = new BufferedReader(new FileReader("Resources/test_out/" + testName));
+                            while ((line = in.readLine()) != null) {
+                                output.add(line);
+
+                            }
+                            for(int i= 0; i <commandsOutput.size(); i++){
+                                //System.out.println(commandsOutput.get(i));
+                                if(!commandsOutput.get(i).equals(output.get(i))){
+                                    System.out.println("Sikertelen teszt hiba: " + i + " sorban");
+                                    return;
+                                }
+                            }
+                            System.out.println("Sikeres teszt!");
+                        }
+
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
