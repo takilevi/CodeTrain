@@ -1,41 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b719b53-8ac2-4a4f-856c-ea236c24fa12" name="Default" comment="Ütközések (24-27es teszt működik)">
+    <list default="true" id="6b719b53-8ac2-4a4f-856c-ea236c24fa12" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/RailroadCross.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/RailroadCross.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/RailroadModel.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/RailroadModel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/map/map3.txt" afterPath="$PROJECT_DIR$/Resources/map/map3.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/map/map4.txt" afterPath="$PROJECT_DIR$/Resources/map/map4.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/map/map5.txt" afterPath="$PROJECT_DIR$/Resources/map/map5.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test/test10.txt" afterPath="$PROJECT_DIR$/Resources/test/test10.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test/test21.txt" afterPath="$PROJECT_DIR$/Resources/test/test21.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test/test4.txt" afterPath="$PROJECT_DIR$/Resources/test/test4.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test/test5.txt" afterPath="$PROJECT_DIR$/Resources/test/test5.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test_out/test13_out.txt" afterPath="$PROJECT_DIR$/Resources/test_out/test13_out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test_out/test14_out.txt" afterPath="$PROJECT_DIR$/Resources/test_out/test14_out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test_out/test17_out.txt" afterPath="$PROJECT_DIR$/Resources/test_out/test17_out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test_out/test18_out.txt" afterPath="$PROJECT_DIR$/Resources/test_out/test18_out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test_out/test19_out.txt" afterPath="$PROJECT_DIR$/Resources/test_out/test19_out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test_out/test1_out.txt" afterPath="$PROJECT_DIR$/Resources/test_out/test1_out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test_out/test20_out.txt" afterPath="$PROJECT_DIR$/Resources/test_out/test20_out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test_out/test21_out.txt" afterPath="$PROJECT_DIR$/Resources/test_out/test21_out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test_out/test22_out.txt" afterPath="$PROJECT_DIR$/Resources/test_out/test22_out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test_out/test23_out.txt" afterPath="$PROJECT_DIR$/Resources/test_out/test23_out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test_out/test24_out.txt" afterPath="$PROJECT_DIR$/Resources/test_out/test24_out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test_out/test25_out.txt" afterPath="$PROJECT_DIR$/Resources/test_out/test25_out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test_out/test26_out.txt" afterPath="$PROJECT_DIR$/Resources/test_out/test26_out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test_out/test27_out.txt" afterPath="$PROJECT_DIR$/Resources/test_out/test27_out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test_out/test2_out.txt" afterPath="$PROJECT_DIR$/Resources/test_out/test2_out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test_out/test3_out.txt" afterPath="$PROJECT_DIR$/Resources/test_out/test3_out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test_out/test4_out.txt" afterPath="$PROJECT_DIR$/Resources/test_out/test4_out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test_out/test5_out.txt" afterPath="$PROJECT_DIR$/Resources/test_out/test5_out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test_out/test6_out.txt" afterPath="$PROJECT_DIR$/Resources/test_out/test6_out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test_out/test7_out.txt" afterPath="$PROJECT_DIR$/Resources/test_out/test7_out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test_out/test8_out.txt" afterPath="$PROJECT_DIR$/Resources/test_out/test8_out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test_out/test9_out.txt" afterPath="$PROJECT_DIR$/Resources/test_out/test9_out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HopperCar.java" afterPath="$PROJECT_DIR$/src/HopperCar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/map/map7.txt" afterPath="$PROJECT_DIR$/Resources/map/map7.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/test/test28.txt" afterPath="$PROJECT_DIR$/Resources/test/test28.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RailroadCross.java" afterPath="$PROJECT_DIR$/src/RailroadCross.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RailroadModel.java" afterPath="$PROJECT_DIR$/src/RailroadModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Train.java" afterPath="$PROJECT_DIR$/src/Train.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,61 +27,81 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test23.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Resources/test/test23.txt">
+      <file leaf-file-name="test11_out.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Resources/test_out/test11_out.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test23_out.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Resources/test_out/test23_out.txt">
+      <file leaf-file-name="test12_out.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Resources/test_out/test12_out.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test24_out.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Resources/test_out/test24_out.txt">
+      <file leaf-file-name="test13_out.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Resources/test_out/test13_out.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+            <state relative-caret-position="51">
+              <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test25_out.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Resources/test_out/test25_out.txt">
+      <file leaf-file-name="test10_out.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Resources/test_out/test10_out.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test26_out.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Resources/test_out/test26_out.txt">
+      <file leaf-file-name="test8_out.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Resources/test_out/test8_out.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test27_out.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Resources/test_out/test27_out.txt">
+      <file leaf-file-name="Locomotive.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Locomotive.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+            <state relative-caret-position="-879">
+              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Movable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Movable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="map7.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Resources/map/map7.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -117,38 +110,18 @@
       <file leaf-file-name="test28.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Resources/test/test28.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="51">
+              <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map7.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Resources/map/map7.txt">
+      <file leaf-file-name="test9_out.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Resources/test_out/test9_out.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test28_out.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Resources/test_out/test28_out.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test21_out.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Resources/test_out/test21_out.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+            <state relative-caret-position="68">
+              <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -195,8 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Resources/map/testMap.txt" />
-        <option value="$PROJECT_DIR$/Resources/test/Test_test" />
         <option value="$PROJECT_DIR$/Resources/test/test17.txt" />
         <option value="$PROJECT_DIR$/Resources/test/test18.txt" />
         <option value="$PROJECT_DIR$/Resources/test/test20.txt" />
@@ -213,7 +184,6 @@
         <option value="$PROJECT_DIR$/src/Station.java" />
         <option value="$PROJECT_DIR$/src/Locomotive.java" />
         <option value="$PROJECT_DIR$/Resources/test/test27.txt" />
-        <option value="$PROJECT_DIR$/Resources/test/test28.txt" />
         <option value="$PROJECT_DIR$/src/HopperCar.java" />
         <option value="$PROJECT_DIR$/Resources/test_out/test1_out.txt" />
         <option value="$PROJECT_DIR$/Resources/test_out/test2_out.txt" />
@@ -235,7 +205,6 @@
         <option value="$PROJECT_DIR$/Resources/test_out/test14_out.txt" />
         <option value="$PROJECT_DIR$/Resources/test_out/test17_out.txt" />
         <option value="$PROJECT_DIR$/Resources/test_out/test18_out.txt" />
-        <option value="$PROJECT_DIR$/src/RailroadModel.java" />
         <option value="$PROJECT_DIR$/Resources/test_out/test19_out.txt" />
         <option value="$PROJECT_DIR$/Resources/test_out/test20_out.txt" />
         <option value="$PROJECT_DIR$/Resources/test/test21.txt" />
@@ -246,6 +215,10 @@
         <option value="$PROJECT_DIR$/Resources/test_out/test25_out.txt" />
         <option value="$PROJECT_DIR$/Resources/test_out/test26_out.txt" />
         <option value="$PROJECT_DIR$/Resources/test_out/test27_out.txt" />
+        <option value="$PROJECT_DIR$/Resources/map/map7.txt" />
+        <option value="$PROJECT_DIR$/src/RailroadCross.java" />
+        <option value="$PROJECT_DIR$/src/RailroadModel.java" />
+        <option value="$PROJECT_DIR$/Resources/test/test28.txt" />
       </list>
     </option>
   </component>
@@ -344,24 +317,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test_out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CodeTrain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CodeTrain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -699,7 +654,7 @@
       <workItem from="1492422557840" duration="12384000" />
       <workItem from="1492444358957" duration="126000" />
       <workItem from="1492461106015" duration="7787000" />
-      <workItem from="1492512254947" duration="4203000" />
+      <workItem from="1492512254947" duration="7495000" />
     </task>
     <task id="LOCAL-00001" summary="KÉSZ: 14-es pont&#10;TODO: Loggingot átnézni, nem világos, hogy hogyan is kéne kinéznie&#10;TODO: Többi menüpont">
       <created>1489933169166</created>
@@ -834,7 +789,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492444482522</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="test fix">
+      <created>1492542435565</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1492542435565</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -855,7 +817,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94161000" />
+    <option name="totallyTimeSpent" value="97453000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1272" y="-8" width="1382" height="744" extended-state="6" />
@@ -870,7 +832,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27444795" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27444795" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -922,11 +884,32 @@
     <MESSAGE value="Batch file a Resources/test mappában" />
     <MESSAGE value="sync" />
     <MESSAGE value="Ütközések (24-27es teszt működik)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ütközések (24-27es teszt működik)" />
+    <MESSAGE value="test fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="test fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Train.java</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/RailroadModel.java</url>
+          <line>400</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Train.java</url>
+          <line>62</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -935,49 +918,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/HopperCar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="88" lean-forward="true" selection-start-line="11" selection-start-column="88" selection-end-line="11" selection-end-column="88" />
-          <folding>
-            <element signature="e#187#188#0" expanded="true" />
-            <element signature="e#282#283#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/test_out/test1_out.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="3" lean-forward="false" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/test_out/test2_out.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/test_out/test3_out.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/test_out/test4_out.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/test/test6.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1018,14 +958,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/test_out/test8_out.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/test/test4.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1046,30 +978,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/test_out/test9_out.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/test_out/test10_out.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/map/map4.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1118,14 +1026,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/test_out/test13_out.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1191,25 +1091,6 @@
         <state relative-caret-position="68">
           <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Train.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="636">
-          <caret line="67" column="41" lean-forward="false" selection-start-line="67" selection-start-column="41" selection-end-line="67" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RailroadModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="214" column="27" lean-forward="true" selection-start-line="214" selection-start-column="27" selection-end-line="214" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#notEmpty#0;class#RailroadModel#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1333,7 +1214,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/map/map4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RailroadCross.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding>
+            <element signature="method#getNextElement#0;class#RailroadCross#0" expanded="false" />
+            <element signature="method#firstDirections#0;class#RailroadCross#0" expanded="false" />
+            <element signature="method#secondDirections#0;class#RailroadCross#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RailroadModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="407" column="0" lean-forward="false" selection-start-line="407" selection-start-column="0" selection-end-line="407" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initFieldElements#0;class#RailroadModel#0" expanded="false" />
+            <element signature="method#notEmpty#0;class#RailroadModel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Train.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="67" column="41" lean-forward="false" selection-start-line="67" selection-start-column="41" selection-end-line="67" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Movable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Locomotive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-879">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/map/map7.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/test/test28.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/test_out/test9_out.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/test_out/test8_out.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/test_out/test10_out.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1341,10 +1310,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/map/map7.txt">
+    <entry file="file://$PROJECT_DIR$/Resources/test_out/test11_out.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/test_out/test12_out.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/test_out/test13_out.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
           <folding />
         </state>
       </provider>

@@ -126,11 +126,22 @@ public class RailroadModel {
                         break;
 
                     case "RailroadCross":
-                        //TODO: ez nem túl egyszerű
+                        String line_2 = in.readLine();
+                        String[] line_2_rc = line_2.split(" ");
+
+                        elementsInModel.put(splittedLine[1],new RailroadCross(splittedLine[1]));
+                        elementsInModel.put(splittedLine[4], new Track(splittedLine[4]));
+                        elementsInModel.put(line_2_rc[4],new Track(line_2_rc[4]));
+                        RailroadCross rc_temp = (RailroadCross)elementsInModel.get(splittedLine[1]);
+                        rc_temp.setFirstDirections(elementsInModel.get(splittedLine[2]),elementsInModel.get(splittedLine[4]));
+                        rc_temp.setSecondDirections(elementsInModel.get(line_2_rc[2]),elementsInModel.get(line_2_rc[4]));
+                        elementsInModel.get(splittedLine[2]).setNextElement(rc_temp);
+                        elementsInModel.get(splittedLine[4]).setPreviousElement(rc_temp);
+                        elementsInModel.get(line_2_rc[2]).setNextElement(rc_temp);
+                        elementsInModel.get(line_2_rc[4]).setPreviousElement(rc_temp);
                         break;
 
                     default:
-                        //ebben a .getClass().getName() -ben nem annyira vagyok biztos
                         String searchType = elementsInModel.get(splittedLine[0]).getClass().getSimpleName();
 
                         switch (searchType) {
@@ -266,6 +277,7 @@ public class RailroadModel {
         String Tenter2;
         String stationName;
         String testName;
+        String crossName;
 
         String[] command = c.split(" ");
 
@@ -388,19 +400,13 @@ public class RailroadModel {
 
                     trainName = command[1];
                     step = Integer.parseInt(command[2]);
-                    int findIt = 0;
                     for (int i = 0; i < step; i++) {
                         for (Train t : trainsInModel) {
                             if (t.getName().matches(trainName)) {
-                                findIt++;
                                 t.awakeLocomotive();
                             }
                         }
                     }
-
-
-                    //System.out.println(findIt);
-
                     break;
 
                 case "stepAll":
@@ -493,6 +499,13 @@ public class RailroadModel {
                             }
                         }
                     }
+                    break;
+                case "readCross":
+                    crossName = command[1];
+                    RailroadCross cross = (RailroadCross)elementsInModel.get(crossName);
+                    System.out.println("RailroadCross "+crossName);
+                    System.out.println(cross.firstDirections());
+                    System.out.println(cross.secondDirections());
                     break;
 
                 case "readTest":
