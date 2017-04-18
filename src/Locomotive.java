@@ -11,7 +11,6 @@ public class Locomotive implements Movable {
 
     public Locomotive(StaticElement current, StaticElement previous, String name, Train t) {
         currentElement = current;
-        current.stepToElement(this);
 
         previousElement = previous;
         currentElement.stepToElement(this);
@@ -105,7 +104,7 @@ public class Locomotive implements Movable {
     }
 
     @Override
-    public boolean tryToGetOnPassenger(Color color) {
+    public boolean tryToGetOnPassenger(Color color, int number) {
         return false;
     }
 

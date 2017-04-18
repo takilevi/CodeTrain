@@ -29,7 +29,9 @@ public abstract class RailroadCar implements Movable {
      * @param nextElement Ide lépett a kocsi.
      */
     public void setCurrent(StaticElement current) {
+
         currentElement = current;
+        currentElement.stepToElement(this);
     }
     public void setPreviousElement(StaticElement previousElement){this.previousElement=previousElement;}
     public StaticElement getPreviousElement(){return previousElement;}
@@ -87,7 +89,7 @@ public abstract class RailroadCar implements Movable {
     public abstract Color getColor();
     public abstract boolean getPassengersOnBoard();
 
-    public boolean tryToGetOnPassenger(Color color){
+    public boolean tryToGetOnPassenger(Color color, int number){
         return false;
     }
     public boolean tryToPutDownPassengers(Color color){

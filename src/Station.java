@@ -88,16 +88,14 @@ public class Station extends StaticElement {
 
         m.tryToPutDownPassengers(color);
 
-        if(getOnPassengers > 0){
+        if(m.tryToGetOnPassenger(color, getOnPassengers)){
+            getOnPassengers--;
 
-            if(m.tryToGetOnPassenger(color)){
-                getOnPassengers--;
-
-                if(getOnPassengers == 0){
-                    model.emptyStation(this);
-                }
+            if(getOnPassengers == 0){
+                model.emptyStation(this);
             }
         }
+
     }
 
     @Override

@@ -201,18 +201,20 @@ public class RailroadModel {
             if(notEmptyStations.isEmpty()){
                 System.out.println("true");
                 System.out.println("true");
+                System.exit(0);
             }
             else{
                 //Még nem nyertünk, mert van olyan állomás, ahol ég fel akarnak szállni.
                 return;
             }
 
-        } else {
+        } else if(code == 1){
             //Vesztettünk
             System.out.println("true");
             System.out.println("false");
+            System.exit(0);
         }
-        System.exit(0);
+
     }
 
     /**
@@ -455,6 +457,14 @@ public class RailroadModel {
                     passengers = command[3];
 
                     Station stat = (Station) elementsInModel.get(stationName);
+
+                    if(Integer.parseInt(passengers) > 0){
+                        if(!notEmptyStations.contains(stat)){
+                            notEmptyStations.add(stat);
+                        }
+                    }
+
+
                     stat.setColor(Color.valueOf(color));
                     stat.setGetOnPassengers(Integer.parseInt(passengers));
                     break;

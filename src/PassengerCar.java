@@ -14,6 +14,7 @@ public class PassengerCar extends RailroadCar {
         this.color = color;
     }
 
+    @Override
     public boolean tryToPutDownPassengers(Color color){
 
         if(passengerOnBoard && this.color == color){
@@ -24,20 +25,19 @@ public class PassengerCar extends RailroadCar {
     }
 
     @Override
-    public boolean tryToGetOnPassenger(Color color){
+    public boolean tryToGetOnPassenger(Color color, int number){
 
-        if(!passengerOnBoard && this.color == color){
+        if(!passengerOnBoard && this.color == color && number > 0){
             passengerOnBoard = true;
             return true;
         }
-        if(!passengerOnBoard){
-            isEmpty();
-        }
+        isEmpty();
         return false;
     }
 
     public void isEmpty(){
-        train.emptyCar(this);
+        if(!passengerOnBoard)
+            train.emptyCar(this);
     }
 
     @Override

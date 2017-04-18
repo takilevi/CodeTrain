@@ -15,7 +15,7 @@ public interface Movable {
      */
     void crash();
 
-    public boolean tryToGetOnPassenger(Color color);
+    public boolean tryToGetOnPassenger(Color color, int number);
 
     public boolean tryToPutDownPassengers(Color color);
 }
