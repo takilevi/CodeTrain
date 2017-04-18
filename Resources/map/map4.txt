@@ -2,3 +2,17 @@ Track t1
 Switch sw1 2
 Track t3
 Track t4
+t3
+Track t5
+Station st1 0 Blue
+Station st2 1 Red
+Station st3 0 Blue
+Station st4 1 Red
+Track t6
+t4
+Track t7
+Track t8
+Track t9
+Track t10
+Station st5 2 Blue
+Track t11

@@ -64,12 +64,8 @@ public class Train {
 
         locomotive.crash();
 
-        //TODO WTF is that? ->
-        // Ez így volt a teszteknél, hogy a ListTrain midenképpen írjon ki vmit,
-        // ha nem lett vége a játéknak akkor azt h false, a másik false meg h "nem nyertünk"
-        //Ez csak azért raktam bele hogy konzisztens legyen a tesztekkel.
-        System.out.println("false");
-        System.out.println("false");
+        System.out.println("Nyertünk: false");
+        System.out.println("Vesztettünk: false");
 
     }
 

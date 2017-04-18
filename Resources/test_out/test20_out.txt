@@ -1,6 +1,6 @@
-false
-false
-l0
-pc0
-black
-true
+Nyertünk: false
+Vesztettünk: false
+PassengerCar pc0
+In train train1
+Color Red
+Passengers on board true

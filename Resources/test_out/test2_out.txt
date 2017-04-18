@@ -1,4 +1,4 @@
 train1
 Locomotive l0 t3
-PassangerCar pc0 red t2 true
+PassengerCar pc0 Red t2 true
 HopperCar hc0 t1
