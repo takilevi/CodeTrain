@@ -1,4 +1,4 @@
-false
-false
+Nyertünk: false
+Vesztettünk: false
 train1
 Locomotive l0 t3
