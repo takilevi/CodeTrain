@@ -55,7 +55,10 @@ public class TunnelEntrance extends StaticElement {
      */
     public StaticElement getNextElement(StaticElement previousElement)
     {
-        if(this.previousElement == previousElement){
+        if(this.previousElement == previousElement && isActive){
+            return tunnelElement;
+        }
+        else if(this.previousElement == previousElement && !isActive){
             return nextElement;
         }
         else{
@@ -67,11 +70,6 @@ public class TunnelEntrance extends StaticElement {
     public StaticElement getPrevForLoco() {
         return previousElement;
     }
-
-    /**
-     * Volt e ütközés az elemen
-     * @return Igaz, ha több mint egy mozgó objektum van rajta, egyébként hamis.
-     */
 
     /**
      * Visszaadja az elemen elhelyezkedő mozgó objektumokat.
