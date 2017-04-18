@@ -16,6 +16,7 @@ public class RailroadModel {
     private List<Train> trainsInModel;
     private List<Train> fullTrains;
     private Map<String, StaticElement> elementsInModel; //ezt átírtam list<StaticElement>-ről, hogy tudjuk tárolni a neveket is
+    private Tunnel activeTunnel;
     private List<Station> notEmptyStations;
     private String mapName;
 
@@ -436,9 +437,34 @@ public class RailroadModel {
                 case "buildTunnel":
                     Tenter1 = command[1];
                     Tenter2 = command[2];
+                    TunnelEntrance t1 = (TunnelEntrance) elementsInModel.get(Tenter1);
+                    TunnelEntrance t2 = (TunnelEntrance) elementsInModel.get(Tenter2);
+                    if(activeTunnel != null){
+                        activeTunnel.destroy();
+                    }
+                    activeTunnel = new Tunnel();
+                    activeTunnel.build(t1);
+                    activeTunnel.build(t2);
                     break;
 
                 case "destroyTunnel":
+                    if(activeTunnel != null){
+                        if(activeTunnel.destroy()){
+                            activeTunnel = null;
+                        }
+
+                    }
+
+                    break;
+
+                case "listActiveTunnel":
+                    if(activeTunnel != null){
+                        //Csúnya, és Demeter, de ez a prototípusban elmegy, a véglegesből úgyis ki kell szedni.
+                        System.out.println("Tunnel : " + activeTunnel.getEntrances().get(0).getName() + " " + activeTunnel.getEntrances().get(1).getName());
+                    }
+                    else{
+                        System.out.println("Aktív alagút: null");
+                    }
                     break;
 
                 case "readSwitch":
