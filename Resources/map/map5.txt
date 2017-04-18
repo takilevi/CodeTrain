@@ -1,7 +1,8 @@
-TunnelEntrance te1
+Track t0
+TunnelElement te1
 Track t1
 Track t2
-TunnelEntrance te2
+TunnelElement te2
 te1
 Track t3
 te2

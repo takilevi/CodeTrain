@@ -1,5 +1,3 @@
-false
-false
 train1
-Locomotive l0 t3
-PassangerCar pc0 red sw1 true
+Locomotive l0 sw1
+PassengerCar pc0 Red t1 true

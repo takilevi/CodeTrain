@@ -9,7 +9,7 @@ public class HopperCar extends RailroadCar{
 
     @Override
     public void listTrain(){
-        System.out.print("HopperCar " + this.name +" "+ this.currentElement.getName());
+        System.out.print("HopperCar " + this.name + " " +this.currentElement.getName());
     }
 
     @Override

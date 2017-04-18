@@ -1,3 +1,4 @@
-Switch sw1 2
 Track t1
+Switch sw1 2
 Track t2
+Track t3

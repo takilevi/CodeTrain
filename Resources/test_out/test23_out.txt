@@ -1,9 +1,9 @@
-false
-false
-l0
-pc0
-blue
-true
-st0
-blue
-false
+Nyertünk: false
+Vesztettünk: false
+PassengerCar pc0
+In train train1
+Color Blue
+Passengers on board true
+Station st0
+Color Blue
+Passengers 0

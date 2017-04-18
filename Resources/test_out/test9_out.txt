@@ -1,5 +1,5 @@
-false
-false
+Nyertünk: false
+Vesztettünk: false
 train1
-Locomotive l0 t1
-PassangerCar pc0 red t3 true
+Locomotive l0 t5
+PassengerCar pc0 Red t3 true

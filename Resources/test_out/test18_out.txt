@@ -1,5 +1,5 @@
-false
-false
-st0
-blue
-true
+Nyertünk: false
+Vesztettünk: false
+Station st0
+Color Blue
+Passengers 1

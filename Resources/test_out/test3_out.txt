@@ -1,6 +1,6 @@
-false
-false
+Nyertünk: false
+Vesztettünk: false
 train1
 Locomotive l0 t4
-PassangerCar pc0 red t3 true
+PassengerCar pc0 Red t3 true
 HopperCar hc0 t2

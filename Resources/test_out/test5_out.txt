@@ -1,6 +1,4 @@
-false
-false
 train1
-Locomotive l0 t6
-PassangerCar pc0 red t5 true
-HopperCar hc0 t4
+Locomotive l0 t5
+PassengerCar pc0 Red t4 true
+HopperCar hc0 t3

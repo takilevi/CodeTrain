@@ -199,8 +199,8 @@ public class RailroadModel {
         if (code == 0) {
             //Nem volt ütközés, nyertünk
             if(notEmptyStations.isEmpty()){
-                System.out.println("true");
-                System.out.println("true");
+                System.out.println("Nyertünk: true");
+                System.out.println("Vesztettünk: false");
                 System.exit(0);
             }
             else{
@@ -210,8 +210,8 @@ public class RailroadModel {
 
         } else if(code == 1){
             //Vesztettünk
-            System.out.println("true");
-            System.out.println("false");
+            System.out.println("Nyertünk: false");
+            System.out.println("Vesztettünk: true");
             System.exit(0);
         }
 
@@ -505,13 +505,13 @@ public class RailroadModel {
                             CommandExecution(line);
 
                         }
+
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-
-
+                    break;
             }
 
         } catch (ArrayIndexOutOfBoundsException a) {
