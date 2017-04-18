@@ -1,8 +1,3 @@
-import javax.sound.midi.SysexMessage;
-
-/**
- * Created by Andy on 2017. 04. 11..
- */
 public class PassengerCar extends RailroadCar {
 
     private boolean passengerOnBoard;
@@ -13,13 +8,11 @@ public class PassengerCar extends RailroadCar {
 
         this.color = color;
         passengerOnBoard = passengers;
-
     }
 
     public void setColor(Color color) {
         this.color = color;
     }
-
 
     public boolean tryToPutDownPassengers(Color color){
 

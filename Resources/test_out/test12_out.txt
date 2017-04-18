@@ -1,0 +1,4 @@
+false
+false
+train1
+Locomotive l0 t3

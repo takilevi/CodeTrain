@@ -1,0 +1,4 @@
+loadMap map7.txt
+addLocomotive train1 l0 t1
+stepLocomotive l0 2
+listTrain train1

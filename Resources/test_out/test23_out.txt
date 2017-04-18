@@ -1,0 +1,9 @@
+false
+false
+l0
+pc0
+blue
+true
+st0
+blue
+false

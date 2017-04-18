@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * A vonatot reprezentáló osztály
@@ -13,7 +12,6 @@ public class Train {
     private List<PassengerCar> freeCars;
     private RailroadModel model;
     private String name;
-
 
     /**
      * Publikus konstruktor a vonathoz
@@ -47,7 +45,7 @@ public class Train {
     }
 
     /**
-     * Elindítja vonat counter-ét.
+     * Elindítja a vonat counter-ét.
      */
     public void StartTrain(){}
 
@@ -73,25 +71,36 @@ public class Train {
 
 
         locomotive = loco;
-
+        //TODO:itt ne adjunk cars listát, nem praktikus, ez legyen az addLocomotive, és van egy addCar
+        /*
         if (cars != null) {
             this.cars = cars;
             totalLength += cars.size();
         }
+        */
     }
 
     public void addCar(RailroadCar car) {
 
-        this.cars.add(car);
-        totalLength++;
-        elementFindForCar(car);
-    }
-        //üres kicsit feltöltése, mert lehet alapból üresen indul 1 kocsi.
+        if(cars.isEmpty()){
+            locomotive.setCarAfter(car);
+            car.setCarBefore(locomotive);
+            car.setCurrent(locomotive.getPreviousElement());
+            car.setPreviousElement(locomotive.getPreviousElement().getPrevForLoco());
+            this.cars.add(car);
+            totalLength++;
 
-
-    private void elementFindForCar(RailroadCar car){
-        //TODO meg kell keresni a staticelementjét, használjuk a totallenght-et
+        }
+        if(cars != null && !cars.isEmpty()) {
+            cars.get(cars.size()-1).setCarAfterCar(car);
+            car.setCarBefore(cars.get(cars.size()-1));
+            car.setCurrent(cars.get(cars.size()-1).getPreviousElement());
+            car.setPreviousElement(car.getCurrentElement().getPrevForLoco());
+            this.cars.add(car);
+            totalLength++;
+        }
     }
+
     public void listTrain(){
         System.out.println(name);
         locomotive.listTrain();

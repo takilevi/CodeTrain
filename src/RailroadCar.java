@@ -1,11 +1,7 @@
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
-import java.util.Scanner;
-
 /**
  * A vonatok kocsiját kezelő osztály.
  */
 public abstract class RailroadCar implements Movable {
-
 
     protected StaticElement currentElement;
     protected StaticElement previousElement;
@@ -38,6 +34,8 @@ public abstract class RailroadCar implements Movable {
     public void setCurrent(StaticElement current) {
         currentElement = current;
     }
+    public void setPreviousElement(StaticElement previousElement){this.previousElement=previousElement;}
+    public StaticElement getPreviousElement(){return previousElement;}
 
     public String getName(){return name;}
     public Movable getCarAfterCar() {
@@ -56,7 +54,6 @@ public abstract class RailroadCar implements Movable {
         this.carBefore = carBefore;
     }
 
-
     /**
      * Kocsi léptetése. Vagy előtte lévő kocsi, vagy a modony hívhatja meg.
      */
@@ -69,10 +66,9 @@ public abstract class RailroadCar implements Movable {
         previousElement.leaveElement(this);
         currentElement.leaveElement(this);
 
-        if(carAfterCar != null){
+        if (carAfterCar != null) {
             carAfterCar.move();
         }
-
     }
 
     /**

@@ -1,6 +1,6 @@
 /**
  * Állomás, illetve vonatkocsik színe.
- * Piros, vagy zöld vagy kéké lehet.
+ * Piros, zöld vagy kék lehet.
  */
 public enum Color {
     Red,

@@ -1,0 +1,6 @@
+loadMap map6.txt
+addLocomotive train1 l0 st0
+addHopperCarToTrain train1 hc0
+changeStationParams st0 blue 1
+stepLocomotive l0 1
+readStationParams st0

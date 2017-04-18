@@ -1,0 +1,4 @@
+Track t1
+Switch sw1 2
+Track t3
+Track t4

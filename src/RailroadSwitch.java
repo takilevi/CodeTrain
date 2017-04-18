@@ -19,7 +19,7 @@ public class RailroadSwitch extends StaticElement {
 
     /**
      * Ez a fügvény hívódik, ha váltani szeretnénk.
-     * Megvizsgálja hogy van e mozgó objektum a váltón, és ennek megfelelően hív tovább.
+     * Megvizsgálja hogy van -e mozgó objektum a váltón, és ennek megfelelően hív tovább.
      * @param direction Az iránya amibe állítani szeretnénk a váltót.
      */
     public void changeSwitchToDirection(StaticElement direction){
@@ -28,7 +28,6 @@ public class RailroadSwitch extends StaticElement {
 
             int dir = dynamicDirections.indexOf(direction);
             setDirection(dir);
-
         }
     }
 
@@ -74,7 +73,6 @@ public class RailroadSwitch extends StaticElement {
         if(i <= dynamicDirections.size()){
             direction = i;
         }
-
     }
 
     /**
@@ -98,17 +96,17 @@ public class RailroadSwitch extends StaticElement {
 
     @Override
     public StaticElement getPrevForLoco() {
-        return null;
+        return staticDirection;
     }
 
     /**
      * Visszaadja az elemen elhelyezkedő mozgó objektumokat.
-     * @return Ezen objektumok listálya.
+     * @return Ezen objektumok listája.
      */
 
     /**
      * Visszaadja az elemen elhelyezkedő mozgó objektumokat.
-     * @return Ezen objektumok listálya.
+     * @return Ezen objektumok listája.
      */
     public List<Movable> getTrainsOnElement()
     {
@@ -128,7 +126,7 @@ public class RailroadSwitch extends StaticElement {
 
     /**
      * Ráléptünk az elemre. (Bekerül a listába az obejktum)
-     * @param m Aki rálpett az elemre.
+     * @param m Aki rálépett az elemre.
      */
     public void stepToElement(Movable m){
 
