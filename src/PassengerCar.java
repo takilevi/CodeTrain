@@ -3,8 +3,8 @@ public class PassengerCar extends RailroadCar {
     private boolean passengerOnBoard;
     private Color color;
 
-    public PassengerCar(StaticElement current,StaticElement previous, Color color, boolean passengers, Train trainRef, String name) {
-        super(current, previous,  name, trainRef);
+    public PassengerCar(Color color, boolean passengers, Train trainRef, String name) {
+        super(name, trainRef);
 
         this.color = color;
         passengerOnBoard = passengers;
@@ -34,7 +34,7 @@ public class PassengerCar extends RailroadCar {
 
     @Override
     public void listTrain(){
-        System.out.print("PassengerCar "+name+" "+color+" "+ currentElement+" " + passengerOnBoard);
+        System.out.println("PassengerCar "+name+" "+color+" "+ currentElement.getName()+" " + passengerOnBoard);
     }
 
     @Override

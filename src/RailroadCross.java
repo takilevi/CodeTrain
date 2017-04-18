@@ -7,7 +7,8 @@ public class RailroadCross extends StaticElement {
     private StaticElement secondEntrance;
     private StaticElement secondExit;
 
-    public RailroadCross(){
+    public RailroadCross(String name){
+        super(name);
 
     }
 

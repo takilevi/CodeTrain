@@ -57,7 +57,7 @@ public class RailroadModel {
                 String[] splittedLine = line.split(" ");
                 switch (splittedLine[0]) {
                     case "Track":
-                        elementsInModel.put(splittedLine[1], new Track());
+                        elementsInModel.put(splittedLine[1], new Track(splittedLine[1]));
                         if (elementsInModel.size() > 1) {
                             StaticElement temp = elementsInModel.get(previousSplittedLine[1]);
                             temp.setNextElement(elementsInModel.get(splittedLine[1]));
@@ -66,28 +66,28 @@ public class RailroadModel {
                         }
                         break;
                     case "Switch":
-                        elementsInModel.put(splittedLine[1], new RailroadCross());
+                        elementsInModel.put(splittedLine[1], new RailroadSwitch(splittedLine[1]));
                         int count_loop = Integer.parseInt(splittedLine[2]);
                         while (count_loop != 0) {
                             String temp_line = in.readLine();
                             String[] temp_splittedLine = temp_line.split(" ");
                             switch (temp_splittedLine[0]) {
                                 case "Track":
-                                    elementsInModel.put(temp_splittedLine[1], new Track());
+                                    elementsInModel.put(temp_splittedLine[1], new Track(temp_splittedLine[1]));
                                     StaticElement temp = elementsInModel.get(splittedLine[1]);
                                     temp.setDynamicDirection(elementsInModel.get(temp_splittedLine[1]));
                                     StaticElement temp2 = elementsInModel.get(temp_splittedLine[1]);
                                     temp2.setPreviousElement(temp);
                                     break;
                                 case "Station":
-                                    elementsInModel.put(temp_splittedLine[1], new Station(0, Color.Blue));
+                                    elementsInModel.put(temp_splittedLine[1], new Station(0, Color.Blue, temp_splittedLine[1]));
                                     StaticElement temp_s = elementsInModel.get(splittedLine[1]);
                                     temp_s.setDynamicDirection(elementsInModel.get(temp_splittedLine[1]));
                                     StaticElement temp2_s = elementsInModel.get(temp_splittedLine[1]);
                                     temp2_s.setPreviousElement(temp_s);
                                     break;
                                 case "TunnelElement":
-                                    elementsInModel.put(temp_splittedLine[1], new TunnelEntrance());
+                                    elementsInModel.put(temp_splittedLine[1], new TunnelEntrance(temp_splittedLine[1]));
                                     StaticElement temp_te = elementsInModel.get(splittedLine[1]);
                                     temp_te.setDynamicDirection(elementsInModel.get(temp_splittedLine[1]));
                                     StaticElement temp2_te = elementsInModel.get(temp_splittedLine[1]);
@@ -103,7 +103,7 @@ public class RailroadModel {
 
                         break;
                     case "Station":
-                        elementsInModel.put(splittedLine[1], new Station(Integer.parseInt(splittedLine[2]), Color.valueOf(splittedLine[3])));
+                        elementsInModel.put(splittedLine[1], new Station(Integer.parseInt(splittedLine[2]), Color.valueOf(splittedLine[3]), splittedLine[1]));
                         StaticElement temp_stat = elementsInModel.get(previousSplittedLine[1]);
                         temp_stat.setNextElement(elementsInModel.get(splittedLine[1]));
                         StaticElement temp2_stat = elementsInModel.get(splittedLine[1]);
@@ -111,7 +111,7 @@ public class RailroadModel {
                         break;
 
                     case "TunnelElement":
-                        elementsInModel.put(splittedLine[1], new TunnelEntrance());
+                        elementsInModel.put(splittedLine[1], new TunnelEntrance(splittedLine[1]));
                         StaticElement temp_tunnel = elementsInModel.get(previousSplittedLine[1]);
                         temp_tunnel.setNextElement(elementsInModel.get(splittedLine[1]));
                         StaticElement temp2_tunnel = elementsInModel.get(splittedLine[1]);
@@ -124,14 +124,14 @@ public class RailroadModel {
 
                     default:
                         //ebben a .getClass().getName() -ben nem annyira vagyok biztos
-                        String searchType = elementsInModel.get(splittedLine[0]).getClass().getName();
+                        String searchType = elementsInModel.get(splittedLine[0]).getClass().getSimpleName();
 
                         switch (searchType) {
                             case "TunnelEntrance":
                                 String until_tunnelend = in.readLine();
                                 String[] in_tunnel = until_tunnelend.split(" ");
 
-                                elementsInModel.put(in_tunnel[1], new Track());
+                                elementsInModel.put(in_tunnel[1], new Track(in_tunnel[1]));
                                 StaticElement temp_intunnel = elementsInModel.get(splittedLine[0]);
                                 temp_intunnel.setTunnelElement(elementsInModel.get(in_tunnel[1]));
                                 StaticElement temp2_intunnel = elementsInModel.get(in_tunnel[1]);
@@ -142,7 +142,7 @@ public class RailroadModel {
                                 in_tunnel = until_tunnelend.split(" ");
 
                                 while (in_tunnel.length != 1) {
-                                    elementsInModel.put(in_tunnel[1], new Track());
+                                    elementsInModel.put(in_tunnel[1], new Track(in_tunnel[1]));
                                     StaticElement prev_track_intunnel = elementsInModel.get(prev_in_tunnel[1]);
                                     prev_track_intunnel.setNextElement(elementsInModel.get(in_tunnel[1]));
                                     StaticElement track_intunnel = elementsInModel.get(in_tunnel[1]);
@@ -243,7 +243,7 @@ public class RailroadModel {
                     System.out.println(ANSI_GREEN + "addLocomotive <vonat neve> <mozdony neve> <pályaelem neve amire kerül>\t " + ANSI_RED + " addLocomotive v4 m3 s4 \t " + ANSI_BLUE + " Egy mozdony ráhelyezése egy megadott pályaelemre, vonat nevének megadása.");
                     System.out.println(ANSI_GREEN + "addPassengersCarToLocomotive <mozodony neve> <kocsi neve> <szín> <tartalmaz-e utast>\t " + ANSI_RED + " addPassengersCarToLocomotive m3 k1 red true \t " + ANSI_BLUE + " Egy utasokat szállító/vagy nem szállító kocsit csatolhatunk egy létező mozdonyhoz.");
                     System.out.println(ANSI_GREEN + "addHopperCarToLocomotive <mozdony neve> <kocsi neve>\t " + ANSI_RED + " addHopperCarToLocomotive m1 k2 \t " + ANSI_BLUE + " Egy szeneskocsit csatolhatunk egy létező mozdonyhoz");
-                    System.out.println(ANSI_GREEN + "stepLocomotive <mozdony neve> <léptetés száma>\t " + ANSI_RED + " stepLocomotive m2 5 \t " + ANSI_BLUE + " Egy adott mozdonyt (és a hozzá tartozó kocsikat) egy megadott mértékkel léptetünk.");
+                    System.out.println(ANSI_GREEN + "stepTrain <vonat neve> <léptetés száma>\t " + ANSI_RED + " stepTrain t0 5 \t " + ANSI_BLUE + " Egy adott vonatot egy megadott mértékkel léptetünk.");
                     System.out.println(ANSI_GREEN + "stepAll <léptetések száma>\t " + ANSI_RED + " stepAll 3 \t " + ANSI_BLUE + " Minden mozdonyt (és a hozzá tartozó kocsikat) egy előre megadott mértékkel léptetünk.");
                     System.out.println(ANSI_GREEN + "run\t " + ANSI_RED + " run \t " + ANSI_BLUE + " Önállóan lépteti az összes pályán lévő vonatot másodpercenként egyszer, amíg véget nem ér a játék.");
                     System.out.println(ANSI_GREEN + "stop\t " + ANSI_RED + " stop \t " + ANSI_BLUE + " Ha futó run parancs után hívjuk, akkor leáll a futtatás (vonatok mozgása)");
@@ -281,16 +281,19 @@ public class RailroadModel {
 
                 case "listTrain":
                     trainName = command[1];
+                    int equals = 0;
                     for (int i = 0; i < trainsInModel.size(); i++) {
                         Train t = trainsInModel.get(i);
                         if (t.getName().equals(trainName)) {
+                            equals++;
                             t.listTrain();
                             break;
                         }
                         break;
                     }
-
-                    System.out.println("Ilyen nevű vonat jelenleg nincs a modelben!");
+                    if(equals==0) {
+                        System.out.println("Ilyen nevű vonat jelenleg nincs a modelben!");
+                    }
                     break;
 
                 case "listTrains":
@@ -308,7 +311,6 @@ public class RailroadModel {
                     locomotiveName = command[2];
                     mapElement = command[3];
 
-                    //ez még nem jó, nemtudom hogyan írja ki, hogy melyik elemen van.
                     if (elementsInModel.containsKey(mapElement)) {
                         Train t = new Train(this, trainName);
                         model.trainsInModel.add(t);
@@ -328,7 +330,7 @@ public class RailroadModel {
 
                     for (Train curInstance : trainsInModel) {
                         if (curInstance.getName().matches(trainName)) {
-                            PassengerCar p = new PassengerCar(null, null, Color.valueOf(color), Boolean.parseBoolean(passengers), curInstance, carName);
+                            PassengerCar p = new PassengerCar(Color.valueOf(color), Boolean.parseBoolean(passengers), curInstance, carName);
                             curInstance.addCar(p);
                         }
                     }
@@ -339,24 +341,28 @@ public class RailroadModel {
                     carName = command[2];
                     for (Train curInstance : trainsInModel) {
                         if (curInstance.getName().matches(trainName)) {
-                            HopperCar p = new HopperCar(null, null, curInstance, carName);
+                            HopperCar p = new HopperCar(curInstance, carName);
                             curInstance.addCar(p);
                         }
                     }
                     break;
 
-                case "stepLocomotive":
+                case "stepTrain":
 
-                    locomotiveName = command[1];
+                    trainName = command[1];
                     step = Integer.parseInt(command[2]);
-
+                    int findIt = 0;
                     for (int i = 0; i < step; i++) {
                         for (Train t : trainsInModel) {
-                            if (t.getName().equals(locomotiveName)) {
+                            if (t.getName().matches(trainName)) {
+                                findIt++;
                                 t.awakeLocomotive();
                             }
                         }
                     }
+
+                    //System.out.println(findIt);
+
                     break;
 
                 case "stepAll":
@@ -401,9 +407,10 @@ public class RailroadModel {
                     switchName = command[1];
                     RailroadSwitch readable = (RailroadSwitch) elementsInModel.get(switchName);
 
-                    System.out.println(readable.getClass().getName() + "\t" + switchName);
-                    //System.out.println(readable.getCurrentSwitchInDirection()+"\t" + readable.getStaticDirection());
-                    //TODO: ezt jól beszoptuk!
+                    System.out.println(readable.getClass().getSimpleName() + "\t" + switchName);
+                    System.out.println("Static Direction "+readable.getStaticDirection().getName());
+                    System.out.println("Current Dynamic Direction "+readable.getCurrentSwitchInDirection().getName());
+                    System.out.println("Optional Directions "+ readable.getDynamicDirectionNames());
                     break;
 
                 case "changeStationParams":
@@ -419,9 +426,9 @@ public class RailroadModel {
                 case "readStationParams":
                     stationName = command[1];
                     Station stat_read = (Station) elementsInModel.get(stationName);
-                    System.out.println("Station\t" + stationName);
-                    System.out.println("Color\t" + stat_read.getColor());
-                    System.out.println("Passengers\t" + stat_read.getGetOnPassengers());
+                    System.out.println("Station " + stationName);
+                    System.out.println("Color " + stat_read.getColor());
+                    System.out.println("Passengers " + stat_read.getGetOnPassengers());
                     break;
 
                 case "readPassengerCarParams":
@@ -432,10 +439,10 @@ public class RailroadModel {
                             List<RailroadCar> cars_temp_list = curInstance.getCars();
                             for (RailroadCar curCar : cars_temp_list) {
                                 if (curCar.getName().matches(carName)) {
-                                    System.out.println("PassengerCar\t" + carName);
-                                    System.out.println("In train\t" + trainName);
-                                    System.out.println("Color\t" + curCar.getColor());
-                                    System.out.println("Passengers on board\t" + curCar.getPassengersOnBoard());
+                                    System.out.println("PassengerCar " + carName);
+                                    System.out.println("In train " + trainName);
+                                    System.out.println("Color " + curCar.getColor());
+                                    System.out.println("Passengers on board " + curCar.getPassengersOnBoard());
                                 }
                             }
                         }

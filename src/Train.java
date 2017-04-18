@@ -53,10 +53,12 @@ public class Train {
      * A vonatot felkelti, és lépteti egyet.
      */
     public void awakeLocomotive(){
-        locomotive.move();
+
+        locomotive.move(null);
 
         locomotive.crash();
 
+        //TODO WTF is that?
         //Nincs vége a játéknak
         System.out.println("false");
         System.out.println("false");
@@ -72,32 +74,28 @@ public class Train {
 
         locomotive = loco;
         //TODO:itt ne adjunk cars listát, nem praktikus, ez legyen az addLocomotive, és van egy addCar
-        /*
-        if (cars != null) {
-            this.cars = cars;
-            totalLength += cars.size();
-        }
-        */
+
     }
 
     public void addCar(RailroadCar car) {
 
-        if(cars.isEmpty()){
-            locomotive.setCarAfter(car);
-            car.setCarBefore(locomotive);
-            car.setCurrent(locomotive.getPreviousElement());
-            car.setPreviousElement(locomotive.getPreviousElement().getPrevForLoco());
-            this.cars.add(car);
-            totalLength++;
 
-        }
         if(cars != null && !cars.isEmpty()) {
             cars.get(cars.size()-1).setCarAfterCar(car);
             car.setCarBefore(cars.get(cars.size()-1));
             car.setCurrent(cars.get(cars.size()-1).getPreviousElement());
-            car.setPreviousElement(car.getCurrentElement().getPrevForLoco());
+            if(car.getCurrentElement().getPrevForLoco() != null)car.setPreviousElement(car.getCurrentElement().getPrevForLoco());
             this.cars.add(car);
             totalLength++;
+        }
+        if(cars.isEmpty()){
+            locomotive.setCarAfter(car);
+            car.setCarBefore(locomotive);
+            car.setCurrent(locomotive.getPreviousElement());
+            if(car.getCurrentElement().getPrevForLoco() != null)car.setPreviousElement(locomotive.getPreviousElement().getPrevForLoco());
+            this.cars.add(car);
+            totalLength++;
+
         }
     }
 

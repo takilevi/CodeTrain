@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,9 +13,11 @@ public class RailroadSwitch extends StaticElement {
     /**
      * A váltó konstruktora.
      */
-    public RailroadSwitch()
+    public RailroadSwitch(String name)
     {
-        setDirection(0);
+        super(name);
+        direction = 0;
+        dynamicDirections = new ArrayList<>();
     }
 
     /**
@@ -153,5 +156,13 @@ public class RailroadSwitch extends StaticElement {
     public void setDynamicDirection(StaticElement one_dir)
     {
         dynamicDirections.add(one_dir);
+    }
+
+    public String getDynamicDirectionNames(){
+        String names="";
+        for(StaticElement curInstance:dynamicDirections){
+            names+=(curInstance.getName()+" ");
+        }
+        return  names;
     }
 }

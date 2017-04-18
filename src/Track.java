@@ -11,7 +11,8 @@ public class Track extends StaticElement {
     /**
      * A sín konstruktora.
      */
-    public Track() {
+    public Track(String name) {
+        super(name);
     }
 
     /**

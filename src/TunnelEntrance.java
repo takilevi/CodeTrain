@@ -13,7 +13,8 @@ public class TunnelEntrance extends StaticElement {
     /**
      * Alagút bejárat konstruktora.
      */
-    public TunnelEntrance() {
+    public TunnelEntrance(String name) {
+        super(name);
         isActive=false;
     }
 
