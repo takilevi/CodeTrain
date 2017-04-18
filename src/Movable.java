@@ -14,4 +14,8 @@ public interface Movable {
      * Ütközés detektálása
      */
     void crash();
+
+    public boolean tryToGetOnPassenger(Color color);
+
+    public boolean tryToPutDownPassengers(Color color);
 }

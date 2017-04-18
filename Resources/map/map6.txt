@@ -1,4 +1,4 @@
 Track t0
 Track t1
-Station st0
+Station st0 0 Blue
 Track t2

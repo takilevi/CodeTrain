@@ -9,7 +9,7 @@ public abstract class RailroadCar implements Movable {
     protected Movable carBefore;
 
     protected String name;
-    private Train train;
+    protected Train train;
 
     public RailroadCar(String name, Train t){
         this.name = name;
@@ -86,4 +86,11 @@ public abstract class RailroadCar implements Movable {
     public abstract void listTrain();
     public abstract Color getColor();
     public abstract boolean getPassengersOnBoard();
+
+    public boolean tryToGetOnPassenger(Color color){
+        return false;
+    }
+    public boolean tryToPutDownPassengers(Color color){
+        return false;
+    }
 }

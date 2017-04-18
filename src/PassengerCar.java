@@ -23,13 +23,21 @@ public class PassengerCar extends RailroadCar {
         return false;
     }
 
+    @Override
     public boolean tryToGetOnPassenger(Color color){
 
         if(!passengerOnBoard && this.color == color){
             passengerOnBoard = true;
             return true;
         }
+        if(!passengerOnBoard){
+            isEmpty();
+        }
         return false;
+    }
+
+    public void isEmpty(){
+        train.emptyCar(this);
     }
 
     @Override

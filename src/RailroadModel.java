@@ -14,8 +14,9 @@ public class RailroadModel {
 
     private static RailroadModel model;
     private List<Train> trainsInModel;
-    private List<Train> freeTrains;
+    private List<Train> fullTrains;
     private Map<String, StaticElement> elementsInModel; //ezt átírtam list<StaticElement>-ről, hogy tudjuk tárolni a neveket is
+    private List<Station> notEmptyStations;
     private String mapName;
 
     /**
@@ -35,8 +36,9 @@ public class RailroadModel {
      */
     private RailroadModel() {
         trainsInModel = new ArrayList<>();
-        freeTrains = new ArrayList<>();
+        fullTrains = new ArrayList<>();
         elementsInModel = new LinkedHashMap<String, StaticElement>();
+        notEmptyStations = new ArrayList<>();
     }
 
     /**
@@ -44,8 +46,9 @@ public class RailroadModel {
      */
     public void initFieldElements(String mapName) {
         trainsInModel = new ArrayList<>();
-        freeTrains = new ArrayList<>();
+        fullTrains = new ArrayList<>();
         elementsInModel = new LinkedHashMap<String, StaticElement>();
+        notEmptyStations = new ArrayList<>();
         String[] previousSplittedLine = null;
 
         BufferedReader in;
@@ -80,7 +83,7 @@ public class RailroadModel {
                                     temp2.setPreviousElement(temp);
                                     break;
                                 case "Station":
-                                    elementsInModel.put(temp_splittedLine[1], new Station(0, Color.Blue, temp_splittedLine[1]));
+                                    elementsInModel.put(temp_splittedLine[1], new Station(0, Color.Blue, temp_splittedLine[1], this));
                                     StaticElement temp_s = elementsInModel.get(splittedLine[1]);
                                     temp_s.setDynamicDirection(elementsInModel.get(temp_splittedLine[1]));
                                     StaticElement temp2_s = elementsInModel.get(temp_splittedLine[1]);
@@ -103,11 +106,15 @@ public class RailroadModel {
 
                         break;
                     case "Station":
-                        elementsInModel.put(splittedLine[1], new Station(Integer.parseInt(splittedLine[2]), Color.valueOf(splittedLine[3]), splittedLine[1]));
+                        Station s = new Station(Integer.parseInt(splittedLine[2]), Color.valueOf(splittedLine[3]), splittedLine[1], this);
+                        elementsInModel.put(splittedLine[1], s);
                         StaticElement temp_stat = elementsInModel.get(previousSplittedLine[1]);
                         temp_stat.setNextElement(elementsInModel.get(splittedLine[1]));
                         StaticElement temp2_stat = elementsInModel.get(splittedLine[1]);
                         temp2_stat.setPreviousElement(temp_stat);
+                        if(Integer.parseInt(splittedLine[2]) >0){
+                            notEmptyStations.add(s);
+                        }
                         break;
 
                     case "TunnelElement":
@@ -187,13 +194,22 @@ public class RailroadModel {
      * A játék véget ért.
      */
     public void finishGame(int code) {
-        //Játék vége
-        System.out.println("true");
+
+
         if (code == 0) {
             //Nem volt ütközés, nyertünk
-            System.out.println("true");
+            if(notEmptyStations.isEmpty()){
+                System.out.println("true");
+                System.out.println("true");
+            }
+            else{
+                //Még nem nyertünk, mert van olyan állomás, ahol ég fel akarnak szállni.
+                return;
+            }
+
         } else {
             //Vesztettünk
+            System.out.println("true");
             System.out.println("false");
         }
         System.exit(0);
@@ -205,9 +221,27 @@ public class RailroadModel {
      * (Szerepe csak akkor lesz, amikor több vonat kerül a modelbe)
      */
     public void emptyTrain(Train empty) {
+        if(fullTrains.contains(empty)){
+            fullTrains.remove(empty);
 
-        if (!freeTrains.contains(empty)) {
-            freeTrains.add(empty);
+            if(fullTrains.isEmpty()){
+                finishGame(0);
+            }
+        }
+
+
+    }
+    public void fullTrain(Train full){
+
+        if(!fullTrains.contains(full)){
+            fullTrains.add(full);
+        }
+    }
+
+    public void emptyStation(Station empty){
+
+        if(notEmptyStations.contains(empty)){
+            notEmptyStations.remove(empty);
         }
     }
 
@@ -229,6 +263,7 @@ public class RailroadModel {
         String Tenter1;
         String Tenter2;
         String stationName;
+        String testName;
 
         String[] command = c.split(" ");
 
@@ -315,7 +350,7 @@ public class RailroadModel {
                         Train t = new Train(this, trainName);
                         model.trainsInModel.add(t);
                         Locomotive m = new Locomotive(elementsInModel.get(mapElement), elementsInModel.get(mapElement).getPrevForLoco(), locomotiveName, t);
-                        t.fillUpTrain(m, null);
+                        t.addLocomotive(m);
                     } else {
                         System.out.println("Ilyen elem sajnos nincs a modelben!");
                     }
@@ -360,6 +395,7 @@ public class RailroadModel {
                             }
                         }
                     }
+
 
                     //System.out.println(findIt);
 
@@ -448,6 +484,24 @@ public class RailroadModel {
                         }
                     }
                     break;
+
+                case "readTest":
+                    try {
+                        testName = command[1];
+                        BufferedReader in = new BufferedReader(new FileReader("Resources/test/" + testName));
+                        String commands = "";
+                        String line;
+                        while ((line = in.readLine()) != null) {
+                            CommandExecution(line);
+
+                        }
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+
             }
 
         } catch (ArrayIndexOutOfBoundsException a) {
@@ -457,8 +511,8 @@ public class RailroadModel {
 
     public void notEmpty(Train full) {
 
-        if (freeTrains.contains(full)) {
-            freeTrains.remove(full);
+        if (fullTrains.contains(full)) {
+            fullTrains.remove(full);
         }
     }
 

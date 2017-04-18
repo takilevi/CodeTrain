@@ -8,18 +8,23 @@ public class Station extends StaticElement {
     private StaticElement previousElement;
     private StaticElement nextElement;
     private int getOnPassengers;
-    Color color;
+    private Color color;
+    private RailroadModel model;
+
 
     /**
      * Az állomás konstruktora.
      */
-    public Station(int getOnPassengers, Color color,String name) {
+    public Station(int getOnPassengers, Color color,String name, RailroadModel m) {
         super(name);
         this.getOnPassengers=getOnPassengers;
         this.color = color;
+        model = m;
     }
 
-    public void setGetOnPassengers(int passengers){getOnPassengers=passengers;}
+    public void setGetOnPassengers(int passengers){
+        getOnPassengers=passengers;
+    }
     public void setColor(Color color){this.color=color;}
     /**
      * Az állomás színének a getter-e.
@@ -79,6 +84,19 @@ public class Station extends StaticElement {
 
         if(!trainsOnElement.contains(m)){
             trainsOnElement.add(m);
+        }
+
+        m.tryToPutDownPassengers(color);
+
+        if(getOnPassengers > 0){
+
+            if(m.tryToGetOnPassenger(color)){
+                getOnPassengers--;
+
+                if(getOnPassengers == 0){
+                    model.emptyStation(this);
+                }
+            }
         }
     }
 

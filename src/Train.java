@@ -9,7 +9,7 @@ public class Train {
     private int totalLength = 0;
     private Locomotive locomotive;
     private List<RailroadCar> cars;
-    private List<PassengerCar> freeCars;
+    private List<RailroadCar> fullCars;
     private RailroadModel model;
     private String name;
 
@@ -20,7 +20,7 @@ public class Train {
         this.name = name;
         this.model = model;
         cars = new ArrayList<>();
-        freeCars = new ArrayList<>();
+        fullCars = new ArrayList<>();
     }
 
     public String getName() {
@@ -35,12 +35,18 @@ public class Train {
      */
     public void  emptyCar(PassengerCar car){
 
-        if(freeCars.contains(car)){
-            freeCars.remove(car);
+        if(fullCars.contains(car)){
+            fullCars.remove(car);
 
-            if(freeCars.isEmpty()){
+
+            if(fullCars.isEmpty()){
                 model.emptyTrain(this);
             }
+        }
+    }
+    public void fullCar(PassengerCar full){
+        if(!fullCars.contains(full)){
+            fullCars.add(full);
         }
     }
 
@@ -58,8 +64,10 @@ public class Train {
 
         locomotive.crash();
 
-        //TODO WTF is that?
-        //Nincs vége a játéknak
+        //TODO WTF is that? ->
+        // Ez így volt a teszteknél, hogy a ListTrain midenképpen írjon ki vmit,
+        // ha nem lett vége a játéknak akkor azt h false, a másik false meg h "nem nyertünk"
+        //Ez csak azért raktam bele hogy konzisztens legyen a tesztekkel.
         System.out.println("false");
         System.out.println("false");
 
@@ -69,11 +77,12 @@ public class Train {
         return false;
     }
 
-    public void fillUpTrain(Locomotive loco, List<RailroadCar> cars) {
+    public void addLocomotive(Locomotive loco) {
 
+        if(locomotive == null){
+            locomotive = loco;
+        }
 
-        locomotive = loco;
-        //TODO:itt ne adjunk cars listát, nem praktikus, ez legyen az addLocomotive, és van egy addCar
 
     }
 
@@ -86,6 +95,7 @@ public class Train {
             car.setCurrent(cars.get(cars.size()-1).getPreviousElement());
             if(car.getCurrentElement().getPrevForLoco() != null)car.setPreviousElement(car.getCurrentElement().getPrevForLoco());
             this.cars.add(car);
+
             totalLength++;
         }
         if(cars.isEmpty()){
@@ -94,8 +104,14 @@ public class Train {
             car.setCurrent(locomotive.getPreviousElement());
             if(car.getCurrentElement().getPrevForLoco() != null)car.setPreviousElement(locomotive.getPreviousElement().getPrevForLoco());
             this.cars.add(car);
-            totalLength++;
 
+            totalLength++;
+        }
+
+        if(car.getPassengersOnBoard()){
+            fullCars.add(car);
+
+            model.fullTrain(this);
         }
     }
 

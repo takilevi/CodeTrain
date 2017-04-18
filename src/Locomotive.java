@@ -104,4 +104,13 @@ public class Locomotive implements Movable {
         System.out.println("Locomotive "+name + " " + currentElement.getName());
     }
 
+    @Override
+    public boolean tryToGetOnPassenger(Color color) {
+        return false;
+    }
+
+    @Override
+    public boolean tryToPutDownPassengers(Color color) {
+        return false;
+    }
 }
