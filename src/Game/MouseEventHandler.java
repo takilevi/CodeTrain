@@ -1,3 +1,5 @@
+package Game;
+
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -5,9 +7,11 @@ import java.awt.event.MouseListener;
  * Created by vassm on 2017. 05. 01..
  */
 public class MouseEventHandler implements MouseListener {
+
     @Override
     public void mouseClicked(MouseEvent e) {
         //Todo: megírni
+        System.out.println("Egérkattintás történt");
     }
 
     @Override

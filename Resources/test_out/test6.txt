@@ -1,4 +1,4 @@
-Track t1
+Game.Track t1
 Switch sw1 2
-Track t2
-Track t3
+Game.Track t2
+Game.Track t3

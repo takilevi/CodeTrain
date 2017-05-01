@@ -1,3 +1,5 @@
+package Game;
+
 /**
  * Szeneskocsi
  */
@@ -17,8 +19,8 @@ public class HopperCar extends RailroadCar{
      */
     @Override
     public void listTrain() {
-        RailroadModel.commandsOutput.add("HopperCar " + this.name + " " +this.currentElement.getName());
-        System.out.println("HopperCar " + this.name + " " +this.currentElement.getName());
+        RailroadModel.commandsOutput.add("Game.HopperCar " + this.name + " " +this.currentElement.getName());
+        System.out.println("Game.HopperCar " + this.name + " " +this.currentElement.getName());
     }
 
     /**

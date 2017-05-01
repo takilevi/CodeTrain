@@ -1,3 +1,5 @@
+package Game;
+
 /**
  * A vonatok kocsiját kezelő osztály.
  */

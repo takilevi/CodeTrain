@@ -1,3 +1,5 @@
+package Game;
+
 /**
  * Utasszállító kocsi
  */
@@ -63,8 +65,8 @@ public class PassengerCar extends RailroadCar {
 
     @Override
     public void listTrain(){
-        RailroadModel.commandsOutput.add("PassengerCar "+name+" "+color+" "+ currentElement.getName()+" " + passengerOnBoard);
-        System.out.println("PassengerCar "+name+" "+color+" "+ currentElement.getName()+" " + passengerOnBoard);
+        RailroadModel.commandsOutput.add("Game.PassengerCar "+name+" "+color+" "+ currentElement.getName()+" " + passengerOnBoard);
+        System.out.println("Game.PassengerCar "+name+" "+color+" "+ currentElement.getName()+" " + passengerOnBoard);
     }
 
     @Override

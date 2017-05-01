@@ -1,5 +1,5 @@
 Nyertünk: false
 Vesztettünk: false
-Station st0
-Color Blue
+Game.Station st0
+Game.Color Blue
 Passengers 1

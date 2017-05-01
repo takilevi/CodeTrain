@@ -1,3 +1,5 @@
+package Game;
+
 /**
  * Mozdony kezelését megvalósító osztály.
  */
@@ -115,8 +117,8 @@ public class Locomotive implements Movable {
      */
     public void listTrain()
     {
-        RailroadModel.commandsOutput.add("Locomotive "+name + " " + currentElement.getName());
-        System.out.println("Locomotive "+name + " " + currentElement.getName());
+        RailroadModel.commandsOutput.add("Game.Locomotive "+name + " " + currentElement.getName());
+        System.out.println("Game.Locomotive "+name + " " + currentElement.getName());
     }
 
     /**

@@ -1,3 +1,5 @@
+package Game;
+
 import java.io.*;
 import java.util.*;
 
@@ -24,7 +26,7 @@ public class RailroadModel {
     private static RailroadModel model;
     private List<Train> trainsInModel;
     private List<Train> fullTrains;
-    private Map<String, StaticElement> elementsInModel; //ezt átírtam list<StaticElement>-ről, hogy tudjuk tárolni a neveket is
+    private Map<String, StaticElement> elementsInModel; //ezt átírtam list<Game.StaticElement>-ről, hogy tudjuk tárolni a neveket is
     private Tunnel activeTunnel;
     private List<Station> notEmptyStations;
     private String mapName;
@@ -72,7 +74,7 @@ public class RailroadModel {
             while ((line = in.readLine()) != null) {
                 String[] splittedLine = line.split(" ");
                 switch (splittedLine[0]) {
-                    case "Track":
+                    case "Game.Track":
                         elementsInModel.put(splittedLine[1], new Track(splittedLine[1]));
                         if (elementsInModel.size() > 1) {
                             StaticElement temp = elementsInModel.get(previousSplittedLine[1]);
@@ -88,14 +90,14 @@ public class RailroadModel {
                             String temp_line = in.readLine();
                             String[] temp_splittedLine = temp_line.split(" ");
                             switch (temp_splittedLine[0]) {
-                                case "Track":
+                                case "Game.Track":
                                     elementsInModel.put(temp_splittedLine[1], new Track(temp_splittedLine[1]));
                                     StaticElement temp = elementsInModel.get(splittedLine[1]);
                                     temp.setDynamicDirection(elementsInModel.get(temp_splittedLine[1]));
                                     StaticElement temp2 = elementsInModel.get(temp_splittedLine[1]);
                                     temp2.setPreviousElement(temp);
                                     break;
-                                case "Station":
+                                case "Game.Station":
                                     elementsInModel.put(temp_splittedLine[1], new Station(0, Color.Blue, temp_splittedLine[1], this));
                                     StaticElement temp_s = elementsInModel.get(splittedLine[1]);
                                     temp_s.setDynamicDirection(elementsInModel.get(temp_splittedLine[1]));
@@ -118,7 +120,7 @@ public class RailroadModel {
                         temp2.setStaticDirection(temp);
 
                         break;
-                    case "Station":
+                    case "Game.Station":
                         Station s = new Station(Integer.parseInt(splittedLine[2]), Color.valueOf(splittedLine[3]), splittedLine[1], this);
                         elementsInModel.put(splittedLine[1], s);
                         StaticElement temp_stat = elementsInModel.get(previousSplittedLine[1]);
@@ -138,7 +140,7 @@ public class RailroadModel {
                         temp2_tunnel.setPreviousElement(temp_tunnel);
                         break;
 
-                    case "RailroadCross":
+                    case "Game.RailroadCross":
 
                         String line_2 = in.readLine();
                         String[] line_2_rc = line_2.split(" ");
@@ -158,7 +160,7 @@ public class RailroadModel {
                         String searchType = elementsInModel.get(splittedLine[0]).getClass().getSimpleName();
 
                         switch (searchType) {
-                            case "TunnelEntrance":
+                            case "Game.TunnelEntrance":
                                 String until_tunnelend = in.readLine();
                                 String[] in_tunnel = until_tunnelend.split(" ");
 
@@ -461,10 +463,10 @@ public class RailroadModel {
                 case "readCross":
                     crossName = command[1];
                     RailroadCross cross = (RailroadCross)elementsInModel.get(crossName);
-                    commandsOutput.add("RailroadCross "+crossName);
+                    commandsOutput.add("Game.RailroadCross "+crossName);
                     commandsOutput.add(cross.firstDirections());
                     commandsOutput.add(cross.secondDirections());
-                    System.out.println("RailroadCross "+crossName);
+                    System.out.println("Game.RailroadCross "+crossName);
                     System.out.println(cross.firstDirections());
                     System.out.println(cross.secondDirections());
                     break;
@@ -513,8 +515,8 @@ public class RailroadModel {
                 case "listActiveTunnel":
                     if(activeTunnel != null){
                         //Csúnya, és Demeter, de ez a prototípusban elmegy, a véglegesből úgyis ki kell szedni.
-                        System.out.println("Tunnel : " + activeTunnel.getEntrances().get(0).getName() + " " + activeTunnel.getEntrances().get(1).getName());
-                        commandsOutput.add("Tunnel : " + activeTunnel.getEntrances().get(0).getName() + " " + activeTunnel.getEntrances().get(1).getName());
+                        System.out.println("Game.Tunnel : " + activeTunnel.getEntrances().get(0).getName() + " " + activeTunnel.getEntrances().get(1).getName());
+                        commandsOutput.add("Game.Tunnel : " + activeTunnel.getEntrances().get(0).getName() + " " + activeTunnel.getEntrances().get(1).getName());
                     }
                     else{
                         commandsOutput.add("Aktív alagút: null");
@@ -557,11 +559,11 @@ public class RailroadModel {
                 case "readStationParams":
                     stationName = command[1];
                     Station stat_read = (Station) elementsInModel.get(stationName);
-                    commandsOutput.add("Station " + stationName);
-                    commandsOutput.add("Color " + stat_read.getColor());
+                    commandsOutput.add("Game.Station " + stationName);
+                    commandsOutput.add("Game.Color " + stat_read.getColor());
                     commandsOutput.add("Passengers " + stat_read.getGetOnPassengers());
-                    System.out.println("Station " + stationName);
-                    System.out.println("Color " + stat_read.getColor());
+                    System.out.println("Game.Station " + stationName);
+                    System.out.println("Game.Color " + stat_read.getColor());
                     System.out.println("Passengers " + stat_read.getGetOnPassengers());
                     break;
 
@@ -573,13 +575,13 @@ public class RailroadModel {
                             List<RailroadCar> cars_temp_list = curInstance.getCars();
                             for (RailroadCar curCar : cars_temp_list) {
                                 if (curCar.getName().matches(carName)) {
-                                    commandsOutput.add("PassengerCar " + carName);
+                                    commandsOutput.add("Game.PassengerCar " + carName);
                                     commandsOutput.add("In train " + trainName);
-                                    commandsOutput.add("Color " + curCar.getColor());
+                                    commandsOutput.add("Game.Color " + curCar.getColor());
                                     commandsOutput.add("Passengers on board " + curCar.getPassengersOnBoard());
-                                    System.out.println("PassengerCar " + carName);
+                                    System.out.println("Game.PassengerCar " + carName);
                                     System.out.println("In train " + trainName);
-                                    System.out.println("Color " + curCar.getColor());
+                                    System.out.println("Game.Color " + curCar.getColor());
                                     System.out.println("Passengers on board " + curCar.getPassengersOnBoard());
                                 }
                             }

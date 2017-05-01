@@ -10,6 +10,11 @@ public class View {
 
     protected List<Drawable> drawables = new ArrayList<Drawable>();
 
+    public View()
+    {
+        //Todo: megírni
+    }
+
     public void DrawAll()
     {
         for(int i = 0; i<drawables.size();i++)

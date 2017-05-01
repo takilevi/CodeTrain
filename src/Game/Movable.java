@@ -1,3 +1,5 @@
+package Game;
+
 /**
  * Interfész, azon osztályok valósítják meg, akik képesek valamilyen mozgásra.
  * Ezzel eggyüt járhat az ütközés is.
