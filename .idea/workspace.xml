@@ -2,49 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b719b53-8ac2-4a4f-856c-ea236c24fa12" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/img_map/allomas_kek.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/img_map/allomas_piros.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/img_map/allomas_zold.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/img_map/elagazodas_2ag.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/img_map/elagazodas_2ag_aktiv1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/img_map/elagazodas_2ag_aktiv2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/img_map/elagazodas_3ag.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/img_map/elagazodas_3ag_aktiv1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/img_map/elagazodas_3ag_aktiv2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/img_map/elagazodas_3ag_aktiv3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/img_map/mozdony.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/img_map/sin_fuggoleges.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/img_map/sin_kanyar_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/img_map/sin_kanyar_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/img_map/sin_kanyar_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/img_map/sin_kanyar_4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/img_map/sin_keresztezodes.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/img_map/sin_vizszintes.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/img_map/szeneskocsi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Graphics/RailroadCrossGraphics.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/map/map2.txt" afterPath="$PROJECT_DIR$/Resources/map/map2.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/Application.java" afterPath="$PROJECT_DIR$/src/Game/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/Controller.java" afterPath="$PROJECT_DIR$/src/Game/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/Locomotive.java" afterPath="$PROJECT_DIR$/src/Game/Locomotive.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/MouseEventHandler.java" afterPath="$PROJECT_DIR$/src/Game/MouseEventHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/RailroadCross.java" afterPath="$PROJECT_DIR$/src/Game/RailroadCross.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/RailroadModel.java" afterPath="$PROJECT_DIR$/src/Game/RailroadModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/RailroadSwitch.java" afterPath="$PROJECT_DIR$/src/Game/RailroadSwitch.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/StaticElement.java" afterPath="$PROJECT_DIR$/src/Game/StaticElement.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/Station.java" afterPath="$PROJECT_DIR$/src/Game/Station.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/Track.java" afterPath="$PROJECT_DIR$/src/Game/Track.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/TunnelEntrance.java" afterPath="$PROJECT_DIR$/src/Game/TunnelEntrance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graphics/Drawable.java" afterPath="$PROJECT_DIR$/src/Graphics/Drawable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graphics/LocomotiveGraphics.java" afterPath="$PROJECT_DIR$/src/Graphics/LocomotiveGraphics.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graphics/RailroadCarGraphics.java" afterPath="$PROJECT_DIR$/src/Graphics/RailroadCarGraphics.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graphics/RailroadSwitchGraphics.java" afterPath="$PROJECT_DIR$/src/Graphics/RailroadSwitchGraphics.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graphics/StationGraphics.java" afterPath="$PROJECT_DIR$/src/Graphics/StationGraphics.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graphics/TrackGraphics.java" afterPath="$PROJECT_DIR$/src/Graphics/TrackGraphics.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graphics/TunnelEntranceGraphics.java" afterPath="$PROJECT_DIR$/src/Graphics/TunnelEntranceGraphics.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graphics/TunnelGraphics.java" afterPath="$PROJECT_DIR$/src/Graphics/TunnelGraphics.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graphics/View.java" afterPath="$PROJECT_DIR$/src/Graphics/View.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graphics/Window.java" afterPath="$PROJECT_DIR$/src/Graphics/Window.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -888,7 +846,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493634892420</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="A grafikus rész alapjai: 1 pálya kb ki van rajzolva">
+      <created>1493838540837</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1493838540873</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -913,7 +878,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -922,9 +887,9 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26971608" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26971608" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26971608" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -986,7 +951,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="KÉSZ: 14-es pont&#10;TODO: Loggingot átnézni, nem világos, hogy hogyan is kéne kinéznie&#10;TODO: Többi menüpont" />
     <MESSAGE value="KÉSZ: 13, 14-es pont&#10;TODO: Loggingot átnézni, nem világos, hogy hogyan is kéne kinéznie&#10;TODO: Többi menüpont" />
     <MESSAGE value="Kész: 1-es" />
     <MESSAGE value="BUGFIXED Kész: 1-es" />
@@ -1011,7 +975,8 @@
     <MESSAGE value="Megint szar valami" />
     <MESSAGE value="Alagutas" />
     <MESSAGE value="Új osztályok felvéve." />
-    <option name="LAST_COMMIT_MESSAGE" value="Új osztályok felvéve." />
+    <MESSAGE value="A grafikus rész alapjai: 1 pálya kb ki van rajzolva" />
+    <option name="LAST_COMMIT_MESSAGE" value="A grafikus rész alapjai: 1 pálya kb ki van rajzolva" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
