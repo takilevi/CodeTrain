@@ -1,5 +1,7 @@
 package Game;
 
+import Graphics.View;
+
 import java.io.*;
 import java.util.*;
 
@@ -32,6 +34,8 @@ public class RailroadModel {
     private String mapName;
     private Counter counter;
 
+    private View view;
+
 
 
     /**
@@ -42,8 +46,13 @@ public class RailroadModel {
     public static RailroadModel getInstance() {
         if (model == null) {
             model = new RailroadModel();
+
         }
         return model;
+    }
+
+    public void setView(View v){
+        view = v;
     }
 
     /**
@@ -54,6 +63,9 @@ public class RailroadModel {
         fullTrains = new ArrayList<>();
         elementsInModel = new LinkedHashMap<String, StaticElement>();
         notEmptyStations = new ArrayList<>();
+
+
+
     }
 
     /**
@@ -75,12 +87,23 @@ public class RailroadModel {
                 String[] splittedLine = line.split(" ");
                 switch (splittedLine[0]) {
                     case "Game.Track":
-                        elementsInModel.put(splittedLine[1], new Track(splittedLine[1]));
+                        Track t =  new Track(splittedLine[1]);
+
+                        t.setGraphics(splittedLine[4], Integer.parseInt(splittedLine[2]), Integer.parseInt(splittedLine[3]));
+                        view.addDrawable(t.getGraphics());
+                        elementsInModel.put(splittedLine[1],t);
+
                         if (elementsInModel.size() > 1) {
                             StaticElement temp = elementsInModel.get(previousSplittedLine[1]);
                             temp.setNextElement(elementsInModel.get(splittedLine[1]));
                             StaticElement temp2 = elementsInModel.get(splittedLine[1]);
                             temp2.setPreviousElement(temp);
+
+                        }
+                        if(splittedLine.length>5){
+                            StaticElement temp = elementsInModel.get(splittedLine[5]);
+                            temp.setPreviousElement(t);
+                            t.setNextElement(temp);
                         }
                         break;
                     case "Switch":
@@ -123,6 +146,8 @@ public class RailroadModel {
                     case "Game.Station":
                         Station s = new Station(Integer.parseInt(splittedLine[2]), Color.valueOf(splittedLine[3]), splittedLine[1], this);
                         elementsInModel.put(splittedLine[1], s);
+                        s.setGraphics(splittedLine[6], Integer.parseInt(splittedLine[4]), Integer.parseInt(splittedLine[5]));
+                        view.addDrawable(s.getGraphics());
                         StaticElement temp_stat = elementsInModel.get(previousSplittedLine[1]);
                         temp_stat.setNextElement(elementsInModel.get(splittedLine[1]));
                         StaticElement temp2_stat = elementsInModel.get(splittedLine[1]);
@@ -208,6 +233,10 @@ public class RailroadModel {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public Map<String, StaticElement> getElementsInModel(){
+        return elementsInModel;
     }
 
     /**
@@ -311,6 +340,8 @@ public class RailroadModel {
 
         String[] command = c.split(" ");
 
+
+
         try {
 
             switch (command[0]) {
@@ -340,9 +371,11 @@ public class RailroadModel {
                         mapName = command[1];
                         initFieldElements(mapName);
 
+
                     break;
 
                 case "listMapElements":
+
                     try {
                         BufferedReader in = new BufferedReader(new FileReader("Resources/map/" + mapName));
                         String line;
@@ -396,6 +429,10 @@ public class RailroadModel {
                         model.trainsInModel.add(t);
                         Locomotive m = new Locomotive(elementsInModel.get(mapElement), elementsInModel.get(mapElement).getPrevForLoco(), locomotiveName, t);
                         t.addLocomotive(m);
+
+
+                       view.addDrawable(m.getGraphics());
+
                     } else {
                         System.out.println("Ilyen elem sajnos nincs a modelben!");
                     }
@@ -640,6 +677,9 @@ public class RailroadModel {
                     break;
             }
 
+
+
+
         } catch (ArrayIndexOutOfBoundsException a) {
             System.out.println("missing parameter " + c);
         }
@@ -650,6 +690,9 @@ public class RailroadModel {
         if (fullTrains.contains(full)) {
             fullTrains.remove(full);
         }
+    }
+    public List<Train> getTrainsInModel(){
+        return trainsInModel;
     }
 
     public void clearModel() {

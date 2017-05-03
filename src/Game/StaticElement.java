@@ -1,5 +1,9 @@
 package Game;
 
+import Graphics.Drawable;
+import Graphics.TrackGraphics;
+
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,12 +14,18 @@ public abstract class StaticElement {
 
     protected List<Movable> trainsOnElement;
     private String name;
+    protected Drawable graphics;
 
     StaticElement(String name) {
         this.name=name;
         trainsOnElement = new ArrayList<>();
     }
 
+    public abstract void setGraphics(String type, int x, int y);
+
+    public Drawable getGraphics(){
+        return graphics;
+    }
     /**
      * Azon statikus szomszédját adja vissza, ami nem egyenlő azzal ahonan oda léptünk.
      *

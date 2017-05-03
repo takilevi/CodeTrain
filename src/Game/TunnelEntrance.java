@@ -1,5 +1,7 @@
 package Game;
 
+import Graphics.TunnelEntranceGraphics;
+
 import java.util.List;
 
 /**
@@ -18,6 +20,11 @@ public class TunnelEntrance extends StaticElement {
     public TunnelEntrance(String name) {
         super(name);
         isActive=false;
+    }
+
+    @Override
+    public void setGraphics(String type, int x, int y) {
+        graphics = new TunnelEntranceGraphics(type, x, y);
     }
 
     /**

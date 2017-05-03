@@ -1,5 +1,8 @@
 package Game;
 
+import Graphics.Drawable;
+import Graphics.TrackGraphics;
+
 import java.util.List;
 
 /**
@@ -9,12 +12,23 @@ public class Track extends StaticElement {
 
     private StaticElement previousElement;
     private StaticElement nextElement;
-
     /**
      * A sín konstruktora.
      */
     public Track(String name) {
         super(name);
+
+    }
+
+    @Override
+    public void setGraphics(String type, int x, int y) {
+        graphics = new TrackGraphics(type, x, y);
+
+    }
+
+    @Override
+    public Drawable getGraphics() {
+        return graphics;
     }
 
     /**

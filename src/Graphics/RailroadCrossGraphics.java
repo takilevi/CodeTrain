@@ -1,5 +1,7 @@
 package Graphics;
 
+import Game.RailroadCross;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -8,15 +10,15 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * Created by vassm on 2017. 05. 01..
+ * Created by András on 2017.05.03..
  */
-public class TunnelEntranceGraphics implements Drawable  {
+public class RailroadCrossGraphics implements Drawable {
 
     private BufferedImage image;
     private int x;
     private int y;
 
-    public TunnelEntranceGraphics(String type, int x, int y){
+    public RailroadCrossGraphics(String type, int x, int y){
         this.x = x;
         this.y = y;
         try {
@@ -24,6 +26,7 @@ public class TunnelEntranceGraphics implements Drawable  {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
 
     }
 

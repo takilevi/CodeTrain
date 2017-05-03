@@ -1,5 +1,8 @@
 package Game;
 
+import Graphics.RailroadCrossGraphics;
+import Graphics.RailroadSwitchGraphics;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +23,11 @@ public class RailroadSwitch extends StaticElement {
         super(name);
         direction = 0;
         dynamicDirections = new ArrayList<>();
+    }
+
+    @Override
+    public void setGraphics(String type, int x, int y) {
+        graphics = new RailroadSwitchGraphics(type, x, y);
     }
 
     /**

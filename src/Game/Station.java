@@ -1,5 +1,7 @@
 package Game;
 
+import Graphics.StationGraphics;
+
 import java.util.List;
 
 /**
@@ -37,6 +39,11 @@ public class Station extends StaticElement {
         return color;
     }
     public  int getGetOnPassengers(){return getOnPassengers;}
+
+    @Override
+    public void setGraphics(String type, int x, int y) {
+        graphics = new StationGraphics(type, x, y);
+    }
 
     /**
      * Azon statikus szomszédját adja vissza, ami nem egyenlő azzal ahonan oda léptünk.

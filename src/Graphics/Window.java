@@ -3,27 +3,42 @@ package Graphics;
 import Game.Application;
 import Game.MouseEventHandler;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.Random;
+
 
 //todo: itt most nem teljesen vágom, hogy a game-t el kell tárolni, vagy azt hogy kezeli...
 public class Window extends JFrame {
 
-    public Window()
-    {
+    private Container container;
+    private JPanel panel;
+
+    public Window(){
+
         setTitle("CodeTrain");
         setSize(640,480);
         setLocationRelativeTo(null);
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        addMouseListener(new MouseEventHandler()); //todo: nem tudom hogy iratkozikfel a rá a controller...
+        container = getContentPane();
+
+
     }
 
-    public static void main(String[] args) {
+    public void addPanel(JPanel p){
+        p.setBackground(Color.green);
+        add(p);
+    }
 
-        new Window().setVisible(true);
-        Application.main();
+    public JPanel getJPanel(){
+        return panel;
     }
 
 }

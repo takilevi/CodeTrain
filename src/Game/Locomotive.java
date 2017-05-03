@@ -1,5 +1,8 @@
 package Game;
 
+import Graphics.Drawable;
+import Graphics.LocomotiveGraphics;
+
 /**
  * Mozdony kezelését megvalósító osztály.
  */
@@ -15,6 +18,7 @@ public class Locomotive implements Movable {
     private RailroadCar carAfterLocomotive;
     private String name;
     private Train train;
+    private Drawable graphics;
 
 
     public Locomotive(StaticElement current, StaticElement previous, String name, Train t) {
@@ -24,6 +28,16 @@ public class Locomotive implements Movable {
         currentElement.stepToElement(this);
         this.name = name;
         train = t;
+
+        setGraphics();
+    }
+
+    public void setGraphics(){
+        graphics = new LocomotiveGraphics(currentElement.getGraphics().getX(), currentElement.getGraphics().getY());
+    }
+
+    public Drawable getGraphics(){
+        return graphics;
     }
 
     public String getName() {

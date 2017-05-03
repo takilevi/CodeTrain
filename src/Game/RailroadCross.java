@@ -1,5 +1,9 @@
 package Game;
 
+import Graphics.RailroadCrossGraphics;
+import Graphics.TrackGraphics;
+
+import javax.swing.*;
 import java.util.List;
 
 /**
@@ -18,6 +22,11 @@ public class RailroadCross extends StaticElement {
     public RailroadCross(String name) {
         super(name);
 
+    }
+
+    @Override
+    public void setGraphics(String type, int x, int y) {
+        graphics = new RailroadCrossGraphics(type, x, y);
     }
 
     /**
