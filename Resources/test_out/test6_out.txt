@@ -1,3 +1,0 @@
-Switch sw1 2
-Track t2
-Track t1

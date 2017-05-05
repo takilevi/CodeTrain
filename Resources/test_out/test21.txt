@@ -1,0 +1,6 @@
+Nyertünk: false
+Vesztettünk: false
+Game.PassengerCar pc0
+In train train1
+Game.Color Red
+Passengers on board false

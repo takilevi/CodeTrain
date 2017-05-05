@@ -1,0 +1,5 @@
+Nyertünk: false
+Vesztettünk: false
+Game.Station st0
+Game.Color Blue
+Passengers 1

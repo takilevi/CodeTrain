@@ -1,5 +1,0 @@
-false
-false
-st0
-blue
-true

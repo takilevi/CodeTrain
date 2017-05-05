@@ -1,5 +1,5 @@
 loadMap map6.txt
 addLocomotive train1 l0 st0
-addPassangersCarToTrain train1 pc0 blue true
-changeStationParams st0 blue 0
-stepLocomotive l0 1
+addPassengerCarToTrain train1 pc0 Blue true
+changeStationParams st0 Blue 0
+stepTrain train1 1

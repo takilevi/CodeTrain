@@ -1,4 +1,4 @@
-Track t0
-Track t1
-Station st0
-Track t2
+Game.Track t0
+Game.Track t1
+Game.Station st0 0 Blue
+Game.Track t2

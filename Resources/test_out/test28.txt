@@ -1,0 +1,9 @@
+Game.RailroadCross rc0
+Entrance: t0 Exit: t2
+Entrance: t1 Exit: t3
+Nyertünk: false
+Vesztettünk: false
+Nyertünk: false
+Vesztettünk: false
+train1
+Game.Locomotive l0 t3

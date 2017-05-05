@@ -1,0 +1,4 @@
+train1
+Game.Locomotive l1 t4
+Game.PassengerCar pc0 Red t3 true
+Game.HopperCar hc0 t2

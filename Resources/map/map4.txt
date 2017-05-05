@@ -1,4 +1,18 @@
-Track t1
+Game.Track t1
 Switch sw1 2
-Track t3
-Track t4
+Game.Track t3
+Game.Track t4
+t3
+Game.Track t5
+Game.Station st1 0 Blue
+Game.Station st2 1 Red
+Game.Station st3 0 Blue
+Game.Station st4 1 Red
+Game.Track t6
+t4
+Game.Track t7
+Game.Track t8
+Game.Track t9
+Game.Track t10
+Game.Station st5 2 Blue
+Game.Track t11

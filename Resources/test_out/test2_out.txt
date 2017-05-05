@@ -1,4 +1,0 @@
-train1
-Locomotive l0 t3
-PassangerCar pc0 red t2 true
-HopperCar hc0 t1

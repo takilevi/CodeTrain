@@ -1,0 +1,5 @@
+Nyertünk: false
+Vesztettünk: false
+train1
+Game.Locomotive l0 t5
+Game.PassengerCar pc0 Red t3 true

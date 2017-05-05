@@ -1,5 +1,0 @@
-false
-false
-train1
-Locomotive l0 t3
-PassangerCar pc0 red sw1 true

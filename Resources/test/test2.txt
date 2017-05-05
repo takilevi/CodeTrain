@@ -1,5 +1,5 @@
 loadMap map2.txt
 addLocomotive train1 l0 t3
-addPassangerCarToTrain train1 pc0 red true
+addPassengerCarToTrain train1 pc0 Red true
 addHopperCarToTrain train1 hc0
 listTrain train1

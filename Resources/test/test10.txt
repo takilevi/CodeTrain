@@ -1,4 +1,4 @@
 loadMap map4.txt
-addLocomotive train1 l0 t4
-addPassangerCarToTrain train1 pc1 red true
-stepLocomotive l0 1
+addLocomotive train1 l0 t11
+addPassengerCarToTrain train1 pc1 Red true
+stepTrain train1 1

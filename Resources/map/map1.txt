@@ -1,17 +1,17 @@
-Track t1
-Track t2
+Game.Track t1
+Game.Track t2
 Switch s1 2
-Track t3
-Track t4
+Game.Track t3
+Game.Track t4
 t3
-Station st1 0 Blue
+Game.Station st1 0 Blue
 TunnelElement te1
-Track t5
+Game.Track t5
 t4
-Track t6
+Game.Track t6
 TunnelElement te2
-Station st2 2 Red
+Game.Station st2 2 Red
 te1
-Track t7
-Track t8
+Game.Track t7
+Game.Track t8
 te2
