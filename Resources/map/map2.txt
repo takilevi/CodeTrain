@@ -4,5 +4,5 @@ Game.Track t3 308 292 sin_vizszintes.png
 Game.Track t4 370 242 sin_kanyar_2.png
 Game.Track t5 363 200 sin_kanyar_1.png
 Game.Track t6 305 200 sin_vizszintes.png
-Game.Station st1 0 Red 246 173 allomas_piros.png
+Game.Station st1 0 Red 0 0 allomas_piros.png
 Game.Track t7 200 200 sin_kanyar_4.png t1
