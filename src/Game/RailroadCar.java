@@ -1,6 +1,9 @@
 package Game;
 
 import Graphics.Drawable;
+import Graphics.RailroadCarGraphics;
+
+import java.awt.*;
 
 /**
  * A vonatok kocsiját kezelő osztály.
@@ -72,6 +75,8 @@ public abstract class RailroadCar implements Movable {
 
         previousElement.leaveElement(this);
         currentElement.stepToElement(this);
+
+        ((RailroadCarGraphics)graphics).RefreshPosition(new Point(currentElement.getGraphics().getX(), currentElement.getGraphics().getY()));
 
         if (carAfterCar != null) {
             carAfterCar.move(previousElement);

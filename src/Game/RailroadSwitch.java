@@ -39,7 +39,6 @@ public class RailroadSwitch extends StaticElement {
     public void changeSwitchToDirection(int d){
 
         if(trainsOnElement.isEmpty()){
-            System.out.println("Új irány:" + d);
             setDirection(d);
         }
     }
@@ -111,14 +110,20 @@ public class RailroadSwitch extends StaticElement {
      */
     public StaticElement getNextElement(StaticElement previousElement)
     {
-        if(previousElement == staticDirection){
+        System.out.println(previousElement.getName());
+        if(previousElement.getName().equals(staticDirection.getName())){
+            System.out.println(previousElement.getName() + " "+ dynamicDirections.get(direction).getName());
+            System.out.println("statikusból jött");
             return dynamicDirections.get(direction);
         }
-        else if(previousElement == dynamicDirections.get(direction)){
+        else if(previousElement.getName().equals(dynamicDirections.get(direction).getName())){
+            System.out.println(previousElement.getName() + " "+ dynamicDirections.get(direction).getName());
+            System.out.println("dinamikusból jött");
             return staticDirection;
         }
         else{
             //Finishgame, kéne ismernie a modellt nem?
+            System.out.println(previousElement.getName() + " "+ dynamicDirections.get(direction).getName());
             return null;
         }
     }

@@ -3,6 +3,8 @@ package Game;
 import Graphics.Drawable;
 import Graphics.LocomotiveGraphics;
 
+import java.awt.*;
+
 /**
  * Mozdony kezelését megvalósító osztály.
  */
@@ -110,6 +112,8 @@ public class Locomotive implements Movable {
 
         previousElement.leaveElement(this);
         currentElement.stepToElement(this);
+
+        ((LocomotiveGraphics)graphics).RefreshPosition(new Point(currentElement.getGraphics().getX(), currentElement.getGraphics().getY()));
 
         if (carAfterLocomotive != null) {
             carAfterLocomotive.move(previousElement);

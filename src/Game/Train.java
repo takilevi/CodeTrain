@@ -68,8 +68,7 @@ public class Train {
 
         RailroadModel.commandsOutput.add("Nyertünk: false");
         RailroadModel.commandsOutput.add("Vesztettünk: false");
-        System.out.println("Nyertünk: false");
-        System.out.println("Vesztettünk: false");
+
 
     }
 

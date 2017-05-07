@@ -28,7 +28,6 @@ public class LocomotiveGraphics implements Drawable  {
 
     @Override
     public void Draw(Graphics g) {
-        System.out.println("vonatotrajzoltam");
         g.drawImage(image, x, y, null);
     }
 
@@ -40,6 +39,11 @@ public class LocomotiveGraphics implements Drawable  {
     @Override
     public int getY() {
         return y;
+    }
+
+    public void RefreshPosition(Point p){
+        x = p.x;
+        y = p.y;
     }
 
 }

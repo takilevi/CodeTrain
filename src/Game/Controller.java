@@ -89,6 +89,8 @@ public class Controller {
                     String hopperCarName = "hc1";
                     model.CommandExecution("addHopperCarToTrain "+trainname+" "+hopperCarName);
                     System.out.println("New Trains added to "+ pos);
+
+                    model.CommandExecution("run");
                 }
 
             }

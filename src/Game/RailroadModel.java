@@ -231,9 +231,9 @@ public class RailroadModel {
         elementsInModel.get("t4_c").setNextElement(elementsInModel.get("sw0"));
 
         elementsInModel.get("sw0").setStaticDirection(elementsInModel.get("t0_d"));
-        elementsInModel.get("sw0").setDynamicDirection(elementsInModel.get("t9_a"));
-        elementsInModel.get("sw0").setDynamicDirection(elementsInModel.get("t9_b"));
         elementsInModel.get("sw0").setDynamicDirection(elementsInModel.get("t4_c"));
+        elementsInModel.get("sw0").setDynamicDirection(elementsInModel.get("t9_b"));
+        elementsInModel.get("sw0").setDynamicDirection(elementsInModel.get("t9_a"));
 
         elementsInModel.get("t2_a").setPreviousElement(elementsInModel.get("rc0_c"));
         elementsInModel.get("t2_a").setNextElement(elementsInModel.get("t3_a"));
@@ -257,8 +257,8 @@ public class RailroadModel {
         elementsInModel.get("t6_a").setNextElement(elementsInModel.get("sw1"));
 
         elementsInModel.get("sw1").setStaticDirection(elementsInModel.get("t7_a"));
-        elementsInModel.get("sw1").setDynamicDirection(elementsInModel.get("t0_e"));
         elementsInModel.get("sw1").setDynamicDirection(elementsInModel.get("t6_a"));
+        elementsInModel.get("sw1").setDynamicDirection(elementsInModel.get("t0_e"));
 
         elementsInModel.get("t7_a").setPreviousElement(elementsInModel.get("sw1"));
         elementsInModel.get("t7_a").setNextElement(elementsInModel.get("t8_a"));
@@ -291,8 +291,8 @@ public class RailroadModel {
         elementsInModel.get("t6_b").setNextElement(elementsInModel.get("sw3"));
 
         elementsInModel.get("sw3").setStaticDirection(elementsInModel.get("t7_b"));
-        elementsInModel.get("sw3").setDynamicDirection(elementsInModel.get("t0_f"));
         elementsInModel.get("sw3").setDynamicDirection(elementsInModel.get("t6_b"));
+        elementsInModel.get("sw3").setDynamicDirection(elementsInModel.get("t0_f"));
 
         elementsInModel.get("t7_b").setPreviousElement(elementsInModel.get("sw3"));
         elementsInModel.get("t7_b").setNextElement(elementsInModel.get("t8_b"));
@@ -313,9 +313,9 @@ public class RailroadModel {
         elementsInModel.get("t2_d").setNextElement(elementsInModel.get("sw4"));
 
         elementsInModel.get("sw4").setStaticDirection(elementsInModel.get("t2_d"));
+        elementsInModel.get("sw4").setDynamicDirection(elementsInModel.get("te0_g"));
         elementsInModel.get("sw4").setDynamicDirection(elementsInModel.get("t4_e"));
         elementsInModel.get("sw4").setDynamicDirection(elementsInModel.get("t4_f"));
-        elementsInModel.get("sw4").setDynamicDirection(elementsInModel.get("te0_g"));
 
         elementsInModel.get("t0_e").setPreviousElement(elementsInModel.get("sw1"));
         elementsInModel.get("t0_e").setNextElement(elementsInModel.get("st1"));
@@ -644,7 +644,7 @@ public class RailroadModel {
                     break;
 
                 case "run":
-                    counter = new Counter(3000, "RunTrains", trainsInModel);
+                    counter = new Counter(3000, "RunTrains", trainsInModel, view);
                     System.out.println("Nyomj meg valamilyen gombot, ha parancsot írnál be");
                     counter.start();
                     break;

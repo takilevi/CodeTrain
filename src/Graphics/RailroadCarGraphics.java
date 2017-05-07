@@ -73,5 +73,9 @@ public class RailroadCarGraphics implements Drawable  {
         return y;
     }
 
+    public void RefreshPosition(Point p){
+        x = p.x;
+        y = p.y;
+    }
 
 }

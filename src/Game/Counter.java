@@ -1,5 +1,7 @@
 package Game;
 
+import Graphics.View;
+
 import java.util.List;
 
 /**
@@ -14,6 +16,7 @@ public class Counter extends Thread {
     private String name;
     private boolean isRunning;
     private List<Train> controlledTrains;
+    private View v;
 
     /**
      * A konstruktor
@@ -22,7 +25,8 @@ public class Counter extends Thread {
      * @param trains A modelben lévő vonatok
      * (Új vonat esetén nyilván nem indul el magától, újra kell indítani)
      */
-    public Counter(int stepTime, String n, List<Train> trains){
+    public Counter(int stepTime, String n, List<Train> trains, View v){
+        this.v = v;
         this.stepTime = stepTime;
         name = n;
         isRunning = false;
@@ -49,6 +53,7 @@ public class Counter extends Thread {
             while(isRunning) {
                 for(Train train : controlledTrains){
                     train.awakeLocomotive();
+                    v.DrawAll();
                 }
                 t.sleep(stepTime);
 
