@@ -27,6 +27,7 @@ public class RailroadSwitch extends StaticElement {
 
     @Override
     public void setGraphics(String type, int x, int y) {
+
         graphics = new RailroadSwitchGraphics(type, x, y);
     }
 
