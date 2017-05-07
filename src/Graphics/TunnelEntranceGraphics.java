@@ -27,10 +27,10 @@ public class TunnelEntranceGraphics implements Drawable  {
 
             images.add(ImageIO.read(new File("Resources/img_map/"+type)));
             if(type.contains("f")){
-                images.add(ImageIO.read(new File("Resources/img_map/"+"tunnel_f_inact")));
+                images.add(ImageIO.read(new File("Resources/img_map/"+"tunnel_f_act.png")));
             }
             else{
-                images.add(ImageIO.read(new File("Resources/img_map/"+"tunnel_v_inact")));
+                images.add(ImageIO.read(new File("Resources/img_map/"+"tunnel_v_act.png")));
             }
 
 
@@ -38,6 +38,14 @@ public class TunnelEntranceGraphics implements Drawable  {
             e.printStackTrace();
         }
 
+    }
+
+    public void changeState(int i){
+        active = i;
+    }
+
+    public int getActive() {
+        return active;
     }
 
     @Override
