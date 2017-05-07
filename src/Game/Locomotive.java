@@ -33,7 +33,12 @@ public class Locomotive implements Movable {
     }
 
     public void setGraphics(){
+        try{
         graphics = new LocomotiveGraphics(currentElement.getGraphics().getX(), currentElement.getGraphics().getY());
+        }
+        catch (NullPointerException n){
+            System.out.println(n.getMessage());
+        }
     }
 
     public Drawable getGraphics(){

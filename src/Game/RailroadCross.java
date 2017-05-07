@@ -1,5 +1,6 @@
 package Game;
 
+import Graphics.Drawable;
 import Graphics.RailroadCrossGraphics;
 import Graphics.TrackGraphics;
 
@@ -21,12 +22,16 @@ public class RailroadCross extends StaticElement {
 
     public RailroadCross(String name) {
         super(name);
-
     }
 
     @Override
     public void setGraphics(String type, int x, int y) {
         graphics = new RailroadCrossGraphics(type, x, y);
+    }
+
+    @Override
+    public Drawable getGraphics() {
+        return graphics;
     }
 
     /**
@@ -129,11 +134,23 @@ public class RailroadCross extends StaticElement {
     @Override
     public void setNextElement(StaticElement nextElement) {
 
+        if(firstExit== null){
+            firstExit= nextElement;
+        }
+        else if(secondExit==null){
+            secondExit = nextElement;
+        }
+
     }
 
     @Override
     public void setPreviousElement(StaticElement previousElement) {
-
+        if(firstExit== null){
+            firstEntrance= previousElement;
+        }
+        else if(secondExit==null){
+            secondEntrance = previousElement;
+        }
     }
 
     @Override

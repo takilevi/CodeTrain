@@ -47,6 +47,7 @@ public class View {
                 super.paintComponent(g);
                 if(drawables != null){
                     for(int i = 0; i< drawables.size(); i++){
+                        if(drawables.get(i) != null)
                         drawables.get(i).Draw(g);
                     }
                 }
@@ -81,12 +82,16 @@ public class View {
         Drawable bestMatch = null;
         int best = 25;
         for(int i= 0; i <drawables.size(); i++){
-           double distance = Math.sqrt((drawables.get(i).getX()+10-p.x)*(drawables.get(i).getX()+10-p.x) +
-                   (drawables.get(i).getY()+10-p.y)*(drawables.get(i).getY()+10-p.y));
+            try{
+                double distance = Math.sqrt((drawables.get(i).getX()+10-p.x)*(drawables.get(i).getX()+10-p.x) +
+                      (drawables.get(i).getY()+10-p.y)*(drawables.get(i).getY()+10-p.y));
 
-            if(distance < best) {
-                bestMatch = drawables.get(i);
-                best = (int )Math.round(distance);
+                if(distance < best) {
+                    bestMatch = drawables.get(i);
+                    best = (int )Math.round(distance);
+                }
+            }catch(NullPointerException n){
+                System.out.println(n.getMessage());
             }
 
         }
