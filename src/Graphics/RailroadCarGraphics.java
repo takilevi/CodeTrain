@@ -74,6 +74,7 @@ public class RailroadCarGraphics implements Drawable  {
     }
 
     public void RefreshPosition(Point p){
+        System.out.print("kocsi új koord");
         x = p.x;
         y = p.y;
     }

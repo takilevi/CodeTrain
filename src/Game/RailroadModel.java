@@ -216,10 +216,13 @@ public class RailroadModel {
         elementsInModel.get("st0").setPreviousElement(elementsInModel.get("t1"));
         elementsInModel.get("st0").setNextElement(elementsInModel.get("rc0_c"));
 
-        elementsInModel.get("rc0_c").setPreviousElement(elementsInModel.get("st0"));
-        elementsInModel.get("rc0_c").setPreviousElement(elementsInModel.get("t2_b"));
-        elementsInModel.get("rc0_c").setNextElement(elementsInModel.get("t2_c"));
-        elementsInModel.get("rc0_c").setNextElement(elementsInModel.get("t2_a"));
+        //elementsInModel.get("rc0_c").setPreviousElement();
+        //elementsInModel.get("rc0_c").setPreviousElement();
+        //elementsInModel.get("rc0_c").setNextElement();
+        //elementsInModel.get("rc0_c").setNextElement();
+
+        ((RailroadCross)elementsInModel.get("rc0_c")).setFirstDirections(elementsInModel.get("st0"), elementsInModel.get("t2_c"));
+        ((RailroadCross) elementsInModel.get("rc0_c")).setSecondDirections(elementsInModel.get("t2_b"),elementsInModel.get("t2_a") );
 
         elementsInModel.get("t2_c").setPreviousElement(elementsInModel.get("rc0_c"));
         elementsInModel.get("t2_c").setNextElement(elementsInModel.get("t3_c"));
@@ -623,6 +626,7 @@ public class RailroadModel {
                     for (int i = 0; i < step; i++) {
                         for (Train t : trainsInModel) {
                             t.awakeLocomotive();
+                            view.DrawAll();
                         }
                     }
                     break;

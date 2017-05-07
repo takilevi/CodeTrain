@@ -76,6 +76,8 @@ public abstract class RailroadCar implements Movable {
         previousElement.leaveElement(this);
         currentElement.stepToElement(this);
 
+
+
         ((RailroadCarGraphics)graphics).RefreshPosition(new Point(currentElement.getGraphics().getX(), currentElement.getGraphics().getY()));
 
         if (carAfterCar != null) {

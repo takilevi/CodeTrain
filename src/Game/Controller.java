@@ -17,7 +17,10 @@ public class Controller {
     int count = 0;
 
     public Controller(RailroadModel model) {
+
         this.model = model;
+
+
     }
 
     /**
@@ -80,11 +83,15 @@ public class Controller {
                         model.CommandExecution("addLocomotive " + trainname + " " + locomotiveName + " " + "t1");
 
                         String carName = "pc1";
-                        model.CommandExecution("addPassengerCarToTrain " + trainname + " " + carName + " Red" + " true");
+                        model.CommandExecution("addPassengerCarToTrain " + trainname + " " + carName + " Green" + " true");
 
                         String hopperCarName = "hc1";
                         model.CommandExecution("addHopperCarToTrain " + trainname + " " + hopperCarName);
+
+
                         System.out.println("New Trains added to " + pos);
+
+
                     }
                     else if (count == 2 && model.getElementsInModel().get(key).getName().isEmpty() ) {
 
@@ -105,8 +112,8 @@ public class Controller {
                     } else {
                         System.out.println("Max 2 vonat lehet");
                     }
-
                     model.CommandExecution("run");
+
                 }
 
             }

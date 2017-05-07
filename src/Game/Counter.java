@@ -51,11 +51,12 @@ public class Counter extends Thread {
     public void run() {
         try{
             while(isRunning) {
+                t.sleep(stepTime);
                 for(Train train : controlledTrains){
                     train.awakeLocomotive();
                     v.DrawAll();
                 }
-                t.sleep(stepTime);
+
 
 
             }
