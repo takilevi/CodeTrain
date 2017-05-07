@@ -1,5 +1,7 @@
 package Game;
 
+import Graphics.StationGraphics;
+
 import java.util.List;
 
 /**
@@ -11,14 +13,16 @@ import java.util.List;
 
 //MIVEL A PROTOTÍPUSBAN TETSZŐLEGES ELEMRE HELYEZHETÜNK EL VONATOT, NINCS SZEREPE AZ OSZTÁLYNAK MÉG!
 //Todo: Majd végleges verzióra elkészíteni!
-public class Depot {
+public class Depot extends StaticElement {
 
     private List<StaticElement> depotElements;
 
     /**
      * A kocsiszín konstruktora.
      */
-    public Depot() {}
+    public Depot(String name) {
+        super(name);
+    }
 
     /**
      * Visszaadja a depóban lévő elemeket
@@ -26,6 +30,46 @@ public class Depot {
      */
     public List<StaticElement> getDepotElements() {
         return depotElements;
+    }
+
+    @Override
+    public void setGraphics(String type, int x, int y) {
+        graphics = new StationGraphics(type, x, y);
+    }
+
+    @Override
+    public StaticElement getNextElement(StaticElement previousElement) {
+        return null;
+    }
+
+    @Override
+    public StaticElement getPrevForLoco() {
+        return null;
+    }
+
+    @Override
+    public void setNextElement(StaticElement nextElement) {
+
+    }
+
+    @Override
+    public void setPreviousElement(StaticElement previousElement) {
+
+    }
+
+    @Override
+    public void setDynamicDirection(StaticElement one_dir) {
+
+    }
+
+    @Override
+    public void setStaticDirection(StaticElement staticDir) {
+
+    }
+
+    @Override
+    public void setTunnelElement(StaticElement tunnelElement) {
+
     }
 
     /**

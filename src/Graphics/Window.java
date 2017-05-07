@@ -23,7 +23,7 @@ public class Window extends JFrame {
     public Window(){
 
         setTitle("CodeTrain");
-        setSize(640,480);
+        setSize(1200,960);
         setLocationRelativeTo(null);
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
