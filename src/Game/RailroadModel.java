@@ -96,19 +96,6 @@ public class RailroadModel {
                         view.addDrawable(t.getGraphics());
 
                         elementsInModel.put(splittedLine[1],t);
-
-                        if (elementsInModel.size() > 1) {
-                            StaticElement temp = elementsInModel.get(previousSplittedLine[1]);
-                            temp.setNextElement(elementsInModel.get(splittedLine[1]));
-                            StaticElement temp2 = elementsInModel.get(splittedLine[1]);
-                            temp2.setPreviousElement(temp);
-
-                        }
-                        if(splittedLine.length>5){
-                            StaticElement temp = elementsInModel.get(splittedLine[5]);
-                            temp.setPreviousElement(t);
-                            t.setNextElement(temp);
-                        }
                         break;
 
                     case "Game.Switch":
@@ -118,83 +105,16 @@ public class RailroadModel {
                         view.addDrawable(sw.getGraphics());
 
                         elementsInModel.put(splittedLine[1], sw);
-
-                        int count_loop = Integer.parseInt(splittedLine[2]);
-
-                        while (count_loop != 0) {
-                            String temp_line = in.readLine();
-                            String[] temp_splittedLine = temp_line.split(" ");
-                            switch (temp_splittedLine[0]) {
-                                case "Game.Track":
-                                    System.out.println(temp_line.length());
-                                    Track t1 =  new Track(temp_splittedLine[1]);
-
-                                    t1.setGraphics(temp_splittedLine[4], Integer.parseInt(temp_splittedLine[2]), Integer.parseInt(temp_splittedLine[3]));
-                                    view.addDrawable(t1.getGraphics());
-
-                                    elementsInModel.put(temp_splittedLine[1], t1);
-
-                                    StaticElement temp = elementsInModel.get(splittedLine[1]);
-                                    temp.setDynamicDirection(elementsInModel.get(temp_splittedLine[1]));
-
-                                    StaticElement temp2 = elementsInModel.get(temp_splittedLine[1]);
-                                    temp2.setPreviousElement(temp);
-                                    break;
-
-                                case "Game.Station":
-
-                                    Station st = new Station(0, Color.Blue, temp_splittedLine[1], this);
-
-                                    st.setGraphics(temp_splittedLine[6], Integer.parseInt(temp_splittedLine[4]), Integer.parseInt(temp_splittedLine[5]));
-                                    view.addDrawable(st.getGraphics());
-
-                                    elementsInModel.put(temp_splittedLine[1], st);
-
-                                    StaticElement temp_s = elementsInModel.get(splittedLine[1]);
-                                    temp_s.setDynamicDirection(elementsInModel.get(temp_splittedLine[1]));
-
-                                    StaticElement temp2_s = elementsInModel.get(temp_splittedLine[1]);
-                                    temp2_s.setPreviousElement(temp_s);
-                                    break;
-
-                                case "TunnelElement":
-
-                                    TunnelEntrance te = new TunnelEntrance(temp_splittedLine[1]);
-
-                                    te.setGraphics(temp_splittedLine[1],Integer.parseInt(temp_splittedLine[2]), Integer.parseInt(temp_splittedLine[3]));
-                                    view.addDrawable(te.getGraphics());
-
-                                    elementsInModel.put(temp_splittedLine[1], te);
-
-                                    StaticElement temp_te = elementsInModel.get(splittedLine[1]);
-                                    temp_te.setDynamicDirection(elementsInModel.get(temp_splittedLine[1]));
-                                    StaticElement temp2_te = elementsInModel.get(temp_splittedLine[1]);
-                                    temp2_te.setPreviousElement(temp_te);
-                                    break;
-                            }
-                            count_loop--;
-                        }
-                        StaticElement temp = elementsInModel.get(previousSplittedLine[1]);
-                        temp.setNextElement(elementsInModel.get(splittedLine[1]));
-                        StaticElement temp2 = elementsInModel.get(splittedLine[1]);
-                        temp2.setStaticDirection(temp);
-
                         break;
+
                     case "Game.Station":
+
                         Station s = new Station(Integer.parseInt(splittedLine[2]), Color.valueOf(splittedLine[3]), splittedLine[1], this);
 
                         s.setGraphics(splittedLine[6], Integer.parseInt(splittedLine[4]), Integer.parseInt(splittedLine[5]));
                         view.addDrawable(s.getGraphics());
 
                         elementsInModel.put(splittedLine[1], s);
-
-                        StaticElement temp_stat = elementsInModel.get(previousSplittedLine[1]);
-                        temp_stat.setNextElement(elementsInModel.get(splittedLine[1]));
-                        StaticElement temp2_stat = elementsInModel.get(splittedLine[1]);
-                        temp2_stat.setPreviousElement(temp_stat);
-                        if(Integer.parseInt(splittedLine[2]) >0){
-                            notEmptyStations.add(s);
-                        }
                         break;
 
                     case "Game.Depot":
@@ -205,43 +125,26 @@ public class RailroadModel {
                         d.setGraphics(splittedLine[4], Integer.parseInt(splittedLine[2]), Integer.parseInt(splittedLine[3]));
                         view.addDrawable(d.getGraphics());
                         elementsInModel.put(splittedLine[1], d);
-
-                        if(elementsInModel.size() > 1){
-
-                            elementsInModel.get(previousSplittedLine[1]).setNextElement(elementsInModel.get(splittedLine[1]));
-
-                            elementsInModel.get(splittedLine[1]).setPreviousElement(null);
-
-                        }else{
-
-                            elementsInModel.get(splittedLine[1]).setPreviousElement(null);
-                        }
-
                         break;
 
-                    case "TunnelElement":
-                        elementsInModel.put(splittedLine[1], new TunnelEntrance(splittedLine[1]));
-                        StaticElement temp_tunnel = elementsInModel.get(previousSplittedLine[1]);
-                        temp_tunnel.setNextElement(elementsInModel.get(splittedLine[1]));
-                        StaticElement temp2_tunnel = elementsInModel.get(splittedLine[1]);
-                        temp2_tunnel.setPreviousElement(temp_tunnel);
+                    case "Game.TunnelEntrance":
+
+                        TunnelEntrance te = new TunnelEntrance(splittedLine[1]);
+
+                        te.setGraphics(splittedLine[4],Integer.parseInt(splittedLine[2]), Integer.parseInt(splittedLine[3]));
+                        view.addDrawable(te.getGraphics());
+
+                        elementsInModel.put(splittedLine[1],te);
                         break;
 
                     case "Game.RailroadCross":
 
-                        String line_2 = in.readLine();
-                        String[] line_2_rc = line_2.split(" ");
-                        elementsInModel.put(splittedLine[1],new RailroadCross(splittedLine[1]));
+                        RailroadCross rc = new RailroadCross(splittedLine[1]);
 
-                        elementsInModel.put(splittedLine[4], new Track(splittedLine[4]));
-                        elementsInModel.put(line_2_rc[4],new Track(line_2_rc[4]));
-                        RailroadCross rc_temp = (RailroadCross)elementsInModel.get(splittedLine[1]);
-                        rc_temp.setFirstDirections(elementsInModel.get(splittedLine[2]),elementsInModel.get(splittedLine[4]));
-                        rc_temp.setSecondDirections(elementsInModel.get(line_2_rc[2]),elementsInModel.get(line_2_rc[4]));
-                        elementsInModel.get(splittedLine[2]).setNextElement(rc_temp);
-                        elementsInModel.get(splittedLine[4]).setPreviousElement(rc_temp);
-                        elementsInModel.get(line_2_rc[2]).setNextElement(rc_temp);
-                        elementsInModel.get(line_2_rc[4]).setPreviousElement(rc_temp);
+                        rc.setGraphics(splittedLine[4],Integer.parseInt(splittedLine[2]), Integer.parseInt(splittedLine[3]));
+                        view.addDrawable(rc.getGraphics());
+
+                        elementsInModel.put(splittedLine[1],rc);
                         break;
 
                     default:
@@ -291,11 +194,174 @@ public class RailroadModel {
                 }
                 previousSplittedLine = splittedLine;
             }
+            setConnections();
         } catch (FileNotFoundException e) {
             System.out.println("Wrong mapname");
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void setConnections(){
+
+
+        elementsInModel.get("d0").setPreviousElement(null);
+
+        elementsInModel.get("t0").setPreviousElement(elementsInModel.get("d0"));
+        elementsInModel.get("t0").setNextElement(elementsInModel.get("t1"));
+
+        elementsInModel.get("t1").setPreviousElement(elementsInModel.get("t0"));
+        elementsInModel.get("t1").setNextElement(elementsInModel.get("st0"));
+
+        elementsInModel.get("st0").setPreviousElement(elementsInModel.get("t1"));
+        elementsInModel.get("st0").setNextElement(elementsInModel.get("rc0_c"));
+
+        elementsInModel.get("rc0_c").setPreviousElement(elementsInModel.get("st0"));
+        elementsInModel.get("rc0_c").setPreviousElement(elementsInModel.get("t2_b"));
+        elementsInModel.get("rc0_c").setNextElement(elementsInModel.get("t2_c"));
+        elementsInModel.get("rc0_c").setNextElement(elementsInModel.get("t2_a"));
+
+        elementsInModel.get("t2_c").setPreviousElement(elementsInModel.get("rc0_c"));
+        elementsInModel.get("t2_c").setNextElement(elementsInModel.get("t3_c"));
+
+        elementsInModel.get("t3_c").setPreviousElement(elementsInModel.get("t2_c"));
+        elementsInModel.get("t3_c").setNextElement(elementsInModel.get("t4_c"));
+
+        elementsInModel.get("t4_c").setPreviousElement(elementsInModel.get("t3_c"));
+        elementsInModel.get("t4_c").setNextElement(elementsInModel.get("sw0"));
+
+        elementsInModel.get("sw0").setStaticDirection(elementsInModel.get("t0_d"));
+        elementsInModel.get("sw0").setDynamicDirection(elementsInModel.get("t9_a"));
+        elementsInModel.get("sw0").setDynamicDirection(elementsInModel.get("t9_b"));
+        elementsInModel.get("sw0").setDynamicDirection(elementsInModel.get("t4_c"));
+
+        elementsInModel.get("t2_a").setPreviousElement(elementsInModel.get("rc0_c"));
+        elementsInModel.get("t2_a").setNextElement(elementsInModel.get("t3_a"));
+
+        elementsInModel.get("t3_a").setPreviousElement(elementsInModel.get("t2_a"));
+        elementsInModel.get("t3_a").setNextElement(elementsInModel.get("t4_a"));
+
+        elementsInModel.get("t4_a").setPreviousElement(elementsInModel.get("t3_a"));
+        elementsInModel.get("t4_a").setNextElement(elementsInModel.get("k0_a"));
+
+        elementsInModel.get("k0_a").setPreviousElement(elementsInModel.get("t4_a"));
+        elementsInModel.get("k0_a").setNextElement(elementsInModel.get("t5_a"));
+
+        elementsInModel.get("t5_a").setPreviousElement(elementsInModel.get("k0_a"));
+        elementsInModel.get("t5_a").setNextElement(elementsInModel.get("te0_a"));
+
+        elementsInModel.get("te0_a").setPreviousElement(elementsInModel.get("t5_a"));
+        elementsInModel.get("te0_a").setNextElement(elementsInModel.get("t6_a"));
+
+        elementsInModel.get("t6_a").setPreviousElement(elementsInModel.get("te0_a"));
+        elementsInModel.get("t6_a").setNextElement(elementsInModel.get("sw1"));
+
+        elementsInModel.get("sw1").setStaticDirection(elementsInModel.get("t7_a"));
+        elementsInModel.get("sw1").setDynamicDirection(elementsInModel.get("t0_e"));
+        elementsInModel.get("sw1").setDynamicDirection(elementsInModel.get("t6_a"));
+
+        elementsInModel.get("t7_a").setPreviousElement(elementsInModel.get("sw1"));
+        elementsInModel.get("t7_a").setNextElement(elementsInModel.get("t8_a"));
+
+        elementsInModel.get("t8_a").setPreviousElement(elementsInModel.get("t7_a"));
+        elementsInModel.get("t8_a").setNextElement(elementsInModel.get("t9_a"));
+
+        elementsInModel.get("t9_a").setPreviousElement(elementsInModel.get("t8_a"));
+        elementsInModel.get("t9_a").setNextElement(elementsInModel.get("sw0"));
+
+        elementsInModel.get("t2_b").setPreviousElement(elementsInModel.get("rc0_c"));
+        elementsInModel.get("t2_b").setNextElement(elementsInModel.get("t3_b"));
+
+        elementsInModel.get("t3_b").setPreviousElement(elementsInModel.get("t2_b"));
+        elementsInModel.get("t3_b").setNextElement(elementsInModel.get("t4_b"));
+
+        elementsInModel.get("t4_b").setPreviousElement(elementsInModel.get("t3_b"));
+        elementsInModel.get("t4_b").setNextElement(elementsInModel.get("k0_b"));
+
+        elementsInModel.get("k0_b").setPreviousElement(elementsInModel.get("t4_b"));
+        elementsInModel.get("k0_b").setNextElement(elementsInModel.get("t5_b"));
+
+        elementsInModel.get("t5_b").setPreviousElement(elementsInModel.get("k0_b"));
+        elementsInModel.get("t5_b").setNextElement(elementsInModel.get("te0_b"));
+
+        elementsInModel.get("te0_b").setPreviousElement(elementsInModel.get("t5_b"));
+        elementsInModel.get("te0_b").setNextElement(elementsInModel.get("t6_b"));
+
+        elementsInModel.get("t6_b").setPreviousElement(elementsInModel.get("teo_b"));
+        elementsInModel.get("t6_b").setNextElement(elementsInModel.get("sw3"));
+
+        elementsInModel.get("sw3").setStaticDirection(elementsInModel.get("t7_b"));
+        elementsInModel.get("sw3").setDynamicDirection(elementsInModel.get("t0_f"));
+        elementsInModel.get("sw3").setDynamicDirection(elementsInModel.get("t6_b"));
+
+        elementsInModel.get("t7_b").setPreviousElement(elementsInModel.get("sw3"));
+        elementsInModel.get("t7_b").setNextElement(elementsInModel.get("t8_b"));
+
+        elementsInModel.get("t8_b").setPreviousElement(elementsInModel.get("t7_b"));
+        elementsInModel.get("t8_b").setNextElement(elementsInModel.get("t9_b"));
+
+        elementsInModel.get("t9_b").setPreviousElement(elementsInModel.get("t8_b"));
+        elementsInModel.get("t9_b").setNextElement(elementsInModel.get("sw0"));
+
+        elementsInModel.get("t0_d").setPreviousElement(elementsInModel.get("sw0"));
+        elementsInModel.get("t0_d").setNextElement(elementsInModel.get("t1_d"));
+
+        elementsInModel.get("t1_d").setPreviousElement(elementsInModel.get("t0_d"));
+        elementsInModel.get("t1_d").setNextElement(elementsInModel.get("t2_d"));
+
+        elementsInModel.get("t2_d").setPreviousElement(elementsInModel.get("t1_d"));
+        elementsInModel.get("t2_d").setNextElement(elementsInModel.get("sw4"));
+
+        elementsInModel.get("sw4").setStaticDirection(elementsInModel.get("t2_d"));
+        elementsInModel.get("sw4").setDynamicDirection(elementsInModel.get("t4_e"));
+        elementsInModel.get("sw4").setDynamicDirection(elementsInModel.get("t4_f"));
+        elementsInModel.get("sw4").setDynamicDirection(elementsInModel.get("te0_g"));
+
+        elementsInModel.get("t0_e").setPreviousElement(elementsInModel.get("sw1"));
+        elementsInModel.get("t0_e").setNextElement(elementsInModel.get("st1"));
+
+        elementsInModel.get("st1").setPreviousElement(elementsInModel.get("t0_e"));
+        elementsInModel.get("st1").setNextElement(elementsInModel.get("t1_e"));
+
+        elementsInModel.get("t1_e").setPreviousElement(elementsInModel.get("st1"));
+        elementsInModel.get("t1_e").setNextElement(elementsInModel.get("k0_e"));
+
+        elementsInModel.get("k0_e").setPreviousElement(elementsInModel.get("t1_e"));
+        elementsInModel.get("k0_e").setNextElement(elementsInModel.get("t2_e"));
+
+        elementsInModel.get("t2_e").setPreviousElement(elementsInModel.get("k0_e"));
+        elementsInModel.get("t2_e").setNextElement(elementsInModel.get("t3_e"));
+
+        elementsInModel.get("t3_e").setPreviousElement(elementsInModel.get("t2_e"));
+        elementsInModel.get("t3_e").setNextElement(elementsInModel.get("t4_e"));
+
+        elementsInModel.get("t4_e").setPreviousElement(elementsInModel.get("t3_e"));
+        elementsInModel.get("t4_e").setNextElement(elementsInModel.get("sw4"));
+
+        elementsInModel.get("t0_f").setPreviousElement(elementsInModel.get("sw3"));
+        elementsInModel.get("t0_f").setNextElement(elementsInModel.get("t1_f"));
+
+        elementsInModel.get("t1_f").setPreviousElement(elementsInModel.get("t0_f"));
+        elementsInModel.get("t1_f").setNextElement(elementsInModel.get("t2_f"));
+
+        elementsInModel.get("t2_f").setPreviousElement(elementsInModel.get("t2_f"));
+        elementsInModel.get("t2_f").setNextElement(elementsInModel.get("k0_f"));
+
+        elementsInModel.get("k0_f").setPreviousElement(elementsInModel.get("t2_f"));
+        elementsInModel.get("k0_f").setNextElement(elementsInModel.get("t3_f"));
+
+        elementsInModel.get("t3_f").setPreviousElement(elementsInModel.get("k0_f"));
+        elementsInModel.get("t3_f").setNextElement(elementsInModel.get("st2"));
+
+        elementsInModel.get("st2").setPreviousElement(elementsInModel.get("t3_f"));
+        elementsInModel.get("st2").setNextElement(elementsInModel.get("t4_f"));
+
+        elementsInModel.get("t4_f").setPreviousElement(elementsInModel.get("st2"));
+        elementsInModel.get("t4_f").setNextElement(elementsInModel.get("sw4"));
+
+        elementsInModel.get("te0_g").setPreviousElement(elementsInModel.get("sw4"));
+        elementsInModel.get("te0_g").setNextElement(elementsInModel.get(null));
+
     }
 
     public Map<String, StaticElement> getElementsInModel(){
