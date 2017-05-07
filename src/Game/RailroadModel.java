@@ -663,17 +663,25 @@ public class RailroadModel {
                     Tenter2 = command[2];
                     TunnelEntrance t1 = (TunnelEntrance) elementsInModel.get(Tenter1);
                     TunnelEntrance t2 = (TunnelEntrance) elementsInModel.get(Tenter2);
+                    t1.setTunnelElement(t2);
+                    t2.setTunnelElement(t1);
                     if(activeTunnel != null){
                         activeTunnel.destroy();
                     }
                     activeTunnel = new Tunnel();
                     activeTunnel.build(t1);
                     activeTunnel.build(t2);
+
+                    view.DrawAll();
+
                     break;
 
                 case "destroyTunnel":
                     if(activeTunnel != null){
                         if(activeTunnel.destroy()){
+
+                            view.DrawAll();
+
                             activeTunnel = null;
                         }
 

@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b719b53-8ac2-4a4f-856c-ea236c24fa12" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Game/Controller.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Game/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Game/RailroadModel.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Game/RailroadModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Game/RailroadSwitch.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Game/RailroadSwitch.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Graphics/TunnelEntranceGraphics.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Graphics/TunnelEntranceGraphics.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/Application.java" afterPath="$PROJECT_DIR$/src/Game/Application.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/Controller.java" afterPath="$PROJECT_DIR$/src/Game/Controller.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/RailroadModel.java" afterPath="$PROJECT_DIR$/src/Game/RailroadModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/RailroadSwitch.java" afterPath="$PROJECT_DIR$/src/Game/RailroadSwitch.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graphics/RailroadSwitchGraphics.java" afterPath="$PROJECT_DIR$/src/Graphics/RailroadSwitchGraphics.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/Tunnel.java" afterPath="$PROJECT_DIR$/src/Game/Tunnel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/TunnelEntrance.java" afterPath="$PROJECT_DIR$/src/Game/TunnelEntrance.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graphics/TunnelEntranceGraphics.java" afterPath="$PROJECT_DIR$/src/Graphics/TunnelEntranceGraphics.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,6 +18,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/CodeTrain$Application.coverage" NAME="Application Coverage Results" MODIFIED="1494185493471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Game.*</FILTER>
+    </SUITE>
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -30,7 +32,7 @@
       <file leaf-file-name="map2.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Resources/map/map2.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-32">
+            <state relative-caret-position="255">
               <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
               <folding />
             </state>
@@ -40,13 +42,15 @@
       <file leaf-file-name="TunnelEntrance.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Game/TunnelEntrance.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-721">
-              <caret line="54" column="43" lean-forward="true" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
+            <state relative-caret-position="765">
+              <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
               <folding>
                 <element signature="e#571#572#0" expanded="true" />
                 <element signature="e#636#637#0" expanded="true" />
-                <element signature="e#1272#1273#0" expanded="true" />
-                <element signature="e#1308#1309#0" expanded="true" />
+                <element signature="e#794#795#0" expanded="true" />
+                <element signature="e#825#826#0" expanded="true" />
+                <element signature="e#1398#1399#0" expanded="true" />
+                <element signature="e#1434#1435#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -55,9 +59,32 @@
       <file leaf-file-name="RailroadModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Game/RailroadModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1352">
-              <caret line="253" column="81" lean-forward="true" selection-start-line="253" selection-start-column="81" selection-end-line="253" selection-end-column="81" />
+            <state relative-caret-position="156">
+              <caret line="666" column="44" lean-forward="false" selection-start-line="666" selection-start-column="44" selection-end-line="666" selection-end-column="44" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageIO.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/javax/imageio/ImageIO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="1300" column="0" lean-forward="false" selection-start-line="1300" selection-start-column="0" selection-end-line="1300" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tunnel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Game/Tunnel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1139">
+              <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+              <folding>
+                <element signature="e#197#198#0" expanded="true" />
+                <element signature="e#242#243#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,35 +102,28 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Game/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="57" column="16" lean-forward="false" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
-              <folding />
+            <state relative-caret-position="323">
+              <caret line="64" column="35" lean-forward="false" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
+              <folding>
+                <element signature="e#278#279#0" expanded="true" />
+                <element signature="e#312#313#0" expanded="true" />
+              </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tunnel_v_act.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Resources/img_map/tunnel_v_act.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tunnel_v_inact.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Resources/img_map/tunnel_v_inact.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="TunnelEntranceGraphics.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Graphics/TunnelEntranceGraphics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10">
-              <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+            <state relative-caret-position="442">
+              <caret line="32" column="80" lean-forward="false" selection-start-line="32" selection-start-column="80" selection-end-line="32" selection-end-column="80" />
               <folding>
-                <element signature="e#1065#1066#0" expanded="true" />
-                <element signature="e#1124#1125#0" expanded="true" />
+                <element signature="e#1056#1057#0" expanded="true" />
+                <element signature="e#1082#1083#0" expanded="true" />
+                <element signature="e#1112#1113#0" expanded="true" />
+                <element signature="e#1141#1142#0" expanded="true" />
+                <element signature="e#1191#1192#0" expanded="true" />
+                <element signature="e#1250#1251#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -171,8 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Resources/test/test2.txt" />
-        <option value="$PROJECT_DIR$/Resources/test/test3.txt" />
         <option value="$PROJECT_DIR$/Resources/test_out/test3_out.txt" />
         <option value="$PROJECT_DIR$/Resources/test/test4.txt" />
         <option value="$PROJECT_DIR$/Resources/test/test5.txt" />
@@ -218,9 +236,11 @@
         <option value="$PROJECT_DIR$/src/Game/RailroadCross.java" />
         <option value="$PROJECT_DIR$/src/Game/Application.java" />
         <option value="$PROJECT_DIR$/src/Graphics/RailroadSwitchGraphics.java" />
-        <option value="$PROJECT_DIR$/src/Game/RailroadModel.java" />
         <option value="$PROJECT_DIR$/src/Game/RailroadSwitch.java" />
+        <option value="$PROJECT_DIR$/src/Game/TunnelEntrance.java" />
+        <option value="$PROJECT_DIR$/src/Game/Tunnel.java" />
         <option value="$PROJECT_DIR$/src/Graphics/TunnelEntranceGraphics.java" />
+        <option value="$PROJECT_DIR$/src/Game/RailroadModel.java" />
         <option value="$PROJECT_DIR$/src/Game/Controller.java" />
       </list>
     </option>
@@ -878,7 +898,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494183177471</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Szóval akkor a váltás">
+      <created>1494184673198</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1494184673198</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -916,6 +943,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28541225" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -997,7 +1025,8 @@
     <MESSAGE value="térkép kézi rajza" />
     <MESSAGE value=".." />
     <MESSAGE value="Váltás" />
-    <option name="LAST_COMMIT_MESSAGE" value="Váltás" />
+    <MESSAGE value="Szóval akkor a váltás" />
+    <option name="LAST_COMMIT_MESSAGE" value="Szóval akkor a váltás" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1010,7 +1039,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Resources/img_map/elagazodas_2ag_aktiv2.png" />
     <entry file="file://$PROJECT_DIR$/src/Graphics/Track.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1022,6 +1050,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1097,14 +1126,6 @@
             <element signature="e#1025#1026#0" expanded="false" />
             <element signature="e#1083#1084#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game/Tunnel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="79" column="27" lean-forward="false" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1328,6 +1349,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/map/map2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Game/Train.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1656">
@@ -1336,51 +1365,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/javax/imageio/ImageIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="1300" column="0" lean-forward="false" selection-start-line="1300" selection-start-column="0" selection-end-line="1300" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Graphics/TunnelEntranceGraphics.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10">
-          <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+        <state relative-caret-position="442">
+          <caret line="32" column="80" lean-forward="false" selection-start-line="32" selection-start-column="80" selection-end-line="32" selection-end-column="80" />
           <folding>
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
+            <element signature="e#1056#1057#0" expanded="true" />
+            <element signature="e#1082#1083#0" expanded="true" />
+            <element signature="e#1112#1113#0" expanded="true" />
+            <element signature="e#1141#1142#0" expanded="true" />
+            <element signature="e#1191#1192#0" expanded="true" />
+            <element signature="e#1250#1251#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game/Tunnel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding>
+            <element signature="e#197#198#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Game/TunnelEntrance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-721">
-          <caret line="54" column="43" lean-forward="true" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
+        <state relative-caret-position="765">
+          <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
           <folding>
             <element signature="e#571#572#0" expanded="true" />
             <element signature="e#636#637#0" expanded="true" />
-            <element signature="e#1272#1273#0" expanded="true" />
-            <element signature="e#1308#1309#0" expanded="true" />
+            <element signature="e#794#795#0" expanded="true" />
+            <element signature="e#825#826#0" expanded="true" />
+            <element signature="e#1398#1399#0" expanded="true" />
+            <element signature="e#1434#1435#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Game/RailroadModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1352">
-          <caret line="253" column="81" lean-forward="true" selection-start-line="253" selection-start-column="81" selection-end-line="253" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/map/map2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-32">
-          <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+        <state relative-caret-position="156">
+          <caret line="666" column="44" lean-forward="false" selection-start-line="666" selection-start-column="44" selection-end-line="666" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Game/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="57" column="16" lean-forward="false" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
-          <folding />
+        <state relative-caret-position="323">
+          <caret line="64" column="35" lean-forward="false" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
+          <folding>
+            <element signature="e#278#279#0" expanded="true" />
+            <element signature="e#312#313#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

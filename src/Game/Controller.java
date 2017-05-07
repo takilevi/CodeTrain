@@ -12,6 +12,8 @@ public class Controller {
 
     RailroadModel model;
 
+    TunnelEntrance tmp;
+
     public Controller(RailroadModel model)
     {
         this.model = model;
@@ -55,7 +57,25 @@ public class Controller {
                     }
                     System.out.println(" Lett: "+sw.getDirection()+"  ");
                 }
-                
+                else if(mapElements.get(key).getName().contains("te")){
+
+                    TunnelEntrance te = (TunnelEntrance) mapElements.get(key);
+                    if(te.getState()){
+                        model.CommandExecution("destroyTunnel");
+                        tmp = null;
+                    }
+
+                    else if(tmp == null){
+                        System.out.println("Elsé létrehozva");
+                        tmp = te;
+                    }
+                    else if(tmp != te){
+                        System.out.println("Második is");
+                        model.CommandExecution("buildTunnel "+tmp.getName()+" "+te.getName());
+                        tmp = null;
+                    }
+                }
+
                 else{
                     String trainname = "train"+model.getTrainsInModel().size();
                     String locomotiveName = "locomotive"+model.getTrainsInModel().size();

@@ -33,6 +33,7 @@ public class Tunnel {
         if(entrances.size() == 2 ){
             entrances.get(0).changeState();
             entrances.get(1).changeState();
+            System.out.println("Létrejött");
         }
 
     }

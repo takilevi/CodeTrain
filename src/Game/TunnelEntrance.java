@@ -41,9 +41,11 @@ public class TunnelEntrance extends StaticElement {
     public void changeState() {
 
         if(isActive){
+            ((TunnelEntranceGraphics)graphics).changeState(0);
             isActive = false;
         }
         else{
+            ((TunnelEntranceGraphics)graphics).changeState(1);
             isActive = true;
         }
     }
