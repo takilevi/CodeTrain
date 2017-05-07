@@ -73,8 +73,8 @@ public class Controller {
                         tmp = null;
                     }
                 } else if (mapElements.get(key).getName().contains("d0")) {
-                    count++;
-                    if (count == 1) {
+
+                    if (count == 0) {
 
                         String trainname = "train" + model.getTrainsInModel().size();
                         String locomotiveName = "locomotive" + model.getTrainsInModel().size();
@@ -91,21 +91,25 @@ public class Controller {
 
                         System.out.println("New Trains added to " + pos);
                         model.CommandExecution("run");
+                        count++;
 
                     }
-                    else if (count == 2 && model.getElementsInModel().get(key).getName().isEmpty() ) {
+                    else if (count == 1 && !model.getElementsInModel().get(key).isCrash()) {
 
                         String trainname = "train2" + model.getTrainsInModel().size();
                         String locomotiveName = "locomotive2" + model.getTrainsInModel().size();
                         String pos = mapElements.get(key).getName();
 
-                        model.CommandExecution("addLocomotive " + trainname + " " + locomotiveName + " " + "t1");
+                        model.CommandExecution("addLocomotive " + trainname + " " + locomotiveName + " " + "st0");
 
                         String hopperCarName = "hc2";
-                        model.CommandExecution("addHopperCarToTrain " + trainname + " " + hopperCarName + "Blue" + "true");
+                        model.CommandExecution("addHopperCarToTrain " + trainname + " " + hopperCarName);
 
                         String carName = "pc2";
                         model.CommandExecution("addPassengerCarToTrain " + trainname + " " + carName + " Red" + " true");
+
+                        String carNamee = "pc3";
+                        model.CommandExecution("addPassengerCarToTrain " + trainname + " " + carName + " Blue" + " true");
 
                         System.out.println("New Trains added to " + pos);
                         System.out.println(count);

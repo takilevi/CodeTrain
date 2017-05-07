@@ -35,6 +35,7 @@ public class PassengerCar extends RailroadCar {
 
         if(passengerOnBoard && this.color == color){
             passengerOnBoard = false;
+
             return true;
         }
         return false;
@@ -52,7 +53,7 @@ public class PassengerCar extends RailroadCar {
             setGraphics("pcar_kek.png", current.getGraphics().getX(), current.getGraphics().getY());
         }
         if(color == Color.Red){
-            System.out.println("piros lett");
+
             setGraphics("pcar_piros.png", current.getGraphics().getX(), current.getGraphics().getY());
         }
         if(color == Color.Green){
@@ -81,8 +82,12 @@ public class PassengerCar extends RailroadCar {
      * Kiürült e a kocsi
      */
     public void isEmpty(){
-        if(!passengerOnBoard)
+        if(!passengerOnBoard){
+            ((RailroadCarGraphics)graphics).setColor(0);
             train.emptyCar(this);
+
+        }
+
     }
 
     @Override

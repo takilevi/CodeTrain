@@ -1,7 +1,7 @@
 Game.Depot d0 0 480 depot_vizszintes.png
 Game.Track t0 60 480 sin_vizszintes.png
 Game.Track t1 120 480 sin_vizszintes.png
-Game.Station st0 0 Red 180 480 allomas_piros.png
+Game.Station st0 1 Red 180 480 allomas_piros.png
 Game.RailroadCross rc0_c 240 480 sin_keresztezodes.png
 Game.Track t2_a 240 420 sin_fuggoleges.png
 Game.Track t2_b 240 540 sin_fuggoleges.png

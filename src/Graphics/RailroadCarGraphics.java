@@ -28,21 +28,19 @@ public class RailroadCarGraphics implements Drawable  {
                 color = 0;
             }
             else{
+                color = 0;
                 images.add(ImageIO.read(new File("Resources/img_map/" + "pcar_ures.png")));
                 images.add(ImageIO.read(new File("Resources/img_map/" + "pcar_piros.png")));
                 images.add(ImageIO.read(new File("Resources/img_map/" + "pcar_kek.png")));
                 images.add(ImageIO.read(new File("Resources/img_map/" + "pcar_zold.png")));
-                if(type.contains("piros")){
+                if(type.equals("pcar_piros.png")){
                     color = 1;
                 }
-                else if(type.contains("kek")){
+                if(type.equals("pcar_kek.png")){
                     color = 2;
                 }
-                else if(type.contains("zold")){
+                if(type.equals("pcar_zold.png")){
                     color  = 3;
-                }
-                else{
-                    color = 0;
                 }
             }
         } catch (IOException e) {
@@ -52,7 +50,7 @@ public class RailroadCarGraphics implements Drawable  {
     }
 
     public void setColor(int i){
-        if(images.size()<i){
+        if(images.size()>i){
             color = i;
         }
 

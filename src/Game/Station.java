@@ -42,7 +42,13 @@ public class Station extends StaticElement {
 
     @Override
     public void setGraphics(String type, int x, int y) {
+
         graphics = new StationGraphics(type, x, y);
+
+        if(getOnPassengers>0){
+
+            ((StationGraphics)graphics).setPassengers(true);
+        }
     }
 
     /**
@@ -102,6 +108,7 @@ public class Station extends StaticElement {
 
             if(getOnPassengers == 0){
                 model.emptyStation(this);
+                ((StationGraphics)graphics).setPassengers(false);
             }
         }
 

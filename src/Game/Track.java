@@ -74,7 +74,7 @@ public class Track extends StaticElement {
      * @return A következő elem a megfelelő irányba.
      */
     public StaticElement getNextElement(StaticElement previousElement) {
-
+        System.out.println("Pre"+previousElement+" this "+this.previousElement);
         if (this.previousElement.getName().equals(previousElement.getName())) {
             return nextElement;
         } else {

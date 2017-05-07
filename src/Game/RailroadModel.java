@@ -111,6 +111,10 @@ public class RailroadModel {
 
                         Station s = new Station(Integer.parseInt(splittedLine[2]), Color.valueOf(splittedLine[3]), splittedLine[1], this);
 
+                        if(s.getGetOnPassengers()>0){
+                            notEmptyStations.add(s);
+                        }
+
                         s.setGraphics(splittedLine[6], Integer.parseInt(splittedLine[4]), Integer.parseInt(splittedLine[5]));
                         view.addDrawable(s.getGraphics());
 
@@ -290,7 +294,7 @@ public class RailroadModel {
         elementsInModel.get("te0_b").setPreviousElement(elementsInModel.get("t5_b"));
         elementsInModel.get("te0_b").setNextElement(elementsInModel.get("t6_b"));
 
-        elementsInModel.get("t6_b").setPreviousElement(elementsInModel.get("teo_b"));
+        elementsInModel.get("t6_b").setPreviousElement(elementsInModel.get("te0_b"));
         elementsInModel.get("t6_b").setNextElement(elementsInModel.get("sw3"));
 
         elementsInModel.get("sw3").setStaticDirection(elementsInModel.get("t7_b"));
@@ -347,7 +351,7 @@ public class RailroadModel {
         elementsInModel.get("t1_f").setPreviousElement(elementsInModel.get("t0_f"));
         elementsInModel.get("t1_f").setNextElement(elementsInModel.get("t2_f"));
 
-        elementsInModel.get("t2_f").setPreviousElement(elementsInModel.get("t2_f"));
+        elementsInModel.get("t2_f").setPreviousElement(elementsInModel.get("t1_f"));
         elementsInModel.get("t2_f").setNextElement(elementsInModel.get("k0_f"));
 
         elementsInModel.get("k0_f").setPreviousElement(elementsInModel.get("t2_f"));

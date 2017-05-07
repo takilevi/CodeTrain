@@ -3,6 +3,7 @@ package Graphics;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.geom.Ellipse2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -13,14 +14,17 @@ import java.io.IOException;
 public class StationGraphics implements Drawable  {
 
     private BufferedImage image;
+    private boolean passengers;
     private int x;
     private int y;
 
     public StationGraphics(String type, int x, int y){
+        passengers = false;
         this.x = x;
         this.y = y;
         try {
             image = ImageIO.read(new File("Resources/img_map/"+type));
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -29,8 +33,14 @@ public class StationGraphics implements Drawable  {
     //Todo itt ha a kört kikomentezitek látszik hogy hova kell kattintani
     @Override
     public void Draw(Graphics g) {
-        //g.drawOval(x, y, 50, 50);
+
+
         g.drawImage(image, x, y, null);
+
+        if(passengers){
+            g.setColor(Color.YELLOW);
+            g.fillOval(x+25,y+15,10,10);
+        }
     }
 
     @Override
@@ -43,5 +53,8 @@ public class StationGraphics implements Drawable  {
         return y;
     }
 
+    public void setPassengers(boolean p){
+        passengers = p;
+    }
 
 }

@@ -111,9 +111,7 @@ public class RailroadSwitch extends StaticElement {
     public StaticElement getNextElement(StaticElement previousElement)
     {
 
-        System.out.println(previousElement.getName());
-        System.out.println(staticDirection.getName());
-        System.out.println(dynamicDirections.get(direction).getName());
+
 
         if(previousElement.getName().equals(staticDirection.getName())){
             System.out.println("statikusból jött");
