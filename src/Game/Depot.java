@@ -16,7 +16,7 @@ import java.util.List;
 public class Depot extends StaticElement {
 
     private List<StaticElement> depotElements;
-
+    RailroadModel model;
     /**
      * A kocsiszín konstruktora.
      */

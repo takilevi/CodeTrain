@@ -559,7 +559,6 @@ public class RailroadModel {
                         Locomotive m = new Locomotive(elementsInModel.get(mapElement), elementsInModel.get(mapElement).getPrevForLoco(), locomotiveName, t);
                         t.addLocomotive(m);
 
-
                        view.addDrawable(m.getGraphics());
 
                     } else {
@@ -612,10 +611,6 @@ public class RailroadModel {
                             }
                         }
                     }
-
-
-
-
                     break;
 
                 case "stepAll":
@@ -690,7 +685,6 @@ public class RailroadModel {
 
                             activeTunnel = null;
                         }
-
                     }
 
                     break;
