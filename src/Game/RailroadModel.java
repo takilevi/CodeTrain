@@ -1,6 +1,8 @@
 package Game;
 
 import Graphics.View;
+import com.sun.media.jfxmedia.logging.Logger;
+import sun.rmi.runtime.Log;
 
 import java.io.*;
 import java.util.*;
@@ -84,6 +86,7 @@ public class RailroadModel {
             String line;
 
             while ((line = in.readLine()) != null) {
+
                 String[] splittedLine = line.split(" ");
                 switch (splittedLine[0]) {
                     case "Game.Track":
@@ -91,6 +94,7 @@ public class RailroadModel {
 
                         t.setGraphics(splittedLine[4], Integer.parseInt(splittedLine[2]), Integer.parseInt(splittedLine[3]));
                         view.addDrawable(t.getGraphics());
+
                         elementsInModel.put(splittedLine[1],t);
 
                         if (elementsInModel.size() > 1) {
@@ -106,29 +110,62 @@ public class RailroadModel {
                             t.setNextElement(temp);
                         }
                         break;
-                    case "Switch":
-                        elementsInModel.put(splittedLine[1], new RailroadSwitch(splittedLine[1]));
+
+                    case "Game.Switch":
+                        RailroadSwitch sw = new RailroadSwitch(splittedLine[1]);
+
+                        sw.setGraphics(splittedLine[5],Integer.parseInt(splittedLine[3]), Integer.parseInt(splittedLine[4]) );
+                        view.addDrawable(sw.getGraphics());
+
+                        elementsInModel.put(splittedLine[1], sw);
+
                         int count_loop = Integer.parseInt(splittedLine[2]);
+
                         while (count_loop != 0) {
                             String temp_line = in.readLine();
                             String[] temp_splittedLine = temp_line.split(" ");
                             switch (temp_splittedLine[0]) {
                                 case "Game.Track":
-                                    elementsInModel.put(temp_splittedLine[1], new Track(temp_splittedLine[1]));
+                                    System.out.println(temp_line.length());
+                                    Track t1 =  new Track(temp_splittedLine[1]);
+
+                                    t1.setGraphics(temp_splittedLine[4], Integer.parseInt(temp_splittedLine[2]), Integer.parseInt(temp_splittedLine[3]));
+                                    view.addDrawable(t1.getGraphics());
+
+                                    elementsInModel.put(temp_splittedLine[1], t1);
+
                                     StaticElement temp = elementsInModel.get(splittedLine[1]);
                                     temp.setDynamicDirection(elementsInModel.get(temp_splittedLine[1]));
+
                                     StaticElement temp2 = elementsInModel.get(temp_splittedLine[1]);
                                     temp2.setPreviousElement(temp);
                                     break;
+
                                 case "Game.Station":
-                                    elementsInModel.put(temp_splittedLine[1], new Station(0, Color.Blue, temp_splittedLine[1], this));
+
+                                    Station st = new Station(0, Color.Blue, temp_splittedLine[1], this);
+
+                                    st.setGraphics(temp_splittedLine[6], Integer.parseInt(temp_splittedLine[4]), Integer.parseInt(temp_splittedLine[5]));
+                                    view.addDrawable(st.getGraphics());
+
+                                    elementsInModel.put(temp_splittedLine[1], st);
+
                                     StaticElement temp_s = elementsInModel.get(splittedLine[1]);
                                     temp_s.setDynamicDirection(elementsInModel.get(temp_splittedLine[1]));
+
                                     StaticElement temp2_s = elementsInModel.get(temp_splittedLine[1]);
                                     temp2_s.setPreviousElement(temp_s);
                                     break;
+
                                 case "TunnelElement":
-                                    elementsInModel.put(temp_splittedLine[1], new TunnelEntrance(temp_splittedLine[1]));
+
+                                    TunnelEntrance te = new TunnelEntrance(temp_splittedLine[1]);
+
+                                    te.setGraphics(temp_splittedLine[1],Integer.parseInt(temp_splittedLine[2]), Integer.parseInt(temp_splittedLine[3]));
+                                    view.addDrawable(te.getGraphics());
+
+                                    elementsInModel.put(temp_splittedLine[1], te);
+
                                     StaticElement temp_te = elementsInModel.get(splittedLine[1]);
                                     temp_te.setDynamicDirection(elementsInModel.get(temp_splittedLine[1]));
                                     StaticElement temp2_te = elementsInModel.get(temp_splittedLine[1]);
@@ -145,9 +182,12 @@ public class RailroadModel {
                         break;
                     case "Game.Station":
                         Station s = new Station(Integer.parseInt(splittedLine[2]), Color.valueOf(splittedLine[3]), splittedLine[1], this);
-                        elementsInModel.put(splittedLine[1], s);
+
                         s.setGraphics(splittedLine[6], Integer.parseInt(splittedLine[4]), Integer.parseInt(splittedLine[5]));
                         view.addDrawable(s.getGraphics());
+
+                        elementsInModel.put(splittedLine[1], s);
+
                         StaticElement temp_stat = elementsInModel.get(previousSplittedLine[1]);
                         temp_stat.setNextElement(elementsInModel.get(splittedLine[1]));
                         StaticElement temp2_stat = elementsInModel.get(splittedLine[1]);
@@ -155,6 +195,28 @@ public class RailroadModel {
                         if(Integer.parseInt(splittedLine[2]) >0){
                             notEmptyStations.add(s);
                         }
+                        break;
+
+                    case "Game.Depot":
+
+                        Depot d = new Depot(splittedLine[1]);
+
+
+                        d.setGraphics(splittedLine[4], Integer.parseInt(splittedLine[2]), Integer.parseInt(splittedLine[3]));
+                        view.addDrawable(d.getGraphics());
+                        elementsInModel.put(splittedLine[1], d);
+
+                        if(elementsInModel.size() > 1){
+
+                            elementsInModel.get(previousSplittedLine[1]).setNextElement(elementsInModel.get(splittedLine[1]));
+
+                            elementsInModel.get(splittedLine[1]).setPreviousElement(null);
+
+                        }else{
+
+                            elementsInModel.get(splittedLine[1]).setPreviousElement(null);
+                        }
+
                         break;
 
                     case "TunnelElement":
@@ -170,6 +232,7 @@ public class RailroadModel {
                         String line_2 = in.readLine();
                         String[] line_2_rc = line_2.split(" ");
                         elementsInModel.put(splittedLine[1],new RailroadCross(splittedLine[1]));
+
                         elementsInModel.put(splittedLine[4], new Track(splittedLine[4]));
                         elementsInModel.put(line_2_rc[4],new Track(line_2_rc[4]));
                         RailroadCross rc_temp = (RailroadCross)elementsInModel.get(splittedLine[1]);
