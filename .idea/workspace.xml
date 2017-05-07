@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b719b53-8ac2-4a4f-856c-ea236c24fa12" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/img/map2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Game/Locomotive.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Game/Locomotive.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Game/RailroadCross.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Game/RailroadCross.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Game/RailroadModel.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Game/RailroadModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Graphics/Locomotive.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Graphics/Locomotive.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Graphics/View$1.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Graphics/View$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Graphics/View.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Graphics/View.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -25,11 +18,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="map2.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="map2.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Resources/map/map2.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="45" column="13" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+            <state relative-caret-position="268">
+              <caret line="43" column="42" lean-forward="true" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -52,7 +45,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map2.jpg" pinned="false" current-in-tab="true">
+      <file leaf-file-name="map2.jpg" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Resources/img/map2.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
@@ -313,6 +306,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="map" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CodeTrain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CodeTrain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img_map" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -845,7 +856,7 @@
       <workItem from="1492422557840" duration="12384000" />
       <workItem from="1492444358957" duration="126000" />
       <workItem from="1494059772069" duration="22546000" />
-      <workItem from="1494149996096" duration="17436000" />
+      <workItem from="1494149996096" duration="18347000" />
     </task>
     <task id="LOCAL-00001" summary="KÉSZ: 14-es pont&#10;TODO: Loggingot átnézni, nem világos, hogy hogyan is kéne kinéznie&#10;TODO: Többi menüpont">
       <created>1489933169166</created>
@@ -1001,7 +1012,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494170530943</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="térkép kézi rajza">
+      <created>1494171658033</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1494171658033</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1022,7 +1040,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122153000" />
+    <option name="totallyTimeSpent" value="123064000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1117,7 +1135,8 @@
     <MESSAGE value="Rendszereztem kicsit a Resources mappát, hogy jobban átlátható legyen, a RailroadModell-ben elkaptam a még le nem kezelt FiletNotfoundExepciont a fájlbetöltésnél, és átírtam a fájlbeolvasás paramétereit, hogy most már a Resources/map/ mappából olvasson be. Nálam minden jól fut, ha valami mégsem jó jelezzétek." />
     <MESSAGE value="Testek és kimeneteik" />
     <MESSAGE value="Batch file a Resources/test mappában" />
-    <option name="LAST_COMMIT_MESSAGE" value="Batch file a Resources/test mappában" />
+    <MESSAGE value="térkép kézi rajza" />
+    <option name="LAST_COMMIT_MESSAGE" value="térkép kézi rajza" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1392,14 +1411,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/map/map2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="13" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Graphics/View.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
@@ -1491,6 +1502,14 @@
     <entry file="file://$PROJECT_DIR$/Resources/img/map2.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/map/map2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="43" column="42" lean-forward="true" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
