@@ -110,6 +110,8 @@ public class Locomotive implements Movable {
         previousElement = currentElement;
         currentElement = next;
 
+        System.out.println(currentElement.getName());
+
         previousElement.leaveElement(this);
         currentElement.stepToElement(this);
 

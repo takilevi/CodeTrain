@@ -90,7 +90,7 @@ public class Controller {
 
 
                         System.out.println("New Trains added to " + pos);
-
+                        model.CommandExecution("run");
 
                     }
                     else if (count == 2 && model.getElementsInModel().get(key).getName().isEmpty() ) {
@@ -109,10 +109,14 @@ public class Controller {
 
                         System.out.println("New Trains added to " + pos);
                         System.out.println(count);
+
+                        model.CommandExecution("stop");
+                        model.CommandExecution("run");
+
                     } else {
                         System.out.println("Max 2 vonat lehet");
                     }
-                    model.CommandExecution("run");
+
 
                 }
 

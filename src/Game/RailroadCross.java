@@ -42,11 +42,7 @@ public class RailroadCross extends StaticElement {
     @Override
     public StaticElement getNextElement(StaticElement previousElement) {
 
-        System.out.println(previousElement.getName());
-        System.out.println(firstEntrance.getName());
-        System.out.println(firstExit.getName());
-        System.out.println(secondEntrance.getName());
-        System.out.println(secondExit.getName());
+
 
         if (previousElement.getName().equals(firstEntrance.getName())) {
             return firstExit;

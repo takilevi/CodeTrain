@@ -43,6 +43,9 @@ public abstract class StaticElement {
      */
     public boolean isCrash() {
         if (trainsOnElement.size() > 1) {
+
+            System.out.print("ütközés volt! " + name);
+
             return true;
         } else {
             return false;

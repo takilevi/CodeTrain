@@ -110,20 +110,20 @@ public class RailroadSwitch extends StaticElement {
      */
     public StaticElement getNextElement(StaticElement previousElement)
     {
+
         System.out.println(previousElement.getName());
+        System.out.println(staticDirection.getName());
+        System.out.println(dynamicDirections.get(direction).getName());
+
         if(previousElement.getName().equals(staticDirection.getName())){
-            System.out.println(previousElement.getName() + " "+ dynamicDirections.get(direction).getName());
             System.out.println("statikusból jött");
             return dynamicDirections.get(direction);
         }
         else if(previousElement.getName().equals(dynamicDirections.get(direction).getName())){
-            System.out.println(previousElement.getName() + " "+ dynamicDirections.get(direction).getName());
             System.out.println("dinamikusból jött");
             return staticDirection;
         }
         else{
-            //Finishgame, kéne ismernie a modellt nem?
-            System.out.println(previousElement.getName() + " "+ dynamicDirections.get(direction).getName());
             return null;
         }
     }
@@ -147,27 +147,6 @@ public class RailroadSwitch extends StaticElement {
         return trainsOnElement;
     }
 
-    /**
-     * Elhagyjuk ezt az elemet. (Kikerül a listából)
-     * @param m Azon mozgó objektum aki elhagyja.
-     */
-    public void leaveElement(Movable m){
-
-        if(trainsOnElement.contains(m)){
-            trainsOnElement.remove(m);
-        }
-    }
-
-    /**
-     * Ráléptünk az elemre. (Bekerül a listába az obejktum)
-     * @param m Aki rálépett az elemre.
-     */
-    public void stepToElement(Movable m){
-
-        if(!trainsOnElement.contains(m)){
-            trainsOnElement.add(m);
-        }
-    }
 
     @Override
     public void setNextElement(StaticElement nextElement) {

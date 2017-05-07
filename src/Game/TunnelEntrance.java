@@ -66,14 +66,14 @@ public class TunnelEntrance extends StaticElement {
      */
     public StaticElement getNextElement(StaticElement previousElement)
     {
-        if(this.previousElement == previousElement && isActive){
+        if(this.previousElement.getName().equals(previousElement.getName()) && isActive){
             return tunnelElement;
         }
-        else if(this.previousElement == previousElement && !isActive){
+        else if(this.previousElement.getName().equals(previousElement.getName()) && !isActive){
             return nextElement;
         }
         else{
-            return previousElement;
+            return this.previousElement;
         }
     }
 

@@ -56,7 +56,7 @@ public class Station extends StaticElement {
             return nextElement;
         }
         else{
-            return previousElement;
+            return this.previousElement;
         }
     }
 

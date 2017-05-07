@@ -643,7 +643,7 @@ public class RailroadModel {
                     break;
 
                 case "run":
-                    counter = new Counter(3000, "RunTrains", trainsInModel, view);
+                    counter = new Counter(1000, "RunTrains", trainsInModel, view);
                     System.out.println("Nyomj meg valamilyen gombot, ha parancsot írnál be");
                     counter.start();
                     break;
