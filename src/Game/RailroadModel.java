@@ -578,6 +578,9 @@ public class RailroadModel {
                         if (curInstance.getName().matches(trainName)) {
                             PassengerCar p = new PassengerCar(Color.valueOf(color), Boolean.parseBoolean(passengers), curInstance, carName);
                             curInstance.addCar(p);
+                            view.addDrawable(p.getGraphics());
+
+                            view.DrawAll();
                         }
                     }
                     break;
@@ -589,6 +592,9 @@ public class RailroadModel {
                         if (curInstance.getName().matches(trainName)) {
                             HopperCar p = new HopperCar(curInstance, carName);
                             curInstance.addCar(p);
+
+                            view.addDrawable(p.getGraphics());
+                            view.DrawAll();
                         }
                     }
                     break;

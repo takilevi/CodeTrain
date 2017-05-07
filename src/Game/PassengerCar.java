@@ -1,5 +1,7 @@
 package Game;
 
+import Graphics.RailroadCarGraphics;
+
 /**
  * Utasszállító kocsi
  */
@@ -38,6 +40,26 @@ public class PassengerCar extends RailroadCar {
         return false;
     }
 
+    @Override
+    public void setCurrent(StaticElement current) {
+
+        currentElement = current;
+        currentElement.stepToElement(this);
+
+        System.out.println(current.getGraphics().getX()+ "" +current.getGraphics().getY());
+
+        if(color == Color.Blue){
+            setGraphics("pcar_kek.png", current.getGraphics().getX(), current.getGraphics().getY());
+        }
+        if(color == Color.Red){
+            System.out.println("piros lett");
+            setGraphics("pcar_piros.png", current.getGraphics().getX(), current.getGraphics().getY());
+        }
+        if(color == Color.Green){
+            setGraphics("pcar_zold.png", current.getGraphics().getX(), current.getGraphics().getY());
+        }
+    }
+
     /**
      * Felszállhatnak rá utasok, ha megfelelő színű, és üres
      * @param color állomás színe
@@ -61,6 +83,11 @@ public class PassengerCar extends RailroadCar {
     public void isEmpty(){
         if(!passengerOnBoard)
             train.emptyCar(this);
+    }
+
+    @Override
+    public void setGraphics(String type, int x, int y) {
+        graphics = new RailroadCarGraphics(type, x, y);
     }
 
     @Override
