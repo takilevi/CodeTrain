@@ -1,8 +1,50 @@
-Game.Track t1 200 250 sin_kanyar_3.png
-Game.Track t2 250 292 sin_vizszintes.png
-Game.Track t3 308 292 sin_vizszintes.png
-Game.Track t4 370 242 sin_kanyar_2.png
-Game.Track t5 363 200 sin_kanyar_1.png
-Game.Track t6 305 200 sin_vizszintes.png
-Game.Station st1 0 Red 246 173 allomas_piros.png
-Game.Track t7 200 200 sin_kanyar_4.png t1
+Game.Depot d0 0 480 depot_vizszintes.png
+Game.Track t0 60 480 sin_vizszintes.png
+Game.Track t1 120 480 sin_vizszintes.png
+Game.Station st0 0 Red 180 480 allomas_piros.png
+Game.RailroadCross rc0_c 240 480 sin_keresztezodes.png
+Game.Track t2_a 240 420 sin_fuggoleges.png
+Game.Track t2_b 240 540 sin_fuggoleges.png
+Game.Track t2_c 300 480 sin_vizszintes.png
+Game.Track t3_c 360 480 sin_vizszintes.png
+Game.Track t4_c 420 480 sin_vizszintes.png
+Game.Switch sw0 3 480 480 valt_3ag_2_c.png
+Game.Track t3_a 240 360 sin_fuggoleges.png
+Game.Track t4_a 240 300 sin_fuggoleges.png
+Game.Track k0_a 240 240 sin_kanyar_4.png
+Game.Track t5_a 300 240 sin_vizszintes.png
+Game.TunnelEntrance te0_a 360 240 tunnel_v_inact.png
+Game.Track t6_a 420 240 sin_vizszintes.png
+Game.Switch sw1 2 480 240 valt_2ag_1_b.png
+Game.Track t7_a 480 300 sin_fuggoleges.png
+Game.Track t8_a 480 360 sin_fuggoleges.png
+Game.Track t9_a 480 420 sin_fuggoleges.png
+Game.Track t3_b 240 600 sin_fuggoleges.png
+Game.Track t4_b 240 660 sin_fuggoleges.png
+Game.Track k0_b 240 720 sin_kanyar_3.png
+Game.Track t5_b 300 720 sin_vizszintes.png
+Game.TunnelEntrance te0_b 360 720 tunnel_v_inact.png
+Game.Track t6_b 420 720 sin_vizszintes.png
+Game.Switch sw3 2 480 720 valt_2ag_2_d.png
+Game.Track t7_b 480 660 sin_fuggoleges.png
+Game.Track t8_b 480 600 sin_fuggoleges.png
+Game.Track t9_b 480 540 sin_fuggoleges.png
+Game.Track t0_e 540 240 sin_vizszintes.png
+Game.Station st1 0 Blue 600 240 allomas_kek.png
+Game.Track t1_e 660 240 sin_vizszintes.png
+Game.Track k0_e 720 240 sin_kanyar_2.png
+Game.Track t2_e 720 300 sin_fuggoleges.png
+Game.Track t3_e 720 360 sin_fuggoleges.png
+Game.Track t4_e 720 420 sin_fuggoleges.png
+Game.Track t0_d 540 480 sin_vizszintes.png
+Game.Track t1_d 600 480 sin_vizszintes.png
+Game.Track t2_d 660 480 sin_vizszintes.png
+Game.Switch sw4 3 720 480 valt_3ag_2_a.png
+Game.Track t0_f 540 720 sin_vizszintes.png
+Game.Track t1_f 600 720 sin_vizszintes.png
+Game.Track t2_f 660 720 sin_vizszintes.png
+Game.Track k0_f 720 720 sin_kanyar_1.png
+Game.Track t3_f 720 660 sin_fuggoleges.png
+Game.Station st2 0 Green 720 600 allomas_zold_fuggoleges.png
+Game.Track t4_f 720 540 sin_fuggoleges.png
+Game.TunnelEntrance te0_g 780 480 tunnel_v_inact.png

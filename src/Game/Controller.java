@@ -42,7 +42,7 @@ public class Controller {
                 String locomotiveName = "locomotive"+model.getTrainsInModel().size();
                 String pos = mapElements.get(key).getName();
 
-                model.CommandExecution("addLocomotive "+ trainname+" "+locomotiveName+" "+ pos);
+                model.CommandExecution("addLocomotive "+ trainname+" "+locomotiveName+" "+pos);
                 System.out.println("New Trains added to "+ pos);
             }
         }
