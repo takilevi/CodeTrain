@@ -23,7 +23,7 @@ public class Application {
      */
     public static void main(String [] args){
 
-        System.out.print("belépés");
+
 
         Window w = new Window();
         w.setVisible(true);

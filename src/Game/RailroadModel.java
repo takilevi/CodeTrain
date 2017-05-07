@@ -652,7 +652,10 @@ public class RailroadModel {
                     switchState = command[2];
 
                     RailroadSwitch switcher = (RailroadSwitch) elementsInModel.get(switchName);
-                    switcher.changeSwitchToDirection(elementsInModel.get(switchState));
+                    switcher.changeSwitchToDirection(Integer.parseInt(switchState));
+
+                    view.DrawAll();
+
                     break;
 
                 case "buildTunnel":

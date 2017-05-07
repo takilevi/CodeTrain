@@ -34,15 +34,29 @@ public class RailroadSwitch extends StaticElement {
     /**
      * Ez a fügvény hívódik, ha váltani szeretnénk.
      * Megvizsgálja hogy van -e mozgó objektum a váltón, és ennek megfelelően hív tovább.
-     * @param direction Az iránya amibe állítani szeretnénk a váltót.
+     * @param d Az iránya amibe állítani szeretnénk a váltót.
      */
-    public void changeSwitchToDirection(StaticElement direction){
+    public void changeSwitchToDirection(int d){
 
         if(trainsOnElement.isEmpty()){
-
-            int dir = dynamicDirections.indexOf(direction);
-            setDirection(dir);
+            System.out.println("Új irány:" + d);
+            setDirection(d);
         }
+    }
+
+    public boolean isMoreDirections(){
+        int k = direction+1;
+        if(k < dynamicDirections.size()){
+
+            return true;
+        }
+        else{
+            return false;
+
+        }
+    }
+    public int getDirection(){
+        return direction;
     }
 
     /**
@@ -84,8 +98,9 @@ public class RailroadSwitch extends StaticElement {
      */
     public void setDirection(int i){
 
-        if(i <= dynamicDirections.size()){
+        if(i < dynamicDirections.size()){
             direction = i;
+            ((RailroadSwitchGraphics) graphics).setDirection(direction);
         }
     }
 
