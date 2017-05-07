@@ -1,5 +1,7 @@
 package Game;
 
+import Graphics.Drawable;
+
 /**
  * A vonatok kocsiját kezelő osztály.
  */
@@ -12,10 +14,17 @@ public abstract class RailroadCar implements Movable {
 
     protected String name;
     protected Train train;
+    protected Drawable graphics;
 
     public RailroadCar(String name, Train t){
         this.name = name;
         train = t;
+    }
+
+    public abstract void setGraphics(String type, int x, int y);
+
+    public Drawable getGraphics(){
+        return graphics;
     }
 
     /**
@@ -30,11 +39,8 @@ public abstract class RailroadCar implements Movable {
      * Aktuális elem beállítása
      * @param nextElement Ide lépett a kocsi.
      */
-    public void setCurrent(StaticElement current) {
+    public abstract void setCurrent(StaticElement current);
 
-        currentElement = current;
-        currentElement.stepToElement(this);
-    }
     public void setPreviousElement(StaticElement previousElement){this.previousElement=previousElement;}
     public StaticElement getPreviousElement(){return previousElement;}
 

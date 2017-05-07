@@ -1,5 +1,7 @@
 package Game;
 
+import Graphics.RailroadCarGraphics;
+
 /**
  * Szeneskocsi
  */
@@ -12,6 +14,11 @@ public class HopperCar extends RailroadCar{
      */
     public HopperCar(Train trainRef, String name) {
         super(name, trainRef);
+    }
+
+    @Override
+    public void setGraphics(String type, int x, int y) {
+        graphics = new RailroadCarGraphics(type, x, y);
     }
 
     /**
@@ -30,6 +37,16 @@ public class HopperCar extends RailroadCar{
     @Override
     public Color getColor() {
         return null;
+    }
+
+    @Override
+    public void setCurrent(StaticElement current) {
+
+        currentElement = current;
+        currentElement.stepToElement(this);
+
+        setGraphics("hcar.png", current.getGraphics().getX(), current.getGraphics().getY());
+        System.out.println("Added");
     }
 
     /**

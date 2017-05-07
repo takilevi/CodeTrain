@@ -82,6 +82,12 @@ public class Controller {
                     String pos = mapElements.get(key).getName();
 
                     model.CommandExecution("addLocomotive "+ trainname+" "+locomotiveName+" "+pos);
+
+                    String carName = "pc1";
+                    model.CommandExecution("addPassengerCarToTrain "+trainname+" "+carName+" Red"+" true");
+
+                    String hopperCarName = "hc1";
+                    model.CommandExecution("addHopperCarToTrain "+trainname+" "+hopperCarName);
                     System.out.println("New Trains added to "+ pos);
                 }
 

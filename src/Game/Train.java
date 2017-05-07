@@ -104,6 +104,8 @@ public class Train {
             if(car.getCurrentElement().getPrevForLoco() != null)car.setPreviousElement(car.getCurrentElement().getPrevForLoco());
             this.cars.add(car);
 
+
+
             totalLength++;
         }
         if(cars.isEmpty()){
@@ -121,6 +123,8 @@ public class Train {
 
             model.fullTrain(this);
         }
+
+
     }
 
     public void listTrain(){
