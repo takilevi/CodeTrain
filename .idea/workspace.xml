@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b719b53-8ac2-4a4f-856c-ea236c24fa12" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Game/Controller.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Game/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Game/Counter.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Game/Counter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Game/HopperCar.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Game/HopperCar.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Game/Locomotive.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Game/Locomotive.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Game/PassengerCar.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Game/PassengerCar.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Game/RailroadCar.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Game/RailroadCar.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Game/RailroadModel.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Game/RailroadModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Game/RailroadSwitch.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Game/RailroadSwitch.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Graphics/LocomotiveGraphics.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Graphics/LocomotiveGraphics.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Graphics/RailroadCarGraphics.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Graphics/RailroadCarGraphics.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/Controller.java" afterPath="$PROJECT_DIR$/src/Game/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/Counter.java" afterPath="$PROJECT_DIR$/src/Game/Counter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/Locomotive.java" afterPath="$PROJECT_DIR$/src/Game/Locomotive.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/RailroadCar.java" afterPath="$PROJECT_DIR$/src/Game/RailroadCar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/RailroadModel.java" afterPath="$PROJECT_DIR$/src/Game/RailroadModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/RailroadSwitch.java" afterPath="$PROJECT_DIR$/src/Game/RailroadSwitch.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/Train.java" afterPath="$PROJECT_DIR$/src/Game/Train.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graphics/LocomotiveGraphics.java" afterPath="$PROJECT_DIR$/src/Graphics/LocomotiveGraphics.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graphics/RailroadCarGraphics.java" afterPath="$PROJECT_DIR$/src/Graphics/RailroadCarGraphics.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -143,8 +124,8 @@
       <file leaf-file-name="RailroadSwitch.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Game/RailroadSwitch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="112" column="54" lean-forward="true" selection-start-line="112" selection-start-column="54" selection-end-line="112" selection-end-column="54" />
+            <state relative-caret-position="442">
+              <caret line="122" column="9" lean-forward="true" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -902,7 +883,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494190667761</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="félig mozog">
+      <created>1494193105176</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1494193105176</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -927,7 +915,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -936,9 +924,9 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28541225" sideWeight="0.5015625" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28541225" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28541225" sideWeight="0.4984375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -999,7 +987,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="KÉSZ: 13, 14-es pont&#10;TODO: Loggingot átnézni, nem világos, hogy hogyan is kéne kinéznie&#10;TODO: Többi menüpont" />
     <MESSAGE value="Kész: 1-es" />
     <MESSAGE value="BUGFIXED Kész: 1-es" />
     <MESSAGE value="Kész: 2-es" />
@@ -1024,7 +1011,8 @@
     <MESSAGE value="Szóval akkor a váltás" />
     <MESSAGE value="Alagutak is működnek" />
     <MESSAGE value="passengerCar és Hoppercar" />
-    <option name="LAST_COMMIT_MESSAGE" value="passengerCar és Hoppercar" />
+    <MESSAGE value="félig mozog" />
+    <option name="LAST_COMMIT_MESSAGE" value="félig mozog" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1412,8 +1400,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Game/RailroadSwitch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="112" column="54" lean-forward="true" selection-start-line="112" selection-start-column="54" selection-end-line="112" selection-end-column="54" />
+        <state relative-caret-position="442">
+          <caret line="122" column="9" lean-forward="true" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
           <folding />
         </state>
       </provider>
