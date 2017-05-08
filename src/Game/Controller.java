@@ -102,8 +102,8 @@ public class Controller {
 
                         model.CommandExecution("addLocomotive " + trainname + " " + locomotiveName + " " + "st0");
 
-                        String hopperCarName = "hc2";
-                        model.CommandExecution("addHopperCarToTrain " + trainname + " " + hopperCarName);
+                        //String hopperCarName = "hc2";
+                        //model.CommandExecution("addHopperCarToTrain " + trainname + " " + hopperCarName);
 
                         String carName = "pc2";
                         model.CommandExecution("addPassengerCarToTrain " + trainname + " " + carName + " Red" + " true");
