@@ -1,5 +1,0 @@
-loadMap map2.txt
-addLocomotive train1 l0 t5
-addPassengerCarToTrain train1 pc0 Blue true
-addLocomotive train2 l1 t3
-stepTrain train2 1

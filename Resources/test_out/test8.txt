@@ -1,3 +1,0 @@
-train1
-Game.Locomotive l0 sw1
-Game.PassengerCar pc0 Red t1 true

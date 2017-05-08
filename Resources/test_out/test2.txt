@@ -1,4 +1,0 @@
-train1
-Game.Locomotive l0 t3
-Game.PassengerCar pc0 Red t2 true
-Game.HopperCar hc0 t1

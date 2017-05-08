@@ -1,8 +1,0 @@
-Game.Track t0
-TunnelElement te1
-Game.Track t1
-Game.Track t2
-TunnelElement te2
-te1
-Game.Track t3
-te2

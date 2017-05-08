@@ -1,5 +1,0 @@
-loadMap map7.txt
-readCross rc0
-addLocomotive train1 l0 t1
-stepTrain train1 2
-listTrain train1

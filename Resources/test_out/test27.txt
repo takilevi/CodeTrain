@@ -1,2 +1,0 @@
-Nyertünk: false
-Vesztettünk: true

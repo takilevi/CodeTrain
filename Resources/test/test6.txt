@@ -1,3 +1,0 @@
-loadMap map3.txt
-changeSwitch sw1 t2
-listMapElements

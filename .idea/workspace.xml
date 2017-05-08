@@ -2,10 +2,85 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b719b53-8ac2-4a4f-856c-ea236c24fa12" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Game/PassengerCar.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Game/PassengerCar.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Graphics/StationGraphics.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Graphics/StationGraphics.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/img/63236-OAYIOH-751.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/img/depot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/img/harmas_elag.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/img/kettes_elag.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/img/map2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/img/railroad_map.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/img/station.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/img/station_default.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/img/switch.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/img/track.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/img/track_collection.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/img/tracks_collection.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/img/tunnel_entrance.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/map/map1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/map/map3.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/map/map4.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/map/map5.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/map/map6.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/map/map7.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test10.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test11.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test12.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test13.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test14.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test15.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test16.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test17.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test18.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test19.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test20.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test21.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test22.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test23.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test24.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test25.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test26.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test27.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test28.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test3.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test4.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test5.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test6.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test7.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test8.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test/test9.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test10.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test11.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test12.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test13.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test14.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test15.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test16.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test17.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test18.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test19.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test20.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test21.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test22.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test23.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test24.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test25.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test26.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test27.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test28.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test3.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test4.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test5.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test6.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test7.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test8.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/test_out/test9.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeTrain/Game/Controller.class" afterPath="$PROJECT_DIR$/out/production/CodeTrain/Game/Controller.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/Controller.java" afterPath="$PROJECT_DIR$/src/Game/Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game/RailroadModel.java" afterPath="$PROJECT_DIR$/src/Game/RailroadModel.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,7 +104,7 @@
       <file leaf-file-name="map2.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Resources/map/map2.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34">
+            <state relative-caret-position="0">
               <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
               <folding />
             </state>
@@ -49,11 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RailroadModel.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RailroadModel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Game/RailroadModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="114" column="52" lean-forward="false" selection-start-line="114" selection-start-column="52" selection-end-line="114" selection-end-column="52" />
+            <state relative-caret-position="68">
+              <caret line="484" column="91" lean-forward="false" selection-start-line="484" selection-start-column="91" selection-end-line="484" selection-end-column="91" />
               <folding />
             </state>
           </provider>
@@ -79,7 +154,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Game/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
@@ -95,20 +170,6 @@
             <state relative-caret-position="1394">
               <caret line="93" column="7" lean-forward="false" selection-start-line="93" selection-start-column="7" selection-end-line="93" selection-end-column="7" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RailroadCarGraphics.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Graphics/RailroadCarGraphics.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="61" column="5" lean-forward="false" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1686#1687#0" expanded="true" />
-                <element signature="e#1744#1745#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -227,8 +288,8 @@
         <option value="$PROJECT_DIR$/src/Game/PassengerCar.java" />
         <option value="$PROJECT_DIR$/src/Game/Station.java" />
         <option value="$PROJECT_DIR$/src/Graphics/StationGraphics.java" />
-        <option value="$PROJECT_DIR$/src/Game/RailroadModel.java" />
         <option value="$PROJECT_DIR$/src/Game/Controller.java" />
+        <option value="$PROJECT_DIR$/src/Game/RailroadModel.java" />
       </list>
     </option>
   </component>
@@ -262,6 +323,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -354,7 +416,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
@@ -909,7 +970,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494201287992</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="végleges++">
+      <created>1494226003859</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1494226003859</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -934,38 +1002,38 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2843552" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2843552" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1006,7 +1074,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Kész: 2-es" />
     <MESSAGE value="Kész: 3-as" />
     <MESSAGE value="Kész: 4-es" />
     <MESSAGE value="Kész: 5-ös (átirányítás 1-esre), 6-os" />
@@ -1031,7 +1098,8 @@
     <MESSAGE value="átmegy a crosson" />
     <MESSAGE value="fasza mozgás" />
     <MESSAGE value="végleges" />
-    <option name="LAST_COMMIT_MESSAGE" value="végleges" />
+    <MESSAGE value="végleges++" />
+    <option name="LAST_COMMIT_MESSAGE" value="végleges++" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1044,11 +1112,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Resources/img_map/tunnel_v_act.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/img_map/tunnel_v_inact.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1383,17 +1446,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game/RailroadModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="114" column="52" lean-forward="false" selection-start-line="114" selection-start-column="52" selection-end-line="114" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/map/map2.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
+        <state relative-caret-position="0">
           <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
           <folding />
         </state>
@@ -1405,6 +1460,19 @@
           <caret line="105" column="26" lean-forward="false" selection-start-line="105" selection-start-column="26" selection-end-line="105" selection-end-column="26" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game/RailroadModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="484" column="91" lean-forward="false" selection-start-line="484" selection-start-column="91" selection-end-line="484" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/img/depot.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>

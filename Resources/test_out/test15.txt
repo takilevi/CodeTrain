@@ -1,2 +1,0 @@
-Game.Tunnel : te1 te2
-Aktív alagút: null

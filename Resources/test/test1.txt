@@ -1,2 +1,0 @@
-loadMap map1.txt
-listMapElements

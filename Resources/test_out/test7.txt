@@ -1,8 +1,0 @@
-Game.RailroadSwitch	sw1
-Static Direction t1
-Current Dynamic Direction t2
-Optional Directions t2 t3 
-Game.RailroadSwitch	sw1
-Static Direction t1
-Current Dynamic Direction t2
-Optional Directions t2 t3 

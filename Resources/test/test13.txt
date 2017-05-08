@@ -1,4 +1,0 @@
-loadMap map5.txt
-addLocomotive train1 l0 te1
-stepTrain train1 1
-listTrain train1

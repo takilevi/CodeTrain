@@ -1,4 +1,0 @@
-Nyertünk: false
-Vesztettünk: false
-train1
-Game.Locomotive l0 t1

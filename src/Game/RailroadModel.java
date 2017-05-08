@@ -482,7 +482,7 @@ public class RailroadModel {
 
             switch (command[0]) {
                 case "help":
-                    System.out.println(ANSI_GREEN + "loadMap\t" + ANSI_RED + " loadMap map1.txt \t " + ANSI_BLUE + " Pálya felépítése");
+                    System.out.println(ANSI_GREEN + "loadMap\t" + ANSI_RED + " loadMap map2.txt \t " + ANSI_BLUE + " Pálya felépítése");
                     System.out.println(ANSI_GREEN + "listMapElements\t " + ANSI_RED + "listMapElements \t " + ANSI_BLUE + " Kilistázza a pályaösszes elemét a rajta álló vonatokkal együtt");
                     System.out.println(ANSI_GREEN + "listTrain <vonat neve>\t " + ANSI_RED + " listTrain v1 \t " + ANSI_BLUE + " Egyetlen, paraméterben megadott vonatot fog kilistázni, ennek mozdonyát illetve kocsijait (ha vannak).");
                     System.out.println(ANSI_GREEN + "listTrains\t " + ANSI_RED + " listTrains \t " + ANSI_BLUE + " Kilistázza a pályán haladó összes vonatot (elemenként) és feltünteti a színüket (ha van) valamint, hogy melyik pálya elemen állnak éppen.");
